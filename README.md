@@ -24,6 +24,8 @@ pnpm preview
 
 Install Playwright's Chromium browser with `pnpm exec playwright install chromium`, then run `pnpm test:e2e`. Run `pnpm release:check` after building to check release readiness.
 
+To install the local release verification hook in a fresh clone, run `node scripts/release-workflow/install.mjs`. Commit your candidate and run `git verify-release` before pushing. The [release guide](docs/RELEASE.md) covers the full staging and publishing process.
+
 ## Work with the data
 
 The versioned JSON, CSV, and GeoJSON downloads are listed on the site's **Open data** page and served under `/data/v1/`. The application builds from the checked-in data. [Data documentation](docs/DATA.md) explains the evidence model, coverage, and source imports.
