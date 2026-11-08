@@ -187,20 +187,25 @@ function agras(model) {
 function crazyflie(model) {
   const frame = model.part('frame', [0, -.55, .38]);
   const mounts = quad(1.14, 1.14);
-  model.plate(frame, [[-.58, -.65], [.53, -.65], [.65, -.52], [.65, .54], [.52, .67], [-.53, .67], [-.65, .54], [-.65, -.54]], .0, .067, dark);
-  arms(model, frame, mounts, { width: .071, height: .014 });
-  const flight = model.part('flight-controller', [.87, .65, -.39]);
-  model.box(flight, [0, .05, -.12], [.42, .093, .35], graphite);
-  for (const side of [-1, 1]) {
-    model.box(flight, [side * .38, .041, .06], [.074, .065, .8], orange);
-  }
-  const radio = model.part('radio', [-.79, .38, -.55]);
-  model.box(radio, [0, .045, -.50], [.41, .075, .16], cream);
-  mounts.forEach(([x, z], i) => {
-    rotor(model, x, -.04, z, .57, i, .111);
+  model.plate(frame, [[-.58, -.65], [.53, -.65], [.65, -.52], [.65, .54], [.52, .67], [-.53, .67], [-.65, .54], [-.65, -.54]], .0, .067, teal);
+  for (const [x, z] of mounts) {
+    model.beam(frame, [x * .43, .025, z * .43], [x, .025, z], .11, teal);
     model.cylinder(frame, [x, -.13, z], .15, .33, cream);
+  }
+  const flight = model.part('flight-controller', [.87, .65, -.39]);
+  model.box(flight, [.18, .07, -.18], [.28, .073, .28], graphite);
+  model.box(flight, [.35, .06, .06], [.10, .05, .11], dark);
+  const radio = model.part('radio', [-.79, .38, -.55]);
+  model.box(radio, [-.31, .07, -.36], [.19, .065, .19], graphite);
+  mounts.forEach(([x, z], i) => {
+    const motor = model.part('motor', [x * .42, .31, z * .42]);
+    model.cylinder(motor, [x, -.065, z], .103, .39, silver);
+    model.cylinder(motor, [x, .17, z], .025, .14, dark);
+    prop(model, x, .265, z, .57, i % 2 ? .55 : 2.3);
   });
   battery(model, [0, .19, .12], [.54, .17, .76], [0, .83, .77]);
+  const holder = model.part('battery', [0, .83, .77]);
+  model.box(holder, [0, .31, .12], [.62, .043, .80], teal);
 }
 
 function wingtra(model) {
@@ -305,7 +310,7 @@ export const airframes = [
   specific('dji-matrice-30t', 'DJI Matrice 30T', matrice, source('Matrice 30 Series', 'DJI Enterprise', 'https://enterprise.dji.com/matrice-30', 'M30T aircraft and integrated camera system')),
   specific('dji-agras-t70p', 'DJI Agras T70P', agras, source('DJI Agras T70P specs', 'DJI Agriculture', 'https://ag.dji.com/t70p/specs', 'Aircraft, propulsion and spraying system')),
   specific('wingtraone-gen-ii', 'WingtraOne GEN II', wingtra, source('Getting started with WingtraOne GEN II', 'Wingtra', 'https://knowledge.wingtra.com/en/register-your-drone', 'Aircraft component diagram and battery compartment')),
-  specific('crazyflie-2-1-plus', 'Bitcraze Crazyflie 2.1+', crazyflie, source('Crazyflie 2.1+', 'Bitcraze', 'https://www.bitcraze.io/products/crazyflie-2-1-plus/', 'Aircraft imagery, mechanics and radio')),
+  specific('crazyflie-2-1-plus', 'Bitcraze Crazyflie 2.1+', crazyflie, source('Crazyflie 2.1+ datasheet, Rev. 1', 'Bitcraze', 'https://www.bitcraze.io/documentation/hardware/crazyflie_2_1_plus/crazyflie_2_1_plus-datasheet.pdf', 'pp. 1–3, §§3–4 and 8–10, onboard electronics, mechanical drawing and kit contents'), 'documented-assembly'),
   specific('zipline-platform-2', 'Zipline Platform 2', (model) => plane(model, 'delivery'), source('Zipline Dallas–Fort Worth final environmental assessment', 'FAA', 'https://www.faa.gov/uas/advanced_operations/nepa_and_drones/20251223_Zipline_Final_DFW_EA_508_signed.pdf', 'Section 2.2.1 and Figure 2.2-4, P2 Zip aircraft')),
   representative('class-quad', 'Quadcopter', (model) => multirotor(model)),
   representative('class-fpv', 'Guarded FPV quadcopter', (model) => fpv(model), source('DJI Avata 2', 'DJI', 'https://www.dji.com/avata-2', 'Integrated propeller guards as one FPV configuration')),

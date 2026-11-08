@@ -3,16 +3,21 @@ import type { APIRoute } from 'astro';
 import {
   aircraft,
   collections,
+  componentClaims,
   coverage,
+  evidenceCoverage,
   events,
   facilities,
   models,
   observations,
+  pathwayContexts,
   relationships,
 } from '../../../lib/data';
+import { benchSetups, componentComparisons } from '../../../lib/component-data';
+import learning from '../../../../data/learning.json';
 import type { Evidence } from '../../../lib/schema';
 
-const schemaVersion = '1.1.0';
+const schemaVersion = '1.2.0';
 const snapshot = process.env.SNAPSHOT_VERSION || 'development';
 const json = (value: unknown) => `${JSON.stringify(value, null, 2)}\n`;
 const digest = (value: string) =>
@@ -100,6 +105,12 @@ const datasets: Record<string, string> = {
     models,
     observations,
     relationships,
+    componentClaims,
+    pathwayContexts,
+    benchSetups,
+    componentComparisons,
+    learning,
+    evidenceCoverage,
     attribution,
   }),
   'aircraft.csv': csv([
@@ -238,6 +249,7 @@ datasets['release.json'] = json({
   schemaVersion,
   snapshot,
   coverage,
+  evidenceCoverage,
   attribution,
   files: Object.fromEntries(
     Object.entries(datasets).map(([name, body]) => [

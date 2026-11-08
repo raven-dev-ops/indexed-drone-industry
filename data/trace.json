@@ -1,0 +1,684 @@
+{
+  "components": [
+    {
+      "aircraft": "holybro-x500-v2",
+      "part": "frame",
+      "name": "X500 V2 frame kit, SKU 30120",
+      "materials": "Carbon-fiber plates and tubes, with fiber-reinforced nylon arm connectors. The fiber grade and supplier are undisclosed.",
+      "materialBasis": "documented",
+      "source": {
+        "id": "holybro-x500-frame-30120",
+        "title": "X500 V2 Kits",
+        "publisher": "Holybro",
+        "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+        "locator": "X500 V2 Frame Kit Details, SKU 30120, included in SKU 30125",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "holybro-x500-v2",
+      "part": "motor",
+      "name": "Four Holybro 2216 KV920 motors",
+      "materials": "The kit identifies the motor. Its winding material, magnet grade and magnet supplier are undisclosed.",
+      "materialBasis": "unknown",
+      "source": {
+        "id": "holybro-x500-kit-30125",
+        "title": "X500 V2 Kits",
+        "publisher": "Holybro",
+        "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+        "locator": "Kit Contents, X500 V2 ARF Kit SKU 30125",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "holybro-x500-v2",
+      "part": "esc",
+      "name": "Four BLHeli S 20 A ESCs",
+      "materials": "The current rating and preinstalled controllers are documented. Board composition and component suppliers are undisclosed.",
+      "materialBasis": "unknown",
+      "source": {
+        "id": "holybro-x500-kit-30125",
+        "title": "X500 V2 Kits",
+        "publisher": "Holybro",
+        "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+        "locator": "Kit Contents, X500 V2 ARF Kit SKU 30125",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "holybro-x500-v2",
+      "part": "propeller",
+      "name": "1045 propellers with retainers",
+      "materials": "Holybro lists six propellers in the kit. The polymer or composite formulation is undisclosed.",
+      "materialBasis": "unknown",
+      "source": {
+        "id": "holybro-x500-kit-30125",
+        "title": "X500 V2 Kits",
+        "publisher": "Holybro",
+        "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+        "locator": "Kit Contents, X500 V2 ARF Kit SKU 30125",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "holybro-x500-v2",
+      "part": "pdb",
+      "name": "Power distribution board with XT60 and XT30 connectors",
+      "materials": "The board connects the battery and ESC branches. The laminate and conductor materials of this board are undisclosed.",
+      "materialBasis": "unknown",
+      "source": {
+        "id": "holybro-x500-kit-30125",
+        "title": "X500 V2 Kits",
+        "publisher": "Holybro",
+        "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+        "locator": "Kit Contents, X500 V2 ARF Kit SKU 30125",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "holybro-x500-v2",
+      "part": "landing-gear",
+      "name": "X500 V2 landing gear",
+      "materials": "Holybro documents 16 mm and 10 mm carbon-fiber tubes. It identifies plastic connectors without giving their formulation.",
+      "materialBasis": "documented",
+      "source": {
+        "id": "holybro-x500-frame-30120",
+        "title": "X500 V2 Kits",
+        "publisher": "Holybro",
+        "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+        "locator": "X500 V2 Frame Kit Details, SKU 30120, included in SKU 30125",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "crazyflie-2-1-plus",
+      "part": "frame",
+      "name": "Crazyflie control-board airframe and 7 mm motor mounts",
+      "materials": "The control board also forms the arms. The datasheet identifies the board and motor mounts without specifying their material grades.",
+      "materialBasis": "unknown",
+      "source": {
+        "id": "bitcraze-cf21plus-mechanics",
+        "title": "Crazyflie 2.1+ datasheet, Rev. 1",
+        "publisher": "Bitcraze",
+        "url": "https://www.bitcraze.io/documentation/hardware/crazyflie_2_1_plus/crazyflie_2_1_plus-datasheet.pdf",
+        "locator": "pp. 2–3, §§8–10 Mechanical specifications, drawing and kit contents",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "crazyflie-2-1-plus",
+      "part": "motor",
+      "name": "Four 7 mm coreless DC motors",
+      "materials": "Four motors are installed and one is supplied as a spare. The winding and magnet materials are undisclosed in the datasheet.",
+      "materialBasis": "unknown",
+      "source": {
+        "id": "bitcraze-cf21plus-kit",
+        "title": "Crazyflie 2.1+ datasheet, Rev. 1",
+        "publisher": "Bitcraze",
+        "url": "https://www.bitcraze.io/documentation/hardware/crazyflie_2_1_plus/crazyflie_2_1_plus-datasheet.pdf",
+        "locator": "p. 3, §10 Package contents",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "crazyflie-2-1-plus",
+      "part": "propeller",
+      "name": "Clockwise and counterclockwise propellers",
+      "materials": "Bitcraze lists separate clockwise and counterclockwise propellers. The propeller material is undisclosed in the datasheet.",
+      "materialBasis": "unknown",
+      "source": {
+        "id": "bitcraze-cf21plus-kit",
+        "title": "Crazyflie 2.1+ datasheet, Rev. 1",
+        "publisher": "Bitcraze",
+        "url": "https://www.bitcraze.io/documentation/hardware/crazyflie_2_1_plus/crazyflie_2_1_plus-datasheet.pdf",
+        "locator": "p. 3, §10 Package contents",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "crazyflie-2-1-plus",
+      "part": "battery",
+      "name": "250 mAh lithium-polymer pack",
+      "materials": "Bitcraze specifies a lithium-polymer battery. The cell supplier and electrode formulation are undisclosed.",
+      "materialBasis": "documented",
+      "source": {
+        "id": "bitcraze-cf21plus-kit",
+        "title": "Crazyflie 2.1+ datasheet, Rev. 1",
+        "publisher": "Bitcraze",
+        "url": "https://www.bitcraze.io/documentation/hardware/crazyflie_2_1_plus/crazyflie_2_1_plus-datasheet.pdf",
+        "locator": "p. 3, §10 Package contents",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "crazyflie-2-1-plus",
+      "part": "flight-controller",
+      "name": "STM32F405 main application MCU",
+      "materials": "The main controller and BMI088 inertial sensor are specified. Package and board materials are undisclosed.",
+      "materialBasis": "unknown",
+      "source": {
+        "id": "bitcraze-cf21plus-mcus",
+        "title": "Crazyflie 2.1+ datasheet, Rev. 1",
+        "publisher": "Bitcraze",
+        "url": "https://www.bitcraze.io/documentation/hardware/crazyflie_2_1_plus/crazyflie_2_1_plus-datasheet.pdf",
+        "locator": "p. 1, §§2–4 Features, onboard microcontrollers, IMU",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "crazyflie-2-1-plus",
+      "part": "radio",
+      "name": "nRF51822 radio and power management MCU",
+      "materials": "The radio MCU is on the same board as the flight controller. Its die and package material sources are undisclosed.",
+      "materialBasis": "unknown",
+      "source": {
+        "id": "bitcraze-cf21plus-mcus",
+        "title": "Crazyflie 2.1+ datasheet, Rev. 1",
+        "publisher": "Bitcraze",
+        "url": "https://www.bitcraze.io/documentation/hardware/crazyflie_2_1_plus/crazyflie_2_1_plus-datasheet.pdf",
+        "locator": "p. 1, §§2–4 Features, onboard microcontrollers, IMU",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "dji-mini-4-pro",
+      "part": "battery",
+      "name": "Intelligent Flight Battery",
+      "materials": "DJI specifies a Li-ion pack. Cell suppliers and the internal construction are undisclosed in the published specifications.",
+      "materialBasis": "documented",
+      "source": {
+        "id": "dji-mini4pro-spec",
+        "title": "DJI Mini 4 Pro Specifications",
+        "publisher": "DJI",
+        "url": "https://www.dji.com/mini-4-pro/specs",
+        "locator": "Aircraft, Camera, and Battery",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "dji-mini-4-pro",
+      "part": "payload",
+      "name": "Integrated stabilized camera",
+      "materials": "DJI specifies a 1/1.3-inch CMOS sensor. Its supplier and the optical material stack are undisclosed.",
+      "materialBasis": "unknown",
+      "source": {
+        "id": "dji-mini4pro-spec",
+        "title": "DJI Mini 4 Pro Specifications",
+        "publisher": "DJI",
+        "url": "https://www.dji.com/mini-4-pro/specs",
+        "locator": "Aircraft, Camera, and Battery",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "skydio-x10",
+      "part": "battery",
+      "name": "Skydio X10 battery pack",
+      "materials": "Skydio disclosed reliance on Chinese battery supply at the time of the 2024 sanctions. The letter does not identify the cell maker, chemistry or factory.",
+      "materialBasis": "unknown",
+      "source": {
+        "id": "skydio-battery-letter",
+        "title": "China’s Sanctions on Skydio",
+        "publisher": "Skydio",
+        "url": "https://www.skydio.com/blog/chinas-sanctions-on-skydio",
+        "locator": "October 30, 2024 customer letter, battery supply and rationing",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2024-10-30"
+      },
+      "scope": "This evidence applies to the X10 units discussed in Skydio’s October 2024 letter."
+    },
+    {
+      "aircraft": "dji-agras-t50",
+      "part": "battery",
+      "name": "DJI DB1560 Intelligent Flight Battery",
+      "materials": "DJI identifies the pack and provides its electrical and charging specifications. Cell sourcing is undisclosed.",
+      "materialBasis": "unknown",
+      "source": {
+        "id": "dji-agras-t50-battery",
+        "title": "DJI Agras T50 Specifications",
+        "publisher": "DJI",
+        "url": "https://ag.dji.com/t50/specs",
+        "locator": "DJI DB1560 Intelligent Flight Battery",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "aircraft": "matternet-m2",
+      "part": "battery",
+      "name": "Matternet M2 swappable battery",
+      "materials": "Matternet describes swapping the pack by hand or at a robotic station. The product overview leaves cell composition and the end-of-life vendor undisclosed.",
+      "materialBasis": "unknown",
+      "source": {
+        "title": "M2 Aircraft",
+        "publisher": "Matternet",
+        "url": "https://www.matternet.com/our-system-aircraft-m2",
+        "locator": "Fast battery and payload swapping",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "id": "matternet-m2-battery-system"
+      }
+    },
+    {
+      "aircraft": "geprc-mark5-dc-hd-o3",
+      "part": "esc",
+      "name": "GEPRC MARK5 speed controller",
+      "materials": "The manufacturer lists the ESC in the build specifications. This index has no model-specific board material claim.",
+      "materialBasis": "unknown",
+      "source": {
+        "title": "MARK5 DC HD O3 FPV",
+        "publisher": "GEPRC",
+        "url": "https://geprc.com/product/geprc-mark5-dc-hd-o3-fpv/",
+        "locator": "Changelog and Specifications → ESC",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "id": "geprc-mark5-o3-esc"
+      }
+    },
+    {
+      "aircraft": "freefly-astro",
+      "part": "flight-controller",
+      "name": "Freefly Astro flight controller",
+      "materials": "The aircraft specifications identify its flight computer. Its semiconductor suppliers and package materials are undisclosed in that source.",
+      "materialBasis": "unknown",
+      "source": {
+        "title": "Astro commercial drone",
+        "publisher": "Freefly Systems",
+        "url": "https://freeflysystems.com/astro",
+        "locator": "Skynode, Mission Control, & the Suite",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "id": "freefly-astro-flight-controller"
+      }
+    },
+    {
+      "aircraft": "dji-matrice-30t",
+      "part": "payload",
+      "name": "Matrice 30T thermal camera system",
+      "materials": "DJI publishes thermal camera specifications. The detector and lens suppliers are undisclosed.",
+      "materialBasis": "unknown",
+      "source": {
+        "id": "dji-m30t-thermal-camera",
+        "title": "Matrice 30 Series Specifications",
+        "publisher": "DJI Enterprise",
+        "url": "https://enterprise.dji.com/matrice-30/specs",
+        "locator": "Thermal Camera, Matrice 30T",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    }
+  ],
+  "pathways": [
+    {
+      "id": "battery",
+      "aircraft": [
+        {
+          "id": "skydio-x10",
+          "part": "battery",
+          "evidenceType": "documented",
+          "scope": "This evidence applies to the X10 units discussed in Skydio’s October 2024 letter."
+        },
+        {
+          "id": "crazyflie-2-1-plus",
+          "part": "battery",
+          "evidenceType": "documented"
+        },
+        {
+          "id": "dji-mini-4-pro",
+          "part": "battery",
+          "evidenceType": "documented"
+        },
+        {
+          "id": "zipline-platform-2",
+          "part": "battery",
+          "evidenceType": "representative"
+        },
+        {
+          "id": "dji-agras-t50",
+          "part": "battery",
+          "evidenceType": "documented"
+        },
+        {
+          "id": "matternet-m2",
+          "part": "battery",
+          "evidenceType": "documented"
+        }
+      ],
+      "nodes": {
+        "lithium": [
+          {
+            "section": "materials",
+            "id": "lithium"
+          }
+        ],
+        "graphite": [
+          {
+            "section": "materials",
+            "id": "graphite"
+          },
+          {
+            "section": "facilities",
+            "id": "syrah-balama"
+          }
+        ],
+        "anode": [
+          {
+            "section": "facilities",
+            "id": "syrah-vidalia"
+          }
+        ],
+        "pack": [
+          {
+            "section": "parts",
+            "id": "battery"
+          }
+        ]
+      },
+      "events": [
+        "skydio-battery-2024",
+        "lithium-price-surge-2022",
+        "gopro-karma-recall-2016"
+      ],
+      "atlasLayer": "lithium-production",
+      "relationships": [
+        "balama-feeds-vidalia"
+      ]
+    },
+    {
+      "id": "motors",
+      "aircraft": [
+        {
+          "id": "holybro-x500-v2",
+          "part": "motor",
+          "evidenceType": "documented"
+        },
+        {
+          "id": "dji-avata-2",
+          "part": "motor",
+          "evidenceType": "representative"
+        }
+      ],
+      "nodes": {
+        "ore": [
+          {
+            "section": "materials",
+            "id": "rare-earths"
+          },
+          {
+            "section": "facilities",
+            "id": "mountain-pass-rare-earth"
+          },
+          {
+            "section": "facilities",
+            "id": "lynas-mt-weld"
+          }
+        ],
+        "oxides": [
+          {
+            "section": "organizations",
+            "id": "mp-materials"
+          },
+          {
+            "section": "facilities",
+            "id": "lynas-kalgoorlie"
+          },
+          {
+            "section": "facilities",
+            "id": "lynas-gebeng"
+          }
+        ],
+        "motor": [
+          {
+            "section": "parts",
+            "id": "motor"
+          }
+        ]
+      },
+      "events": [
+        "rare-earth-magnets-2025"
+      ],
+      "atlasLayer": "rare-earths-production",
+      "relationships": [
+        "lynas-mt-weld-feeds-kalgoorlie",
+        "lynas-kalgoorlie-feeds-gebeng"
+      ]
+    },
+    {
+      "id": "composites",
+      "aircraft": [
+        {
+          "id": "holybro-x500-v2",
+          "part": "frame",
+          "evidenceType": "documented"
+        },
+        {
+          "id": "wingtraone-gen-ii",
+          "part": "wing",
+          "evidenceType": "representative"
+        }
+      ],
+      "nodes": {
+        "fiber": [
+          {
+            "section": "materials",
+            "id": "carbon-fiber"
+          }
+        ],
+        "frame": [
+          {
+            "section": "parts",
+            "id": "frame"
+          }
+        ]
+      },
+      "events": [
+        "red-sea-freight-2024"
+      ]
+    },
+    {
+      "id": "electronics",
+      "aircraft": [
+        {
+          "id": "holybro-x500-v2",
+          "part": "esc",
+          "evidenceType": "documented"
+        },
+        {
+          "id": "crazyflie-2-1-plus",
+          "part": "flight-controller",
+          "evidenceType": "documented"
+        },
+        {
+          "id": "geprc-mark5-dc-hd-o3",
+          "part": "esc",
+          "evidenceType": "documented"
+        },
+        {
+          "id": "freefly-astro",
+          "part": "flight-controller",
+          "evidenceType": "documented"
+        }
+      ],
+      "nodes": {
+        "silicon": [
+          {
+            "section": "materials",
+            "id": "silicon"
+          }
+        ],
+        "fab": [
+          {
+            "section": "facilities",
+            "id": "renesas-naka"
+          },
+          {
+            "section": "facilities",
+            "id": "tsmc-fab-12a"
+          }
+        ],
+        "board": [
+          {
+            "section": "parts",
+            "id": "flight-controller"
+          },
+          {
+            "section": "parts",
+            "id": "esc"
+          }
+        ]
+      },
+      "events": [
+        "naka-chip-fire-2021",
+        "chip-shortage-2022-rfi"
+      ]
+    },
+    {
+      "id": "optics",
+      "aircraft": [
+        {
+          "id": "dji-mini-4-pro",
+          "part": "payload",
+          "evidenceType": "documented"
+        },
+        {
+          "id": "dji-matrice-30t",
+          "part": "payload",
+          "evidenceType": "documented"
+        },
+        {
+          "id": "wingtraone-gen-ii",
+          "part": "payload",
+          "evidenceType": "representative"
+        }
+      ],
+      "nodes": {
+        "camera": [
+          {
+            "section": "parts",
+            "id": "payload"
+          }
+        ],
+        "electronics": [
+          {
+            "section": "materials",
+            "id": "silicon"
+          }
+        ]
+      },
+      "events": [
+        "gallium-germanium-controls-2023"
+      ]
+    },
+    {
+      "id": "radio-gnss",
+      "aircraft": [
+        {
+          "id": "crazyflie-2-1-plus",
+          "part": "radio",
+          "evidenceType": "documented"
+        },
+        {
+          "id": "dji-agras-t70p",
+          "part": "gnss",
+          "evidenceType": "representative"
+        }
+      ],
+      "nodes": {
+        "wafer": [
+          {
+            "section": "materials",
+            "id": "silicon"
+          }
+        ],
+        "receiver": [
+          {
+            "section": "parts",
+            "id": "gnss"
+          },
+          {
+            "section": "parts",
+            "id": "radio"
+          }
+        ]
+      },
+      "events": [
+        "chip-shortage-2022-rfi"
+      ]
+    },
+    {
+      "id": "skydio-battery",
+      "aircraft": [
+        {
+          "id": "skydio-x10",
+          "part": "battery",
+          "evidenceType": "documented",
+          "scope": "This evidence applies to the X10 units discussed in Skydio’s October 2024 letter."
+        }
+      ],
+      "nodes": {
+        "original": [
+          {
+            "section": "organizations",
+            "id": "skydio"
+          }
+        ],
+        "batteries": [
+          {
+            "section": "parts",
+            "id": "battery"
+          }
+        ],
+        "deliveries": [
+          {
+            "section": "aircraft",
+            "id": "skydio-x10"
+          },
+          {
+            "section": "history",
+            "id": "skydio-battery-2024"
+          }
+        ]
+      },
+      "events": [
+        "skydio-battery-2024"
+      ],
+      "atlasLayer": "lithium-production"
+    },
+    {
+      "id": "gopro-karma-battery-retention",
+      "aircraft": [],
+      "nodes": {
+        "battery-retention": [
+          {
+            "section": "parts",
+            "id": "battery"
+          }
+        ],
+        "original-sale-program": [
+          {
+            "section": "history",
+            "id": "gopro-karma-recall-2016"
+          }
+        ]
+      },
+      "events": [
+        "gopro-karma-recall-2016"
+      ]
+    }
+  ]
+}

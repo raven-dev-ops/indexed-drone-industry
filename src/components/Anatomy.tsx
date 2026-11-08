@@ -1,8 +1,13 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import type { Material, Mesh, MeshStandardMaterial, Object3D, Vector3 } from 'three';
+import type { Evidence } from '../lib/schema';
 import './anatomy.css';
 
-type Part = { id: string; name: string; href: string; note?: string };
+type Part = {
+  id: string; name: string; href: string; note?: string;
+  component?: { name: string; materials: string; materialBasis: string; scope?: string; source: Evidence };
+  supply?: { name: string; href: string }[];
+};
 type Hotspot = { id: string; x: number; y: number; anchorX: number; anchorY: number };
 type ViewAction = 'left' | 'right' | 'closer' | 'farther' | 'reset';
 
@@ -10,6 +15,7 @@ interface Props {
   model: string;
   label: string;
   representative: boolean;
+  fidelity?: string;
   parts: Part[];
   modelUrl?: string;
 }
@@ -34,11 +40,11 @@ function releaseScene(root: Object3D) {
   for (const material of materials) material.dispose();
 }
 
-export default function Anatomy({ model, label, representative, parts, modelUrl }: Props) {
-  return <AnatomyViewer key={model} {...{ model, label, representative, parts, modelUrl }} />;
+export default function Anatomy(props: Props) {
+  return <AnatomyViewer key={props.model} {...props} />;
 }
 
-function AnatomyViewer({ model, label, representative, parts, modelUrl }: Props) {
+function AnatomyViewer({ model, label, representative, fidelity, parts, modelUrl }: Props) {
   const [selected, setSelected] = useState<string | undefined>(parts[0]?.id);
   const [explode, setExplode] = useState(0);
   const [mode, setMode] = useState<'3d' | '2d'>('3d');
@@ -48,6 +54,10 @@ function AnatomyViewer({ model, label, representative, parts, modelUrl }: Props)
   const canvas = useRef<HTMLDivElement | null>(null);
   const initialState = useRef({ selected, explode });
   const partIds = useRef(new Set(parts.map((part) => part.id)));
+  useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get('part');
+    if (requested && partIds.current.has(requested)) setSelected(requested);
+  }, []);
   const sliderId = useId();
   const headingId = useId();
   const root = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/models/${model}`;
@@ -250,7 +260,7 @@ function AnatomyViewer({ model, label, representative, parts, modelUrl }: Props)
 
   const active = parts.find(({ id }) => id === selected);
   const activeSpot = hotspots.find(({ id }) => id === selected);
-  const fidelity = representative ? 'Representative class diagram' : model === 'holybro-x500-v2' ? 'Schematic of documented assembly' : 'Exterior schematic';
+  const fidelityLabel = representative ? 'Representative class diagram' : fidelity === 'documented-assembly' ? 'Schematic of documented assembly' : 'Exterior schematic';
   const switchMode = (next: '3d' | '2d') => {
     if (next === mode) return;
     if (next === '3d') setStatus('loading');
@@ -261,7 +271,7 @@ function AnatomyViewer({ model, label, representative, parts, modelUrl }: Props)
     <section className="anatomy" aria-labelledby={headingId} data-model={model} data-model-ready={show3d}>
       <div className="anatomy-toolbar">
         <div>
-          <p className="anatomy-caption">{fidelity}</p>
+          <p className="anatomy-caption">{fidelityLabel}</p>
           <h2 id={headingId}>{label}</h2>
         </div>
         <div className="anatomy-toggle" role="group" aria-label="Anatomy view">
@@ -340,8 +350,15 @@ function AnatomyViewer({ model, label, representative, parts, modelUrl }: Props)
           {active && (
             <div className="anatomy-detail" aria-live="polite">
               <h3>{active.name}</h3>
+              {active.component && <>
+                <p><strong>{active.component.name}</strong></p>
+                {active.component.scope && <p>{active.component.scope}</p>}
+                <p><strong>Material evidence ({active.component.materialBasis})</strong> {active.component.materials}</p>
+                <p><a href={active.component.source.url}>{active.component.source.publisher} · {active.component.source.locator}</a></p>
+              </>}
               {active.note && <p>{active.note}</p>}
               <a href={active.href}>Explore this part <span aria-hidden="true">↗</span></a>
+              {active.supply?.map((link) => <p key={link.href}><a href={link.href}>{link.name}</a></p>)}
             </div>
           )}
         </div>

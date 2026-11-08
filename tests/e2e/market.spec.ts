@@ -17,8 +17,8 @@ test('market groups keep sales, shares, and activity separate as filters change'
   await expect(usSales).toContainText('3,711 aircraft');
   await expect(japanInspection).toBeVisible();
   await expect(japanInspection).toContainText('266 aircraft');
-  await expect(page.getByText(/^Revenue share/).first()).toBeVisible();
-  await expect(page.getByText(/^Unit-sales share/).first()).toBeVisible();
+  await expect(rows.getByText(/^Revenue share/).first()).toBeVisible();
+  await expect(rows.getByText(/^Unit-sales share/).first()).toBeVisible();
 
   const geography = page.getByRole('combobox', { name: 'Geography', exact: true });
   const segment = page.getByRole('combobox', { name: 'Segment', exact: true });
@@ -40,6 +40,24 @@ test('market groups keep sales, shares, and activity separate as filters change'
   await expect(usSales).toBeVisible();
   await expect(japanInspection).toBeVisible();
   await expect(usFleet).toBeVisible();
+});
+
+test('period and measurement filters constrain comparable chart cohorts', async ({ page }) => {
+  await page.goto('./market/');
+  const charts = page.locator('[data-market-chart]:visible');
+  const period = page.getByRole('combobox', { name: 'Period', exact: true });
+  const measure = page.getByRole('combobox', { name: 'Measure', exact: true });
+  await page.getByRole('combobox', { name: 'Geography', exact: true }).selectOption('United States');
+  await period.selectOption('2025');
+  await measure.selectOption('Unit-sales share');
+  await expect(charts).toHaveCount(1);
+  await expect(charts.first()).toContainText('3,711 estimated U.S. spray drone units sold in 2025');
+  await expect(charts.first()).toContainText('75.75%');
+  await expect(charts.first()).toContainText('24.25%');
+  await measure.selectOption('Aircraft sales');
+  await expect(charts).toHaveCount(0);
+  await expect(page.locator('[data-market-no-chart]')).toBeVisible();
+  await expect(page.locator(us2025Sales)).toBeVisible();
 });
 
 test('a market record links to evidence and the CSV carries metric provenance', async ({ page, request }) => {

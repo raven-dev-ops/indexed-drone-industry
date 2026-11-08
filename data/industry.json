@@ -1,6 +1,56 @@
 {
   "organizations": [
     {
+      "id": "lynas-rare-earths",
+      "name": "Lynas Rare Earths",
+      "role": "Rare-earth mining and separation",
+      "country": "AU",
+      "summary": "Operates a mine and concentrator in Western Australia and downstream rare-earth processing sites in Australia and Malaysia.",
+      "source": {
+        "id": "lynas-2025-sustainability",
+        "title": "Lynas 2025 Sustainability Report",
+        "publisher": "Lynas Rare Earths",
+        "url": "https://lynasrareearths.com/wp-content/uploads/2025/10/LYC-Sustainability-Report-2025-Oct25V2-1.pdf",
+        "locator": "Our Operations → Mt Weld, Kalgoorlie and Lynas Malaysia material flow",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "id": "texas-instruments",
+      "name": "Texas Instruments",
+      "role": "Analog and embedded semiconductor manufacturing",
+      "country": "US",
+      "summary": "Manufactures analog and embedded semiconductors, including production at the Sherman SM1 wafer fab.",
+      "source": {
+        "id": "ti-sherman-sm1-2025",
+        "title": "Texas Instruments begins production at its newest 300mm semiconductor manufacturing facility",
+        "publisher": "Texas Instruments",
+        "url": "https://www.ti.com/en-us/about-ti/newsroom/news-releases/2025/texas-instruments-begins-production-at-its-newest-300mm-semiconductor-manufacturing-facility-in-sherman-texas",
+        "locator": "SM1 start of production; Sherman location",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2025-12-17"
+      }
+    },
+    {
+      "id": "amprius",
+      "name": "Amprius Technologies",
+      "role": "Lithium-ion cell development and production",
+      "country": "US",
+      "summary": "Develops silicon-anode cells and supplies the unmanned aviation sector. Uses a Fremont pilot line and separate contract manufacturing arrangements.",
+      "source": {
+        "id": "amprius-2025-form-10k",
+        "title": "Amprius 2025 Form 10-K",
+        "publisher": "Amprius",
+        "url": "https://ir.amprius.com/sec-filings/all-sec-filings/content/0001899287-26-000015/ampx-20251231.htm",
+        "locator": "Business → Our Manufacturing; Fremont SiMaxx production and SiCore pilot transition",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-03-06"
+      }
+    },
+    {
       "id": "tsmc",
       "name": "TSMC",
       "role": "Semiconductor manufacturer",
@@ -2072,6 +2122,234 @@
   ],
   "facilities": [
     {
+      "id": "lynas-mt-weld",
+      "name": "Lynas Mt Weld mine and concentrator",
+      "country": "AU",
+      "activity": "Rare-earth mining and concentration",
+      "status": "operating",
+      "lat": -28.628,
+      "lon": 122.404,
+      "precision": "region",
+      "organizationId": "lynas-rare-earths",
+      "summary": "Lynas mines and concentrates rare-earth ore near Laverton. The marker shows the Laverton district.",
+      "source": {
+        "id": "lynas-mt-weld",
+        "title": "Mt Weld, Western Australia",
+        "publisher": "Lynas Rare Earths",
+        "url": "https://lynasrareearths.com/mt-weld-western-australia-2/",
+        "locator": "Mt Weld mine and concentrator near Laverton",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      },
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "lynas-mt-weld",
+        "title": "Mt Weld, Western Australia",
+        "publisher": "Lynas Rare Earths",
+        "url": "https://lynasrareearths.com/mt-weld-western-australia-2/",
+        "locator": "Mt Weld mine and concentrator near Laverton",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "id": "lynas-kalgoorlie",
+      "name": "Lynas Kalgoorlie Rare Earths Processing Facility",
+      "country": "AU",
+      "activity": "Rare-earth cracking and leaching",
+      "status": "operating",
+      "lat": -30.7489,
+      "lon": 121.4658,
+      "precision": "city",
+      "organizationId": "lynas-rare-earths",
+      "summary": "Lynas processes concentrate into mixed rare-earth carbonate at Kalgoorlie for further separation. The marker shows Kalgoorlie.",
+      "source": {
+        "id": "lynas-kalgoorlie",
+        "title": "Kalgoorlie, Western Australia",
+        "publisher": "Lynas Rare Earths",
+        "url": "https://lynasrareearths.com/kalgoorlie-western-australia/",
+        "locator": "Cracking and leaching process; mixed rare-earth carbonate shipment to Malaysia",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      },
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "lynas-2025-sustainability",
+        "title": "Lynas 2025 Sustainability Report",
+        "publisher": "Lynas Rare Earths",
+        "url": "https://lynasrareearths.com/wp-content/uploads/2025/10/LYC-Sustainability-Report-2025-Oct25V2-1.pdf",
+        "locator": "Our Operations → Mt Weld, Kalgoorlie and Lynas Malaysia material flow",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "id": "lynas-gebeng",
+      "name": "Lynas Malaysia advanced materials plant",
+      "country": "MY",
+      "activity": "Rare-earth separation",
+      "status": "operating",
+      "lat": 3.8168,
+      "lon": 103.3317,
+      "precision": "region",
+      "organizationId": "lynas-rare-earths",
+      "summary": "Lynas separates rare earths into oxide products in Gebeng Industrial Estate near Kuantan. The marker shows the Kuantan region.",
+      "source": {
+        "id": "lynas-operations",
+        "title": "About Us",
+        "publisher": "Lynas Rare Earths",
+        "url": "https://lynasrareearths.com/about-us/",
+        "locator": "Lynas Malaysia → Gebeng Industrial Estate and separated rare-earth oxide production",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      },
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "lynas-2025-sustainability",
+        "title": "Lynas 2025 Sustainability Report",
+        "publisher": "Lynas Rare Earths",
+        "url": "https://lynasrareearths.com/wp-content/uploads/2025/10/LYC-Sustainability-Report-2025-Oct25V2-1.pdf",
+        "locator": "Our Operations → Mt Weld, Kalgoorlie and Lynas Malaysia material flow",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "id": "mp-independence-fort-worth",
+      "name": "MP Materials Independence magnet plant",
+      "country": "US",
+      "activity": "Rare-earth metal and magnet manufacturing",
+      "status": "operating",
+      "lat": 32.7555,
+      "lon": -97.3308,
+      "precision": "city",
+      "organizationId": "mp-materials",
+      "summary": "MP Materials processes refined rare-earth materials into metals, alloys and NdFeB magnets. The marker shows Fort Worth.",
+      "source": {
+        "id": "mp-materials-magnetics",
+        "title": "Magnetics",
+        "publisher": "MP Materials",
+        "url": "https://mpmaterials.com/magnetics/",
+        "locator": "Independence facility and Mountain Pass feedstock",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      },
+      "observed": "2026-09-30",
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "mp-materials-2026-q3",
+        "title": "MP Materials Reports Third Quarter 2026 Results",
+        "publisher": "MP Materials",
+        "url": "https://investors.mpmaterials.com/investor-news/news-details/2026/MP-Materials-Reports-Third-Quarter-2026-Results/default.aspx",
+        "locator": "Magnetics segment and Independence ramp",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-11-05"
+      }
+    },
+    {
+      "id": "ti-sherman-sm1",
+      "name": "Texas Instruments Sherman SM1 wafer fab",
+      "country": "US",
+      "activity": "Semiconductor manufacturing",
+      "status": "operating",
+      "lat": 33.6357,
+      "lon": -96.6089,
+      "precision": "city",
+      "organizationId": "texas-instruments",
+      "summary": "Texas Instruments announced start of production at this 300 mm semiconductor fab in December 2025. The marker shows Sherman.",
+      "source": {
+        "id": "ti-sherman-sm1-2025",
+        "title": "Texas Instruments begins production at its newest 300mm semiconductor manufacturing facility",
+        "publisher": "Texas Instruments",
+        "url": "https://www.ti.com/en-us/about-ti/newsroom/news-releases/2025/texas-instruments-begins-production-at-its-newest-300mm-semiconductor-manufacturing-facility-in-sherman-texas",
+        "locator": "SM1 start of production; Sherman location",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2025-12-17"
+      },
+      "observed": "2025-12-17",
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "ti-sherman-sm1-2025",
+        "title": "Texas Instruments begins production at its newest 300mm semiconductor manufacturing facility",
+        "publisher": "Texas Instruments",
+        "url": "https://www.ti.com/en-us/about-ti/newsroom/news-releases/2025/texas-instruments-begins-production-at-its-newest-300mm-semiconductor-manufacturing-facility-in-sherman-texas",
+        "locator": "SM1 start of production; Sherman location",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2025-12-17"
+      }
+    },
+    {
+      "id": "amprius-fremont",
+      "name": "Amprius Fremont cell pilot line",
+      "country": "US",
+      "activity": "Battery cell production and development",
+      "status": "operating",
+      "lat": 37.5485,
+      "lon": -121.9886,
+      "precision": "city",
+      "organizationId": "amprius",
+      "summary": "Amprius reported manufacturing SiMaxx cells at Fremont in 2025 and transitioning its pilot line for SiCore cells in 2026. The marker shows Fremont.",
+      "source": {
+        "id": "amprius-2025-form-10k",
+        "title": "Amprius 2025 Form 10-K",
+        "publisher": "Amprius",
+        "url": "https://ir.amprius.com/sec-filings/all-sec-filings/content/0001899287-26-000015/ampx-20251231.htm",
+        "locator": "Business → Our Manufacturing; Fremont SiMaxx production and SiCore pilot transition",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-03-06"
+      },
+      "observed": "2025-12-31",
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "amprius-2025-form-10k",
+        "title": "Amprius 2025 Form 10-K",
+        "publisher": "Amprius",
+        "url": "https://ir.amprius.com/sec-filings/all-sec-filings/content/0001899287-26-000015/ampx-20251231.htm",
+        "locator": "Business → Our Manufacturing; Fremont SiMaxx production and SiCore pilot transition",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-03-06"
+      }
+    },
+    {
+      "id": "matternet-mountain-view",
+      "name": "Matternet Mountain View aircraft production facility",
+      "country": "US",
+      "activity": "Aircraft assembly and acceptance testing",
+      "status": "operating",
+      "lat": 37.3861,
+      "lon": -122.0839,
+      "precision": "city",
+      "organizationId": "matternet",
+      "summary": "Matternet identifies the site for M2 and ground-station assembly, testing, quality acceptance and delivery. The marker shows Mountain View.",
+      "source": {
+        "id": "matternet-2026-8k",
+        "title": "Matternet 2026 Form 8-K",
+        "publisher": "Matternet",
+        "url": "https://investor.matternet.com/sec-filings/all-sec-filings/content/0001213900-26-062961/ea0292214-8k_matternet.htm",
+        "locator": "Manufacturing and Supply Chain; Properties, Mountain View production facility",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-05-29"
+      },
+      "observed": "2026-05-29",
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "matternet-2026-8k",
+        "title": "Matternet 2026 Form 8-K",
+        "publisher": "Matternet",
+        "url": "https://investor.matternet.com/sec-filings/all-sec-filings/content/0001213900-26-062961/ea0292214-8k_matternet.htm",
+        "locator": "Manufacturing and Supply Chain; Properties, Mountain View production facility",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-05-29"
+      }
+    },
+    {
       "id": "tsmc-fab-12a",
       "name": "TSMC Fab 12A",
       "country": "TW",
@@ -2152,11 +2430,11 @@
       "name": "Syrah Vidalia active anode material facility",
       "country": "US",
       "activity": "Graphite anode processing",
-      "status": "unknown",
+      "status": "operating",
       "lat": 31.5654,
       "lon": -91.4259,
       "precision": "city",
-      "summary": "Syrah describes a graphite anode materials facility in Vidalia, Louisiana. The marker shows Vidalia.",
+      "summary": "Syrah reported starting commercial ramp-up at Vidalia in September 2026 to build inventory. First commercial sales were subject to final customer qualification.",
       "source": {
         "title": "Vidalia Active Anode Material Facility",
         "publisher": "Syrah Resources",
@@ -2164,7 +2442,18 @@
         "locator": "Vidalia facility and project milestones",
         "accessed": "2026-11-08"
       },
-      "organizationId": "syrah-resources"
+      "organizationId": "syrah-resources",
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "syrah-2026-q3",
+        "title": "September 2026 Quarterly Activities and Cashflow Report",
+        "publisher": "Syrah Resources",
+        "url": "https://company-announcements.afr.com/asx/syr/6788725f-d31a-11f1-a069-b6b1a9c70e34.pdf",
+        "locator": "First-page Balama production and Vidalia commercial ramp-up summary",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-10-29"
+      }
     },
     {
       "id": "clarios-meadowbrook",
@@ -2227,12 +2516,12 @@
       "id": "freefly-woodinville",
       "name": "Freefly Woodinville drone manufacturing",
       "country": "US",
-      "activity": "Aircraft assembly",
+      "activity": "Aircraft assembly and repair",
       "status": "operating",
       "lat": 47.7543,
       "lon": -122.1635,
       "precision": "city",
-      "summary": "Freefly lists drone manufacturing roles in Woodinville, Washington. The marker shows Woodinville.",
+      "summary": "Freefly lists aircraft manufacturing jobs at Woodinville and identifies the same headquarters as its service and repair destination for Astro aircraft. The marker shows Woodinville.",
       "source": {
         "title": "Open Positions",
         "publisher": "Freefly Systems",
@@ -2240,7 +2529,17 @@
         "locator": "Woodinville drone manufacturing positions",
         "accessed": "2026-11-08"
       },
-      "organizationId": "freefly-systems"
+      "organizationId": "freefly-systems",
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "freefly-astro-repair",
+        "title": "What equipment does Freefly service/repair?",
+        "publisher": "Freefly Systems",
+        "url": "https://freeflysystems.com/knowledge-base/how-can-i-send-in-a-movi-alta-or-other-freefly-accessory-for-service-or-repair",
+        "locator": "Astro in supported products and Woodinville shipping location",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
     },
     {
       "id": "new-york-uas-test-site",
@@ -2681,11 +2980,11 @@
       "name": "Mine brines of Atacama Salar",
       "country": "CL",
       "activity": "Mining · lithium",
-      "status": "unknown",
+      "status": "operating",
       "lat": -23.4874,
       "lon": -68.3354,
       "precision": "site",
-      "summary": "The USGS 2014 facility inventory lists lithium for this mine. Present operating status is unknown.",
+      "summary": "The historical USGS inventory lists lithium brines at Salar de Atacama. SQM reports extraction there and transport of solutions for downstream processing.",
       "source": {
         "title": "Mineral facilities of Latin America and the Caribbean",
         "publisher": "U.S. Geological Survey",
@@ -2693,6 +2992,16 @@
         "locator": "MINFAC_LAC.csv · CL196, row 709 · 2014 source data, public domain",
         "accessed": "2026-11-08",
         "rights": "U.S. Geological Survey, Mineral facilities of Latin America and the Caribbean. Public domain."
+      },
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "sqm-2025-annual-report",
+        "title": "SQM 2025 Annual Report",
+        "publisher": "SQM",
+        "url": "https://ir.sqm.com/system/files-encrypted/nasdaq_kms/assets/2026/06/08/11-37-39/2025%20Annual%20Report.pdf",
+        "locator": "Lithium production at Salar de Atacama and Lithium Chemical Plant Carmen",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
       }
     },
     {
@@ -2719,11 +3028,11 @@
       "name": "Plant at Salar del Carmen",
       "country": "CL",
       "activity": "Processing · lithium",
-      "status": "unknown",
+      "status": "operating",
       "lat": -23.6414,
       "lon": -70.2593,
       "precision": "site",
-      "summary": "The USGS 2014 facility inventory lists lithium for this plant. Present operating status is unknown.",
+      "summary": "SQM reports lithium carbonate and hydroxide production at its Carmen chemical plant near Antofagasta.",
       "source": {
         "title": "Mineral facilities of Latin America and the Caribbean",
         "publisher": "U.S. Geological Survey",
@@ -2731,6 +3040,16 @@
         "locator": "MINFAC_LAC.csv · CL234, row 780 · 2014 source data, public domain",
         "accessed": "2026-11-08",
         "rights": "U.S. Geological Survey, Mineral facilities of Latin America and the Caribbean. Public domain."
+      },
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "sqm-2025-annual-report",
+        "title": "SQM 2025 Annual Report",
+        "publisher": "SQM",
+        "url": "https://ir.sqm.com/system/files-encrypted/nasdaq_kms/assets/2026/06/08/11-37-39/2025%20Annual%20Report.pdf",
+        "locator": "Lithium production at Salar de Atacama and Lithium Chemical Plant Carmen",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
       }
     },
     {
@@ -2738,11 +3057,11 @@
       "name": "Antucoya Mine",
       "country": "CL",
       "activity": "Mining · copper",
-      "status": "unknown",
+      "status": "operating",
       "lat": -22.6298,
       "lon": -69.8832,
       "precision": "site",
-      "summary": "The USGS 2014 facility inventory lists copper for this mine. Present operating status is unknown.",
+      "summary": "Antofagasta reported copper production from Antucoya in Q3 2026.",
       "source": {
         "title": "Mineral facilities of Latin America and the Caribbean",
         "publisher": "U.S. Geological Survey",
@@ -2750,6 +3069,17 @@
         "locator": "MINFAC_LAC.csv · CL320, row 514 · 2014 source data, public domain",
         "accessed": "2026-11-08",
         "rights": "U.S. Geological Survey, Mineral facilities of Latin America and the Caribbean. Public domain."
+      },
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "antofagasta-2026-q3",
+        "title": "Q3 2026 Production Report",
+        "publisher": "Antofagasta",
+        "url": "https://www.antofagasta.co.uk/investors/news/2026/q3-2026-production-report/",
+        "locator": "Antucoya operating results",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-10-15"
       }
     },
     {
@@ -3156,11 +3486,11 @@
       "name": "Antamina Mine",
       "country": "PE",
       "activity": "Mining · copper",
-      "status": "unknown",
+      "status": "operating",
       "lat": -9.5398,
       "lon": -77.0619,
       "precision": "site",
-      "summary": "The USGS 2014 facility inventory lists copper for this mine. Present operating status is unknown.",
+      "summary": "BHP reported copper production from Antamina in FY 2026.",
       "source": {
         "title": "Mineral facilities of Latin America and the Caribbean",
         "publisher": "U.S. Geological Survey",
@@ -3168,6 +3498,16 @@
         "locator": "MINFAC_LAC.csv · PE3, row 1291 · 2014 source data, public domain",
         "accessed": "2026-11-08",
         "rights": "U.S. Geological Survey, Mineral facilities of Latin America and the Caribbean. Public domain."
+      },
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "bhp-2026-annual-report",
+        "title": "BHP Annual Report 2026",
+        "publisher": "BHP",
+        "url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026",
+        "locator": "Operating and Financial Review → Antamina copper production",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
       }
     },
     {
@@ -3384,11 +3724,11 @@
       "name": "Kinsevere Mine",
       "country": "CD",
       "activity": "Mining · copper",
-      "status": "unknown",
+      "status": "operating",
       "lat": -11.3604,
       "lon": 27.5719,
       "precision": "region",
-      "summary": "The USGS Africa inventory lists copper among the materials reported at this mine. Present operating status is unknown.",
+      "summary": "MMG reported active mining at Kinsevere and increased cathode output in Q3 2026.",
       "source": {
         "title": "Compilation of geospatial data for mineral industries in Africa",
         "publisher": "U.S. Geological Survey",
@@ -3396,6 +3736,16 @@
         "locator": "AFR_Mineral_Facilities · COD019 · 2021 release, CC0 1.0",
         "accessed": "2026-11-08",
         "rights": "U.S. Geological Survey, Compilation of Geospatial Data for the Mineral Industries and Related Infrastructure of Africa. CC0 1.0 Universal."
+      },
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "mmg-2026-q3",
+        "title": "Stable production in third quarter",
+        "publisher": "MMG",
+        "url": "https://www.mmg.com/%E6%8A%A5%E5%91%8A%E5%92%8C%E4%BB%8B%E7%BB%8D/stable-production-in-third-quarter/",
+        "locator": "Kinsevere Q3 2026 copper cathode production and mining activity",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
       }
     },
     {
@@ -3422,11 +3772,11 @@
       "name": "Kinsevere Plant",
       "country": "CD",
       "activity": "Processing · copper",
-      "status": "unknown",
+      "status": "operating",
       "lat": -11.3627,
       "lon": 27.5622,
       "precision": "region",
-      "summary": "The USGS Africa inventory lists copper among the materials reported at this plant. Present operating status is unknown.",
+      "summary": "MMG reported copper cathode production and ongoing ramp-up of the sulphide processing circuit at Kinsevere in Q3 2026.",
       "source": {
         "title": "Compilation of geospatial data for mineral industries in Africa",
         "publisher": "U.S. Geological Survey",
@@ -3434,6 +3784,16 @@
         "locator": "AFR_Mineral_Facilities · COD020 · 2021 release, CC0 1.0",
         "accessed": "2026-11-08",
         "rights": "U.S. Geological Survey, Compilation of Geospatial Data for the Mineral Industries and Related Infrastructure of Africa. CC0 1.0 Universal."
+      },
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "mmg-2026-q3",
+        "title": "Stable production in third quarter",
+        "publisher": "MMG",
+        "url": "https://www.mmg.com/%E6%8A%A5%E5%91%8A%E5%92%8C%E4%BB%8B%E7%BB%8D/stable-production-in-third-quarter/",
+        "locator": "Kinsevere Q3 2026 copper cathode production and mining activity",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
       }
     },
     {
@@ -3574,11 +3934,11 @@
       "name": "Kansanshi Mine",
       "country": "ZM",
       "activity": "Mining · cobalt",
-      "status": "unknown",
+      "status": "operating",
       "lat": -12.0938,
       "lon": 26.4298,
       "precision": "site",
-      "summary": "The USGS Africa inventory lists cobalt among the materials reported at this mine. Present operating status is unknown.",
+      "summary": "First Quantum reported copper production at Kansanshi in Q3 2026.",
       "source": {
         "title": "Compilation of geospatial data for mineral industries in Africa",
         "publisher": "U.S. Geological Survey",
@@ -3586,6 +3946,17 @@
         "locator": "AFR_Mineral_Facilities · ZMB020 · 2021 release, CC0 1.0",
         "accessed": "2026-11-08",
         "rights": "U.S. Geological Survey, Compilation of Geospatial Data for the Mineral Industries and Related Infrastructure of Africa. CC0 1.0 Universal."
+      },
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "first-quantum-2026-q3",
+        "title": "First Quantum Minerals Reports Third Quarter 2026 Results",
+        "publisher": "First Quantum Minerals",
+        "url": "https://www.first-quantum.com/news/first-quantum-minerals-reports-third-quarter-2026-results/",
+        "locator": "Kansanshi copper production",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-10-28"
       }
     },
     {
@@ -4543,11 +4914,11 @@
       "name": "Syrah Balama graphite operation",
       "country": "MZ",
       "activity": "Graphite mining and processing",
-      "status": "unknown",
+      "status": "operating",
       "lat": -13.3093,
       "lon": 38.6612,
       "precision": "region",
-      "summary": "The USGS Africa inventory maps Syrah’s graphite site in Cabo Delgado. The location is approximate.",
+      "summary": "Syrah reported graphite production in the quarter ended September 2026. This status reflects that reported campaign.",
       "source": {
         "title": "Compilation of geospatial data for mineral industries in Africa",
         "publisher": "U.S. Geological Survey",
@@ -4556,7 +4927,18 @@
         "accessed": "2026-11-08",
         "rights": "U.S. Geological Survey, Compilation of Geospatial Data for the Mineral Industries and Related Infrastructure of Africa. CC0 1.0 Universal."
       },
-      "organizationId": "syrah-resources"
+      "organizationId": "syrah-resources",
+      "statusReviewed": "2026-11-08",
+      "statusSource": {
+        "id": "syrah-2026-q3",
+        "title": "September 2026 Quarterly Activities and Cashflow Report",
+        "publisher": "Syrah Resources",
+        "url": "https://company-announcements.afr.com/asx/syr/6788725f-d31a-11f1-a069-b6b1a9c70e34.pdf",
+        "locator": "First-page Balama production and Vidalia commercial ramp-up summary",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-10-29"
+      }
     },
     {
       "id": "redwood-tahoe-campus",
@@ -4601,6 +4983,122 @@
   ],
   "events": [
     {
+      "id": "gopro-karma-relaunch-2017",
+      "name": "GoPro relaunches Karma with a redesigned battery latch",
+      "date": "2017-02-01",
+      "type": "launch",
+      "summary": "GoPro returned Karma to sale in the United States and described the redesigned latch addressing the battery-retention problem.",
+      "source": {
+        "id": "gopro-karma-relaunch-2017",
+        "title": "GoPro's Karma Returns",
+        "publisher": "GoPro",
+        "url": "https://investor.gopro.com/press-releases/press-release-details/2017/GoPros-Karma-Returns/default.aspx",
+        "locator": "U.S. return to sale and redesigned battery latch",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2017-02-01"
+      }
+    },
+    {
+      "id": "ups-flight-forward-part135-2019",
+      "name": "UPS Flight Forward receives FAA air carrier certification",
+      "date": "2019-09-27",
+      "type": "deployment",
+      "summary": "The FAA issued UPS Flight Forward a Part 119 air carrier certificate with Part 135 authority for its drone delivery operation.",
+      "source": {
+        "id": "faa-ipp-final-2021",
+        "title": "UAS Integration Pilot Program Final Report",
+        "publisher": "Federal Aviation Administration",
+        "url": "https://www.faa.gov/sites/faa.gov/files/uas/programs_partnerships/completed/integration_pilot_program/IPP_Final_Report_20210712.pdf",
+        "locator": "North Carolina → UPS Flight Forward September 27, 2019 air carrier certificate and Matternet WakeMed operations",
+        "accessed": "2026-11-08",
+        "rights": "U.S. government report"
+      }
+    },
+    {
+      "id": "ups-matternet-wakemed-deployment-2019",
+      "name": "UPS Flight Forward delivers at WakeMed under Part 135",
+      "date": "2019-09-27",
+      "type": "deployment",
+      "summary": "The FAA recorded UPS Flight Forward’s first Part 135 drone delivery at the WakeMed campus in Raleigh. The integration pilot report identifies its Matternet aircraft.",
+      "source": {
+        "id": "faa-package-delivery-congress-report",
+        "title": "Operations of Unmanned Aircraft Systems Deliveries",
+        "publisher": "Federal Aviation Administration",
+        "url": "https://www.faa.gov/sites/faa.gov/files/PL_117-103_Operations_of_Unmanned_Aircraft_Systems_Deliveries.pdf",
+        "locator": "September 27, 2019 UPS Flight Forward package delivery at WakeMed with Part 135 certification",
+        "accessed": "2026-11-08",
+        "rights": "U.S. government report"
+      }
+    },
+    {
+      "id": "faa-matternet-m2-type-certificate-2022",
+      "name": "FAA issues a type certificate for Matternet’s M2",
+      "date": "2022-09-07",
+      "type": "policy",
+      "summary": "The FAA approved the M2 aircraft type design. The 2019 WakeMed operation and the aircraft type certificate are distinct regulatory milestones.",
+      "source": {
+        "id": "faa-2022-historical-chronology",
+        "title": "2022 Update to FAA Historical Chronology",
+        "publisher": "Federal Aviation Administration",
+        "url": "https://www.faa.gov/sites/faa.gov/files/2022%20Chronology.pdf",
+        "locator": "September 7, 2022 entry, Matternet Model M2 type certificate",
+        "accessed": "2026-11-08",
+        "rights": "U.S. government report"
+      }
+    },
+    {
+      "id": "ti-sherman-sm1-production-2025",
+      "name": "Texas Instruments announces production at Sherman SM1",
+      "date": "2025-12-17",
+      "type": "facility",
+      "summary": "Texas Instruments announced that its new 300 mm Sherman wafer fab had started production.",
+      "source": {
+        "id": "ti-sherman-sm1-2025",
+        "title": "Texas Instruments begins production at its newest 300mm semiconductor manufacturing facility",
+        "publisher": "Texas Instruments",
+        "url": "https://www.ti.com/en-us/about-ti/newsroom/news-releases/2025/texas-instruments-begins-production-at-its-newest-300mm-semiconductor-manufacturing-facility-in-sherman-texas",
+        "locator": "SM1 start of production; Sherman location",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2025-12-17"
+      }
+    },
+    {
+      "id": "mp-independence-first-magnets-2026-report",
+      "name": "MP Materials reports first NdFeB magnets on commercial equipment",
+      "date": "2026-02-26",
+      "type": "facility",
+      "summary": "In its fourth-quarter results, MP Materials reported producing its first NdFeB magnets on commercial equipment at Independence. The timeline date marks publication.",
+      "source": {
+        "id": "mp-materials-2025-results",
+        "title": "MP Materials Reports Fourth Quarter and Full Year 2025 Results",
+        "publisher": "MP Materials",
+        "url": "https://mpmaterials.com/news/mp-materials-reports-fourth-quarter-and-full-year-2025-results",
+        "locator": "Magnetics segment and first NdFeB magnets on commercial equipment",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-02-26"
+      }
+    },
+    {
+      "id": "matternet-m3-unveiling-2026",
+      "name": "Matternet unveils its M3 delivery platform",
+      "date": "2026-09-28",
+      "type": "launch",
+      "summary": "Matternet unveiled the M3. The announcement records a product introduction and describes its certification roadmap.",
+      "source": {
+        "id": "matternet-m3-announcement",
+        "title": "Matternet Unveils M3, Its Next-Generation Autonomous Drone Delivery Platform",
+        "publisher": "Matternet",
+        "url": "https://investor.matternet.com/news-events/press-releases/detail/120/matternet-unveils-m3-its-next-generation-autonomous-drone-delivery-platform",
+        "locator": "M3 platform unveiling and certification status",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-09-28"
+      }
+    },
+    {
       "id": "skydio-battery-2024",
       "name": "Sanctions squeeze Skydio’s X10 battery supply",
       "date": "2024-10-10",
@@ -4617,7 +5115,7 @@
       "effects": [
         {
           "order": 1,
-          "text": "Skydio reported that sanctions cut its access to batteries.",
+          "text": "Skydio reported reduced battery supply after the sanctions.",
           "source": {
             "title": "China's Sanctions on Skydio",
             "publisher": "Skydio",
@@ -5064,16 +5562,20 @@
         },
         {
           "order": 2,
-          "text": "GoPro reported that domestic sales resumed in February 2017.",
+          "text": "GoPro said a redesigned battery latch addressed the retention problem and returned Karma to sale in the United States in February 2017.",
           "source": {
-            "title": "Form 10-Q for the quarter ended March 31, 2017",
+            "id": "gopro-karma-relaunch-2017",
+            "title": "GoPro's Karma Returns",
             "publisher": "GoPro",
-            "url": "https://www.sec.gov/Archives/edgar/data/1500435/000150043517000028/gpro2017-03x3110xq.htm",
-            "locator": "Management discussion and Karma relaunch",
-            "accessed": "2026-11-08"
+            "url": "https://investor.gopro.com/press-releases/press-release-details/2017/GoPros-Karma-Returns/default.aspx",
+            "locator": "U.S. return to sale and redesigned battery latch",
+            "accessed": "2026-11-08",
+            "rights": "Citation only",
+            "published": "2017-02-01"
           }
         }
-      ]
+      ],
+      "scenarioId": "gopro-karma-battery-retention"
     },
     {
       "id": "us-part-107-2016",
@@ -5555,6 +6057,425 @@
     }
   ],
   "relationships": [
+    {
+      "id": "lynas-mt-weld-feeds-kalgoorlie",
+      "from": {
+        "section": "facilities",
+        "id": "lynas-mt-weld"
+      },
+      "to": {
+        "section": "facilities",
+        "id": "lynas-kalgoorlie"
+      },
+      "relation": "Supplies rare-earth concentrate",
+      "summary": "Lynas identifies Mt Weld concentrate as an input to the Kalgoorlie cracking and leaching facility.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "lynas-2025-sustainability",
+        "title": "Lynas 2025 Sustainability Report",
+        "publisher": "Lynas Rare Earths",
+        "url": "https://lynasrareearths.com/wp-content/uploads/2025/10/LYC-Sustainability-Report-2025-Oct25V2-1.pdf",
+        "locator": "Our Operations → Mt Weld, Kalgoorlie and Lynas Malaysia material flow",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "id": "lynas-kalgoorlie-feeds-gebeng",
+      "from": {
+        "section": "facilities",
+        "id": "lynas-kalgoorlie"
+      },
+      "to": {
+        "section": "facilities",
+        "id": "lynas-gebeng"
+      },
+      "relation": "Feeds further separation",
+      "summary": "Lynas identifies its Malaysian plant as the downstream destination for mixed rare-earth carbonate produced at Kalgoorlie.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "lynas-kalgoorlie",
+        "title": "Kalgoorlie, Western Australia",
+        "publisher": "Lynas Rare Earths",
+        "url": "https://lynasrareearths.com/kalgoorlie-western-australia/",
+        "locator": "Cracking and leaching process; mixed rare-earth carbonate shipment to Malaysia",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "id": "mp-mountain-pass-feeds-independence",
+      "from": {
+        "section": "facilities",
+        "id": "mountain-pass-rare-earth"
+      },
+      "to": {
+        "section": "facilities",
+        "id": "mp-independence-fort-worth"
+      },
+      "relation": "Supplies refined rare-earth material",
+      "summary": "MP Materials names Mountain Pass as the input source to Independence. The source gives no individual drone motor buyer.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "mp-materials-magnetics",
+        "title": "Magnetics",
+        "publisher": "MP Materials",
+        "url": "https://mpmaterials.com/magnetics/",
+        "locator": "Independence facility and Mountain Pass feedstock",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "id": "ti-sm1-start-of-production",
+      "from": {
+        "section": "facilities",
+        "id": "ti-sherman-sm1"
+      },
+      "to": {
+        "section": "history",
+        "id": "ti-sherman-sm1-production-2025"
+      },
+      "relation": "Production milestone",
+      "summary": "Texas Instruments announced the fab’s start of production in December 2025.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "ti-sherman-sm1-2025",
+        "title": "Texas Instruments begins production at its newest 300mm semiconductor manufacturing facility",
+        "publisher": "Texas Instruments",
+        "url": "https://www.ti.com/en-us/about-ti/newsroom/news-releases/2025/texas-instruments-begins-production-at-its-newest-300mm-semiconductor-manufacturing-facility-in-sherman-texas",
+        "locator": "SM1 start of production; Sherman location",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2025-12-17"
+      }
+    },
+    {
+      "id": "mp-independence-first-commercial-equipment",
+      "from": {
+        "section": "facilities",
+        "id": "mp-independence-fort-worth"
+      },
+      "to": {
+        "section": "history",
+        "id": "mp-independence-first-magnets-2026-report"
+      },
+      "relation": "Magnet production milestone",
+      "summary": "The operator reported first NdFeB magnets made on commercial equipment.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "mp-materials-2025-results",
+        "title": "MP Materials Reports Fourth Quarter and Full Year 2025 Results",
+        "publisher": "MP Materials",
+        "url": "https://mpmaterials.com/news/mp-materials-reports-fourth-quarter-and-full-year-2025-results",
+        "locator": "Magnetics segment and first NdFeB magnets on commercial equipment",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-02-26"
+      }
+    },
+    {
+      "id": "modalai-starling-amprius-cell-configuration",
+      "from": {
+        "section": "aircraft",
+        "id": "modalai-starling-2-max"
+      },
+      "to": {
+        "section": "organizations",
+        "id": "amprius"
+      },
+      "relation": "Documents an Amprius cell configuration",
+      "summary": "ModalAI lists a flight-time figure with Amprius cells. The source does not disclose the cells’ production site or the purchasing arrangement.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "modalai-starling-2-max-datasheet",
+        "title": "Starling 2 Max datasheet",
+        "publisher": "ModalAI",
+        "url": "https://docs.modalai.com/starling-2-max-datasheet/",
+        "locator": "Specifications → Flight Time with Amprius cells",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "id": "matternet-m2-mountain-view-assembly",
+      "from": {
+        "section": "aircraft",
+        "id": "matternet-m2"
+      },
+      "to": {
+        "section": "facilities",
+        "id": "matternet-mountain-view"
+      },
+      "relation": "Assembled and acceptance-tested at",
+      "summary": "Matternet identifies Mountain View for aircraft and ground-station production, acceptance testing and delivery.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "matternet-2026-8k",
+        "title": "Matternet 2026 Form 8-K",
+        "publisher": "Matternet",
+        "url": "https://investor.matternet.com/sec-filings/all-sec-filings/content/0001213900-26-062961/ea0292214-8k_matternet.htm",
+        "locator": "Manufacturing and Supply Chain; Properties, Mountain View production facility",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-05-29"
+      }
+    },
+    {
+      "id": "matternet-m2-cloud-control",
+      "from": {
+        "section": "aircraft",
+        "id": "matternet-m2"
+      },
+      "to": {
+        "section": "organizations",
+        "id": "matternet"
+      },
+      "relation": "Uses Matternet Cloud for command and control",
+      "summary": "The manufacturer lists cellular connectivity to its cloud system for automated operations.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "matternet-m2-aircraft",
+        "title": "M2 Aircraft",
+        "publisher": "Matternet",
+        "url": "https://www.matternet.com/our-system-aircraft-m2",
+        "locator": "Specs → Cellular connectivity to Matternet Cloud for automated operations",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "id": "ups-flight-forward-received-part135",
+      "from": {
+        "section": "organizations",
+        "id": "ups-flight-forward"
+      },
+      "to": {
+        "section": "history",
+        "id": "ups-flight-forward-part135-2019"
+      },
+      "relation": "Received air carrier authority",
+      "summary": "FAA documents the September 27, 2019 award of the air carrier certificate to UPS Flight Forward.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "faa-ipp-final-2021",
+        "title": "UAS Integration Pilot Program Final Report",
+        "publisher": "Federal Aviation Administration",
+        "url": "https://www.faa.gov/sites/faa.gov/files/uas/programs_partnerships/completed/integration_pilot_program/IPP_Final_Report_20210712.pdf",
+        "locator": "North Carolina → UPS Flight Forward September 27, 2019 air carrier certificate and Matternet WakeMed operations",
+        "accessed": "2026-11-08",
+        "rights": "U.S. government report"
+      }
+    },
+    {
+      "id": "ups-part135-wakemed-deployment",
+      "from": {
+        "section": "history",
+        "id": "ups-flight-forward-part135-2019"
+      },
+      "to": {
+        "section": "history",
+        "id": "ups-matternet-wakemed-deployment-2019"
+      },
+      "relation": "Used for first Part 135 WakeMed delivery",
+      "summary": "The FAA dates the first package delivery under the certificate to September 27, 2019 at WakeMed.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "faa-package-delivery-congress-report",
+        "title": "Operations of Unmanned Aircraft Systems Deliveries",
+        "publisher": "Federal Aviation Administration",
+        "url": "https://www.faa.gov/sites/faa.gov/files/PL_117-103_Operations_of_Unmanned_Aircraft_Systems_Deliveries.pdf",
+        "locator": "September 27, 2019 UPS Flight Forward package delivery at WakeMed with Part 135 certification",
+        "accessed": "2026-11-08",
+        "rights": "U.S. government report"
+      }
+    },
+    {
+      "id": "matternet-m2-used-wakemed-ipp",
+      "from": {
+        "section": "aircraft",
+        "id": "matternet-m2"
+      },
+      "to": {
+        "section": "history",
+        "id": "ups-matternet-wakemed-deployment-2019"
+      },
+      "relation": "Aircraft in WakeMed operation",
+      "summary": "FAA’s North Carolina pilot program report identifies Matternet in the UPS Flight Forward WakeMed operation.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "faa-ipp-final-2021",
+        "title": "UAS Integration Pilot Program Final Report",
+        "publisher": "Federal Aviation Administration",
+        "url": "https://www.faa.gov/sites/faa.gov/files/uas/programs_partnerships/completed/integration_pilot_program/IPP_Final_Report_20210712.pdf",
+        "locator": "North Carolina → UPS Flight Forward September 27, 2019 air carrier certificate and Matternet WakeMed operations",
+        "accessed": "2026-11-08",
+        "rights": "U.S. government report"
+      }
+    },
+    {
+      "id": "wakemed-site-first-ups-part135",
+      "from": {
+        "section": "facilities",
+        "id": "wakemed-raleigh"
+      },
+      "to": {
+        "section": "history",
+        "id": "ups-matternet-wakemed-deployment-2019"
+      },
+      "relation": "Site of Part 135 delivery",
+      "summary": "FAA identifies the WakeMed campus as the location of the first delivery under the certificate.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "faa-package-delivery-congress-report",
+        "title": "Operations of Unmanned Aircraft Systems Deliveries",
+        "publisher": "Federal Aviation Administration",
+        "url": "https://www.faa.gov/sites/faa.gov/files/PL_117-103_Operations_of_Unmanned_Aircraft_Systems_Deliveries.pdf",
+        "locator": "September 27, 2019 UPS Flight Forward package delivery at WakeMed with Part 135 certification",
+        "accessed": "2026-11-08",
+        "rights": "U.S. government report"
+      }
+    },
+    {
+      "id": "matternet-m2-faa-type-certification",
+      "from": {
+        "section": "aircraft",
+        "id": "matternet-m2"
+      },
+      "to": {
+        "section": "history",
+        "id": "faa-matternet-m2-type-certificate-2022"
+      },
+      "relation": "Aircraft type design approved",
+      "summary": "FAA records the September 7, 2022 M2 type certificate, distinct from operating authority held by operators.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "faa-2022-historical-chronology",
+        "title": "2022 Update to FAA Historical Chronology",
+        "publisher": "Federal Aviation Administration",
+        "url": "https://www.faa.gov/sites/faa.gov/files/2022%20Chronology.pdf",
+        "locator": "September 7, 2022 entry, Matternet Model M2 type certificate",
+        "accessed": "2026-11-08",
+        "rights": "U.S. government report"
+      }
+    },
+    {
+      "id": "matternet-unveiled-m3",
+      "from": {
+        "section": "organizations",
+        "id": "matternet"
+      },
+      "to": {
+        "section": "history",
+        "id": "matternet-m3-unveiling-2026"
+      },
+      "relation": "Unveiled platform",
+      "summary": "Matternet announced its next-generation M3 delivery platform in September 2026.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "matternet-m3-announcement",
+        "title": "Matternet Unveils M3, Its Next-Generation Autonomous Drone Delivery Platform",
+        "publisher": "Matternet",
+        "url": "https://investor.matternet.com/news-events/press-releases/detail/120/matternet-unveils-m3-its-next-generation-autonomous-drone-delivery-platform",
+        "locator": "M3 platform unveiling and certification status",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2026-09-28"
+      }
+    },
+    {
+      "id": "freefly-astro-px4-software",
+      "from": {
+        "section": "aircraft",
+        "id": "freefly-astro"
+      },
+      "to": {
+        "section": "organizations",
+        "id": "px4"
+      },
+      "relation": "Uses PX4-based flight software",
+      "summary": "Freefly’s Astro v2.0 release notes identify PX4 v1.15/APX4 3.2 in that software version.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "freefly-astro-firmware",
+        "title": "Astro Software v2.0 — What's New",
+        "publisher": "Freefly Systems",
+        "url": "https://docs.freeflysystems.com/astro/maintenance/software-release-notes/astro-software-v2.0-whats-new",
+        "locator": "Firmware notes → PX4 v1.15/APX4 3.2",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "id": "freefly-astro-woodinville-repair",
+      "from": {
+        "section": "aircraft",
+        "id": "freefly-astro"
+      },
+      "to": {
+        "section": "facilities",
+        "id": "freefly-woodinville"
+      },
+      "relation": "Manufacturer service and repair",
+      "summary": "Freefly lists Astro as a serviceable aircraft and identifies Woodinville as the repair destination after troubleshooting.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "freefly-astro-repair",
+        "title": "What equipment does Freefly service/repair?",
+        "publisher": "Freefly Systems",
+        "url": "https://freeflysystems.com/knowledge-base/how-can-i-send-in-a-movi-alta-or-other-freefly-accessory-for-service-or-repair",
+        "locator": "Astro in supported products and Woodinville shipping location",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "id": "battery-redwood-recovery-pathway",
+      "from": {
+        "section": "parts",
+        "id": "battery"
+      },
+      "to": {
+        "section": "organizations",
+        "id": "redwood-materials"
+      },
+      "relation": "Illustrates lithium-ion material recovery",
+      "summary": "Redwood describes recycling rechargeable lithium-ion batteries. This illustrates a recovery pathway without assigning a specific aircraft or pack to Redwood.",
+      "evidenceType": "representative",
+      "source": {
+        "id": "redwood-battery-materials",
+        "title": "What batteries can be recycled?",
+        "publisher": "Redwood Materials",
+        "url": "https://www.redwoodmaterials.com/resources/what-batteries-can-be-recycled/",
+        "locator": "Rechargeable lithium-ion batteries and materials recovery",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "id": "karma-recall-followed-by-redesign",
+      "from": {
+        "section": "history",
+        "id": "gopro-karma-recall-2016"
+      },
+      "to": {
+        "section": "history",
+        "id": "gopro-karma-relaunch-2017"
+      },
+      "relation": "Followed by redesigned latch and return to sale",
+      "summary": "GoPro linked the February 2017 relaunch and redesigned battery latch to the issue behind the 2016 recall.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "gopro-karma-relaunch-2017",
+        "title": "GoPro's Karma Returns",
+        "publisher": "GoPro",
+        "url": "https://investor.gopro.com/press-releases/press-release-details/2017/GoPros-Karma-Returns/default.aspx",
+        "locator": "U.S. return to sale and redesigned battery latch",
+        "accessed": "2026-11-08",
+        "rights": "Citation only",
+        "published": "2017-02-01"
+      }
+    },
     {
       "id": "ups-operates-matternet-m2",
       "from": {

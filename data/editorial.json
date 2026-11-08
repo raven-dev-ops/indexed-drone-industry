@@ -25,7 +25,6 @@
         "locator": "Propeller propulsion system and momentum model"
       },
       "materials": "Propeller material is not listed for the X500 kit on this source. Check the propeller maker before assigning a polymer or composite.",
-      "pathway": "motors",
       "lesson": "flight"
     },
     {
@@ -67,7 +66,6 @@
         "locator": "SKU 30125 · Specifications and Package Includes"
       },
       "materials": "A representative board routes current on copper conductors. Exact materials for the kit board are undisclosed.",
-      "pathway": "electronics",
       "lesson": "electronics"
     },
     {
@@ -901,7 +899,18 @@
           "id": "alternate",
           "name": "Replacement supply availability",
           "stage": "Supply",
-          "unknown": true
+          "unknown": true,
+          "source": {
+            "title": "China’s sanctions on Skydio",
+            "publisher": "Skydio",
+            "url": "https://www.skydio.com/blog/chinas-sanctions-on-skydio",
+            "locator": "October 30, 2024 customer letter, expected alternate supply",
+            "id": "skydio-replacement-forecast",
+            "accessed": "2026-11-08",
+            "published": "2024-10-30",
+            "rights": "Citation only"
+          },
+          "timing": "In October 2024, Skydio expected replacement sources to come online in spring 2025. This was a forecast for supplier readiness."
         },
         {
           "id": "batteries",
@@ -1089,7 +1098,14 @@
       },
       "pathway": "motors",
       "affects": "Permanent-magnet motors",
-      "mitigation": "Qualify alternate production routes and distinguish the constraints at each stage."
+      "mitigation": "Qualify alternate production routes and distinguish the constraints at each stage.",
+      "parts": [
+        "motor"
+      ],
+      "segments": [
+        "fpv",
+        "research"
+      ]
     },
     {
       "id": "qualified-packs",
@@ -1103,7 +1119,14 @@
       },
       "pathway": "battery",
       "affects": "Aircraft delivery and spare packs",
-      "mitigation": "Qualify a replacement source and communicate allocation and support changes."
+      "mitigation": "Qualify a replacement source and communicate allocation and support changes.",
+      "parts": [
+        "battery"
+      ],
+      "segments": [
+        "public-safety",
+        "delivery"
+      ]
     },
     {
       "id": "chip-packaging",
@@ -1117,7 +1140,40 @@
       },
       "pathway": "electronics",
       "affects": "Control and power electronics",
-      "mitigation": "Assess fabrication and packaging exposure separately when qualifying alternative parts."
+      "mitigation": "Assess fabrication and packaging exposure separately when qualifying alternative parts.",
+      "parts": [
+        "flight-controller",
+        "radio"
+      ],
+      "segments": [
+        "research",
+        "enterprise"
+      ]
+    },
+    {
+      "id": "composite-material-qualification",
+      "name": "Qualification of composite materials",
+      "summary": "Aerospace composite grades can depend on a narrow set of qualified sources. A material substitution can require qualification even when another supplier makes a similar product.",
+      "source": {
+        "id": "hexcel-2022-raw-materials",
+        "title": "Hexcel 2022 Form 10-K",
+        "publisher": "Hexcel",
+        "url": "https://www.sec.gov/Archives/edgar/data/717605/000095017023002099/hxl-20221231.htm",
+        "locator": "Part I, Item 1, Raw Materials and Manufacturing",
+        "accessed": "2026-11-08",
+        "rights": "Citation only"
+      },
+      "pathway": "composites",
+      "affects": "Designs built around specified laminate or fiber properties. This is an industrial exposure example and supplier data for indexed drone frames varies by model.",
+      "mitigation": "Qualify an alternative grade or supplier against the design requirements before relying on it as a substitute.",
+      "parts": [
+        "frame",
+        "wing"
+      ],
+      "segments": [
+        "enterprise",
+        "research"
+      ]
     }
   ],
   "regulations": [
@@ -1185,6 +1241,40 @@
       },
       "jurisdiction": "United States",
       "axis": "Procurement"
+    },
+    {
+      "id": "eu-mini-4-pro-c0",
+      "name": "DJI Mini 4 Pro C0 class mark",
+      "summary": "EASA lists model MT4MFVD with the C0 class mark under PR-35. Check the aircraft label against the model code.",
+      "source": {
+        "id": "easa-mini-4-pro-c0",
+        "title": "PR-35 – MT4MFVD",
+        "publisher": "EASA",
+        "url": "https://www.easa.europa.eu/en/domains/drones-air-mobility/drones-evtol-designs/drones-eu-operations/pr-35-mt4mfvd",
+        "locator": "Drone Identification and Drone Design Specifications, Drone Class Mark",
+        "accessed": "2026-11-08",
+        "published": "2024-07-11",
+        "rights": "Citation only"
+      },
+      "jurisdiction": "EU",
+      "axis": "Equipment"
+    },
+    {
+      "id": "eu-mini-4-pro-c1",
+      "name": "DJI Mini 4 Pro C1 class mark",
+      "summary": "EASA lists model MT4MFVDB with the C1 class mark under PR-47. Check the aircraft label against the model code.",
+      "source": {
+        "id": "easa-mini-4-pro-c1",
+        "title": "PR-47 – MT4MFVDB",
+        "publisher": "EASA",
+        "url": "https://www.easa.europa.eu/en/domains/drones-air-mobility/drones-evtol-designs/drones-eu-operations/pr-47-mt4mfvdb",
+        "locator": "Drone Identification and Drone Design Specifications, Drone Class Mark",
+        "accessed": "2026-11-08",
+        "published": "2024-07-11",
+        "rights": "Citation only"
+      },
+      "jurisdiction": "EU",
+      "axis": "Equipment"
     }
   ],
   "indicators": [
@@ -1257,6 +1347,56 @@
       "segment": "Wing commercial delivery operations",
       "value": 400000,
       "unit": "deliveries (reported minimum)"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "mini-4-pro-c0-equipment",
+      "from": {
+        "section": "aircraft",
+        "id": "dji-mini-4-pro"
+      },
+      "to": {
+        "section": "regulations",
+        "id": "eu-mini-4-pro-c0"
+      },
+      "relation": "EU equipment record",
+      "summary": "EASA lists the MT4MFVD model under this class mark. The record applies to that model code.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "easa-mini-4-pro-c0",
+        "title": "PR-35 – MT4MFVD",
+        "publisher": "EASA",
+        "url": "https://www.easa.europa.eu/en/domains/drones-air-mobility/drones-evtol-designs/drones-eu-operations/pr-35-mt4mfvd",
+        "locator": "Drone Identification and Drone Design Specifications, Drone Class Mark",
+        "accessed": "2026-11-08",
+        "published": "2024-07-11",
+        "rights": "Citation only"
+      }
+    },
+    {
+      "id": "mini-4-pro-c1-equipment",
+      "from": {
+        "section": "aircraft",
+        "id": "dji-mini-4-pro"
+      },
+      "to": {
+        "section": "regulations",
+        "id": "eu-mini-4-pro-c1"
+      },
+      "relation": "EU equipment record",
+      "summary": "EASA lists the MT4MFVDB model under this class mark. The record applies to that model code.",
+      "evidenceType": "documented",
+      "source": {
+        "id": "easa-mini-4-pro-c1",
+        "title": "PR-47 – MT4MFVDB",
+        "publisher": "EASA",
+        "url": "https://www.easa.europa.eu/en/domains/drones-air-mobility/drones-evtol-designs/drones-eu-operations/pr-47-mt4mfvdb",
+        "locator": "Drone Identification and Drone Design Specifications, Drone Class Mark",
+        "accessed": "2026-11-08",
+        "published": "2024-07-11",
+        "rights": "Citation only"
+      }
     }
   ]
 }

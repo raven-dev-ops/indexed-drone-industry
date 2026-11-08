@@ -1,11 +1,15 @@
 ---
 import Site from '../../layouts/Site.astro';
 import Compare from '../../components/Compare';
+import ComponentCompare from '../../components/ComponentCompare';
 import Atlas from '../../components/Atlas';
 import Market from '../../components/Market.astro';
+import SupplyScope from '../../components/SupplyScope';
+import GuidedLearning from '../../components/learning/GuidedLearning.astro';
 import { PropulsionLab, SurveyLab } from '../../components/Labs';
-import { aircraft, collections, coverage, facilities, launchThresholds, lookupModel, observations, type Section } from '../../lib/data';
+import { aircraft, collections, coverage, evidenceCoverage, facilities, launchThresholds, lookupModel, observations, type Section } from '../../lib/data';
 import { labels, page, path } from '../../lib/navigation';
+import { supplyPaths } from '../../lib/supply-links';
 import { forms, segments } from '../../lib/schema';
 const descriptions: Record<string,string> = {
   aircraft:'Browse civilian aircraft by mission and airframe. Every 3D view identifies the evidence behind its layout.',
@@ -15,7 +19,7 @@ const descriptions: Record<string,string> = {
   facilities:'Search publicly documented extraction, production, assembly, test, and recycling sites.',
   history:'Explore dated disruptions, deployments, industrial changes, and regulatory milestones.',
   supply:'Explore material pathways and see how interruptions propagate through modeled dependencies.',
-  learn:'Eight short lessons from the airframe and flight to supply chains, operations, and recycling.',
+  learn:'Eight guided lessons from the airframe and flight to supply chains, operations, and recycling.',
   bottlenecks:'See what limits supply and which parts of the industry depend on it.',
   regulations:'Browse equipment, operations, and procurement sources by jurisdiction.',
   market:'Explore sourced drone shipments, sales, and market shares by geography, segment, and period.',
@@ -41,16 +45,25 @@ const counterLabels: Record<keyof typeof coverage,string> = {
   pathways:'Supply pathways', organizations:'Organizations and declared makes', facilities:'Public facilities', countries:'Countries and territories',
   disruptions:'Disruption cases', labs:'Interactive labs', lessons:'Learning modules',
 };
+const coverageBreakdown = [
+  {title:'Anatomy fidelity', rows: [['Documented assembly', evidenceCoverage.anatomy['documented-assembly']], ['Exterior schematic', evidenceCoverage.anatomy['exterior-schematic']], ['Representative class diagram', evidenceCoverage.anatomy.representative]]},
+  {title:'Evidence relationships', rows: ['documented','representative','unknown'].map(label => [label, evidenceCoverage.relationships[label]] as const)},
+  {title:'Supply model inputs', rows: [...['documented','representative','unknown'].map(label => [label, evidenceCoverage.supplyInputs[label]] as const), ['Published lead time', evidenceCoverage.timedSupplyInputs]]},
+  {title:'Facility status and dates', rows: [...['operating','announced','closed','unknown'].map(label => [label, evidenceCoverage.facilityStatus[label]] as const), ['Dated observations', evidenceCoverage.datedFacilities], ['Statuses reviewed', evidenceCoverage.reviewedFacilityStatus]]},
+  {title:'Disruption evidence', rows: [['First-order effects only', evidenceCoverage.disruptionDepth['1']], ['Two observed orders', evidenceCoverage.disruptionDepth['2']], ['Three observed orders', evidenceCoverage.disruptionDepth['3']], ['Replayable cases', evidenceCoverage.replayableCases]]},
+  {title:'Market measures', rows: [['Comparable share cohorts', evidenceCoverage.marketCohorts], ...Object.entries(evidenceCoverage.marketMeasures).map(([label,value]) => [label.replaceAll('-', ' '), value] as const)]},
+];
 ---
 <Site title={title} description={descriptions[section]} section={section}>
   <header class="pagehead"><span class="eyebrow">The index / {section === 'atlas' ? 'Geography' : 'Explore'}</span><h1>{title}</h1><p class="lede">{descriptions[section]}</p>
-    {section === 'aircraft' && <div class="actions"><a class="button small" href={page('compare')}>Compare two aircraft</a><a class="button secondary small" href={page('aircraft','holybro-x500-v2')}>Flagship teardown</a></div>}
+    {section === 'aircraft' && <div class="actions"><a class="button small" href={page('compare')}>Compare two aircraft</a><a class="button secondary small" href={page('aircraft','holybro-x500-v2')}>Flagship teardown</a><a href={path('journeys/')}>Browse guided journeys</a></div>}
   </header>
 
-  {section === 'compare' && <Compare aircraft={aircraft} base={path()} client:load />}
+  {section === 'compare' && <><Compare aircraft={aircraft} base={path()} client:load /><ComponentCompare base={path()} client:visible /></>}
   {section === 'labs' && <div class="grid two"><PropulsionLab client:load /><SurveyLab client:visible /></div>}
   {section === 'atlas' && <Atlas facilities={facilities} observations={observations} base={path()} client:load />}
   {section === 'market' && <Market entries={collections.market} />}
+  {section === 'learn' && <GuidedLearning />}
   {section === 'search' && <>
     <div id="search-widget" data-base={path()} class="panel"></div>
     <p class="note" id="search-browse">Browse <a href={page('aircraft')}>aircraft</a>, <a href={page('parts')}>parts</a>, or <a href={page('history')}>history</a>.</p>
@@ -89,15 +102,23 @@ const counterLabels: Record<keyof typeof coverage,string> = {
     <div class="table-wrap"><table><thead><tr><th scope="col">Coverage</th><th scope="col">In this snapshot</th><th scope="col">Launch target</th></tr></thead><tbody>
       {Object.entries(coverage).map(([key,value]) => <tr><th scope="row">{counterLabels[key as keyof typeof coverage]}</th><td>{value}</td><td>{launchThresholds[key as keyof typeof coverage]}</td></tr>)}
     </tbody></table></div>
+    <section class="section-block grid two" aria-label="Evidence depth">
+      {coverageBreakdown.map(group => <article class="panel"><h2>{group.title}</h2><dl>
+        {group.rows.map(([label,value]) => <div><dt>{label}</dt><dd>{value ?? 0}</dd></div>)}
+      </dl></article>)}
+    </section>
     <div class="section-block grid two">
       <article class="panel"><h2>How evidence is labeled</h2><p><strong>Documented</strong> connects claims supported by a specific source. <strong>Representative</strong> illustrates a class or industrial process. <strong>Unknown</strong> means the evidence available here cannot resolve the claim.</p><p>Country production does not establish a supplier relationship for any individual aircraft.</p></article>
       <article class="panel"><h2>Coverage gaps</h2><p>Manufacturers rarely disclose complete internal assemblies or supplier tiers. Facility records have different observation dates and precision. Energy and labor observations are regional. The market page lists published indicators with different geographies and methods.</p><p>Defense coverage is limited to public policy or procurement context for relevant organizations.</p></article>
     </div>
   </>}
-  {section === 'supply' && <p class="note">Representative pathways explain the industry process. Aircraft-specific connections require a source naming that relationship.</p>}
+  {section === 'supply' && <>
+    <p class="note">Representative pathways explain the industry process. Aircraft-specific connections require a source naming that relationship.</p>
+    <SupplyScope paths={supplyPaths} client:load />
+  </>}
   {section === 'organizations' && <p class="note">Entries marked as FAA-declared makes are names appearing in a declaration dataset. A declared make can be a brand or an individual producer.</p>}
 
-  {section !== 'market' && ordered.length > 0 && <div data-filter-root>
+  {!['market', 'learn', 'supply'].includes(section) && ordered.length > 0 && <div data-filter-root>
     <div class="controls">
       <label>Filter {title.toLowerCase()}<input type="search" data-filter-search placeholder="Type to filter this list" /></label>
       {categories.length > 0 && <label>{section === 'aircraft' ? 'Mission' : 'Category'}<select data-filter-category><option value="">All categories</option>{categories.map(([id,name]) => <option value={id}>{name}</option>)}</select></label>}

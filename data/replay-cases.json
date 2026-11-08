@@ -1,0 +1,56 @@
+[
+  {
+    "id": "gopro-karma-battery-retention",
+    "name": "GoPro Karma battery retention and sales interruption",
+    "summary": "Interrupt the original battery retention mechanism to replay the dependencies behind the 2016 Karma recall. GoPro observed power failures in some aircraft. The graph represents the affected original configuration and sales program. The historical record separately documents refunds and the relaunch with a redesigned latch.",
+    "mode": "case-study",
+    "event": "gopro-karma-recall-2016",
+    "source": {
+      "id": "gopro-karma-relaunch-2017",
+      "title": "GoPro's Karma Returns",
+      "publisher": "GoPro",
+      "url": "https://investor.gopro.com/press-releases/press-release-details/2017/GoPros-Karma-Returns/default.aspx",
+      "locator": "Recall cause, redesigned battery latch, and return to sale",
+      "published": "2017-02-01",
+      "accessed": "2026-11-08",
+      "rights": "Citation only"
+    },
+    "nodes": [
+      { "id": "battery-retention", "name": "Original battery retention", "stage": "Component" },
+      { "id": "power-continuity", "name": "Electrical power continuity", "stage": "Aircraft" },
+      { "id": "original-sale-program", "name": "Original Karma available for sale", "stage": "Distribution" }
+    ],
+    "inputs": [
+      {
+        "target": "power-continuity",
+        "alternatives": ["battery-retention"],
+        "evidenceType": "documented",
+        "source": {
+          "id": "gopro-karma-relaunch-2017",
+          "title": "GoPro's Karma Returns",
+          "publisher": "GoPro",
+          "url": "https://investor.gopro.com/press-releases/press-release-details/2017/GoPros-Karma-Returns/default.aspx",
+          "locator": "Mechanical issue securing the battery and resulting loss of power",
+          "published": "2017-02-01",
+          "accessed": "2026-11-08",
+          "rights": "Citation only"
+        }
+      },
+      {
+        "target": "original-sale-program",
+        "alternatives": ["power-continuity"],
+        "evidenceType": "documented",
+        "source": {
+          "id": "gopro-karma-recall-2016",
+          "title": "GoPro Announces Karma Recall and Refund Program",
+          "publisher": "GoPro",
+          "url": "https://investor.gopro.com/press-releases/press-release-details/2016/GoPro-Announces-Karma-Recall-and-Refund-Program/default.aspx",
+          "locator": "Recall and refund announcement following reported loss of power",
+          "published": "2016-11-08",
+          "accessed": "2026-11-08",
+          "rights": "Citation only"
+        }
+      }
+    ]
+  }
+]
