@@ -1,27 +1,29 @@
 # Release and rollback
 
-## Prepare in private staging
+## Set up a clone
 
-Develop and review in the private staging repository. Use local builds or access-controlled previews. Build from a clean candidate commit with the pinned Node and pnpm versions. Set `SITE_URL` to the target site origin and `SITE_BASE` to its path prefix when the host serves the site below a subpath.
+Run the installer once after cloning, and again when the release workflow files change.
 
 ```sh
-pnpm install --frozen-lockfile
-pnpm exec playwright install chromium
-pnpm check
-pnpm test
-pnpm build
-pnpm test:e2e
-pnpm release:check
+node scripts/release-workflow/install.mjs
 ```
 
-CI should pass on the candidate commit. Use the production preview to check the X500 teardown and keyboard-accessible part list, comparison conditions, map and table, a supply interruption, search, and downloads. Verify the site works at its planned base path. Compare the coverage page with the release gate and resolve unmet launch criteria before v1.
+The installer adds `git verify-release` and a pre-push hook to this clone and its linked worktrees. It keeps previous verification results and stops if an unrelated hook, alias, or custom hooks path is already configured. Review that configuration before installing. GitHub's CI and branch rules still apply to remote changes.
 
-## Publish v1 from a separate repository
+## Develop and verify locally
 
-1. Review the full public snapshot, including hidden configuration, repository metadata, assets, data and their licenses. Check evidence, attributions, rights and sensitive material. Confirm that a fresh clone can build and that the public owner, repository name and deployment target are correct.
-2. Record the approved staging commit and release checks. Export the approved tracked tree into a new public repository under the approved owner. Use a clean public history. Keep staging access restricted. Enable private vulnerability reports and configure CI and the deployment target.
-3. Run the checks against the public candidate. Push tag `v1.0.0` for the approved public commit to trigger the GitHub Pages workflow. That workflow uses the tag as `SNAPSHOT_VERSION` in the static build. Verify core routes and download files on the public URL, then publish the notes and the deployed data files, `release.json`, and `SHA256SUMS.txt` together.
-4. Download the release artifacts and verify their SHA-256 hashes against `SHA256SUMS.txt`. For example, compare the hash produced by `Get-FileHash -Algorithm SHA256 <file>` on Windows or `sha256sum <file>` on Linux. Preserve the tagged artifacts and checksum file as a matched set.
+Start from the synced `main` and develop on a local branch. Preview with `pnpm dev`. Commit the candidate, then run `git verify-release` from a clean checkout before pushing. For a planned release, use `git verify-release v1.2.0`, substituting the actual version.
+
+The command uses the pinned Node and pnpm versions to install dependencies, check types, run unit and Chromium tests, build with the production site prefix, and check release readiness. A pass records the exact Git tree tested. The hook checks that record before any branch or release tag push. A new public release tag also needs a pass for its version and must point to the current public `main` commit.
+
+## Promote and publish
+
+Contributors using a public clone can push a verified branch to their normal PR remote. The following steps are for maintainers promoting changes from private staging.
+
+1. Push the locally verified branch to private staging and wait for CI. In the staging checkout, `origin` points to private staging. In a clone of the public repository, `origin` points to the public repository and the hook recognizes it by URL.
+2. From a staging checkout, add the public remote if needed with `git remote add public https://github.com/raven-dev-ops/indexed-drone-industry.git`. Fetch `public main` and create a clean branch based on `public/main` in a separate worktree. Apply the approved changes there as a patch or cherry-pick. Compare its Git tree with the verified staging tree and run local verification if the files differ. The hook protects the public repository from private ancestry. Review evidence, licenses, and the public diff before pushing the PR.
+3. Wait for public PR checks and review, then merge. Fetch public `main` again. Confirm the merge contains the files verified for the release version, then create and push the new tag from that commit. GitHub Pages builds and deploys the tag using its version as `SNAPSHOT_VERSION`.
+4. Verify the live site and download files. Publish release notes and the deployed assets, including `release.json` and `SHA256SUMS.txt`. Download the release assets and verify their SHA-256 hashes with `Get-FileHash -Algorithm SHA256 <file>` on Windows or `sha256sum <file>` on Linux. Sync the published files back to local and private staging `main` so the next update starts from the release.
 
 Keep every tagged release immutable. A correction gets a new version and a new checksum file. `/data/v1/` identifies the data interface, and a tagged release identifies the exact snapshot.
 

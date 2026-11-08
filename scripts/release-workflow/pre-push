@@ -1,0 +1,60 @@
+#!/bin/sh
+# indexed-drone-industry release workflow
+set -eu
+
+remote_url=$(printf '%s' "$2" | tr '[:upper:]' '[:lower:]')
+remote_url=${remote_url%/}
+remote_url=${remote_url%.git}
+case "$remote_url" in
+  https://github.com/raven-dev-ops/indexed-drone-industry|\
+  https://*@github.com/raven-dev-ops/indexed-drone-industry|\
+  ssh://git@github.com/raven-dev-ops/indexed-drone-industry|\
+  ssh://git@github.com:22/raven-dev-ops/indexed-drone-industry|\
+  ssh://git@ssh.github.com:443/raven-dev-ops/indexed-drone-industry|\
+  git@github.com:raven-dev-ops/indexed-drone-industry) public=true ;;
+  *) public=false ;;
+esac
+
+workflow_dir="$(git rev-parse --path-format=absolute --git-common-dir)/release-workflow"
+public_main=''
+reject() {
+  printf '%s\n' "$1" 'See docs/RELEASE.md for the release workflow.' >&2
+  exit 1
+}
+
+while read -r source_ref source_sha target_ref target_sha; do
+  release_tag=false
+  case "$target_ref" in refs/tags/v*) release_tag=true ;; esac
+  if [ "$public" = true ] && [ "$release_tag" = true ]; then
+    case "$target_sha" in *[!0]*) reject 'Public release tags are immutable.' ;; esac
+  fi
+  [ "$source_ref" != '(delete)' ] || continue
+
+  case "$target_ref" in
+    refs/heads/*|refs/tags/v*) verify=true ;;
+    *) verify=false ;;
+  esac
+  [ "$verify" = true ] || [ "$public" = true ] || continue
+  commit=$(git rev-parse --verify "$source_sha^{commit}") || reject "Expected a commit for $target_ref."
+  tree=$(git rev-parse "$commit^{tree}")
+  if [ "$verify" = true ] && [ ! -f "$workflow_dir/verified/$tree" ]; then
+    reject "Source tree for $target_ref has no local verification. Check out the candidate and run git verify-release."
+  fi
+
+  [ "$public" = true ] || continue
+  if [ -z "$public_main" ]; then
+    [ "$(git rev-parse --is-shallow-repository)" = false ] || reject 'Fetch the full Git history before pushing to the public repository.'
+    main_ref=$(git ls-remote --exit-code "$2" refs/heads/main </dev/null) || reject 'Could not read the public main branch.'
+    public_main=$(printf '%s\n' "$main_ref" | cut -f 1)
+    git cat-file -e "$public_main^{commit}" 2>/dev/null || reject 'Fetch main from the public repository and retry.'
+    public_roots=$(git rev-list --max-parents=0 "$public_main")
+  fi
+  candidate_roots=$(git rev-list --max-parents=0 "$commit")
+  [ "$candidate_roots" = "$public_roots" ] || reject 'Promote the verified files onto a branch based on public main before pushing to the public repository.'
+
+  if [ "$release_tag" = true ]; then
+    version=${target_ref#refs/tags/}
+    [ -f "$workflow_dir/verified/$tree.$version" ] || reject "Run git verify-release $version before pushing the release tag."
+    [ "$commit" = "$public_main" ] || reject 'A new public release tag must point to the current public main commit.'
+  fi
+done

@@ -1,0 +1,22 @@
+#!/bin/sh
+set -eu
+
+cd "$(git rev-parse --show-toplevel)"
+workflow_dir="$(git rev-parse --path-format=absolute --git-common-dir)/release-workflow"
+node_version=$(tr -d '\r\n' < .node-version)
+package_manager=$(node -p "require('./package.json').packageManager")
+set -- exec --yes --package="node@$node_version" --package="$package_manager" -- node "$workflow_dir/verify.mjs" "$@"
+
+if [ "$(node -p 'process.platform')" = win32 ]; then
+  # Git for Windows sh can invoke npm's JavaScript entry point with native Node.
+  npm_cmd=$(command -v npm.cmd || true)
+  if [ -n "$npm_cmd" ]; then
+    npm_cli="$(dirname "$npm_cmd")/node_modules/npm/bin/npm-cli.js"
+    if [ -f "$npm_cli" ]; then
+      exec node "$npm_cli" "$@"
+    fi
+  fi
+  npm_cli=$(node -p "require('node:path').join(require('node:path').dirname(process.execPath), 'node_modules', 'npm', 'bin', 'npm-cli.js')")
+  exec node "$npm_cli" "$@"
+fi
+exec npm "$@"
