@@ -6,7 +6,8 @@ The source of truth is the JSON in `data/`. [The schema](../src/lib/schema.ts) c
 | --- | --- |
 | `catalog.json` | Aircraft, configurations, manufacturers, and sourced specification observations |
 | `industry.json` | Organizations, facilities, documented relationships, and dated events with separately cited effects |
-| `editorial.json` | Parts, materials, supply pathways, lessons, bottlenecks, regulatory records, and market indicators |
+| `editorial.json` | Parts, materials, supply pathways, lessons, bottlenecks, regulatory records, and baseline adoption indicators |
+| `market.json` | Aircraft shipments and sales, market shares, and supporting adoption evidence |
 | `observations.json` | Normalized country indicators from the USGS and Eurostat |
 
 Records carry a publisher, direct URL, locator, access date, and reuse terms. A specification can cite a more specific source. Preserve the source's reported units, variant, test conditions and date. Treat unknown, withheld, and inapplicable values separately from zero. Keep conflicting observations and older variants distinguishable.
@@ -30,6 +31,10 @@ The first command checks the committed snapshot against the pinned series and pe
 
 See [source notices](../NOTICE.md) for attribution and reuse terms. An unshaded country may be outside a dataset's coverage or lack a published figure. These indicators describe geography and time periods. Supplier origin, market share, and global sales require their own evidence.
 
+## Market records
+
+Keep the source's geography, segment, period, and method. `shipment` counts aircraft shipped, and `sales` counts aircraft sold. `share` requires a percentage, a denominator, and a basis (`unit-sales`, `shipment-units`, or `revenue`). Use `registration-share` for a share of registrations. Survey totals, issuer disclosures, and estimates retain their scope and qualifiers. Figures from different samples, periods, or bases cannot be combined into a ranking. The index cites public findings and keeps underlying reports at their source.
+
 ## Download interfaces
 
 | Path | Contents |
@@ -37,6 +42,7 @@ See [source notices](../NOTICE.md) for attribution and reuse terms. An unshaded 
 | `/data/v1/index.json` | Structured index and evidence |
 | `/data/v1/aircraft.csv` | Aircraft records |
 | `/data/v1/observations.csv` | Atlas observations |
+| `/data/v1/market.csv` | Market and adoption figures with measurement basis, denominator, and source |
 | `/data/v1/facilities.geojson` | Facility points and properties |
 | `/data/v1/events.csv` | Historical events |
 | `/data/v1/release.json` | Release metadata |

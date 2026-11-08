@@ -175,21 +175,55 @@ export const regulation = entry.extend({
   axis: z.enum(['Equipment', 'Operations', 'Procurement']),
   effective: date.optional(),
 });
+export const marketKind = z.enum([
+  'shipment',
+  'sales',
+  'share',
+  'registration-share',
+  'registration',
+  'fleet',
+  'deployment',
+]);
+export const marketBasis = z.enum([
+  'unit-sales',
+  'shipment-units',
+  'revenue',
+  'registrations',
+]);
 export const indicator = entry
   .extend({
-    kind: z.enum(['registration', 'fleet', 'deployment', 'shipment', 'share']),
-    geography: z.string(),
-    period: z.string(),
-    segment: z.string(),
+    kind: marketKind,
+    geography: z.string().trim().min(1),
+    period: z.string().trim().min(1),
+    segment: z.string().trim().min(1),
+    subject: z.string().trim().min(1).optional(),
     value: z.number().nonnegative(),
-    unit: z.string(),
-    denominator: z.string().optional(),
+    unit: z.string().trim().min(1),
+    basis: marketBasis.optional(),
+    denominator: z.string().trim().min(1).optional(),
+    method: z.string().trim().min(1).optional(),
+    qualifier: z.enum(['over', 'at-least', 'about']).optional(),
     estimate: z.boolean().default(false),
   })
   .refine(
-    (row) => row.kind !== 'share' || Boolean(row.denominator),
-    'Market shares need a denominator',
+    (row) =>
+      !['shipment', 'sales', 'share', 'registration-share'].includes(row.kind) ||
+      Boolean(row.method),
+    'Shipment, sales, and share records need a methodology',
+  )
+  .refine(
+    (row) => {
+      if (row.kind === 'share' || row.kind === 'registration-share') {
+        const hasBasis = row.kind === 'share'
+          ? row.basis && row.basis !== 'registrations'
+          : row.basis === 'registrations';
+        return hasBasis && row.denominator && row.unit === '%' && row.value <= 100;
+      }
+      return row.basis === undefined && row.unit !== '%';
+    },
+    'Share records need a matching basis, a denominator, and a percentage from 0 to 100',
   );
+export type MarketIndicator = z.infer<typeof indicator>;
 export const scenario = entry.extend({
   mode: z.enum(['representative', 'case-study']),
   nodes: z
