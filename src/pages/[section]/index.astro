@@ -1,8 +1,8 @@
 ---
 import Site from '../../layouts/Site.astro';
-import Evidence from '../../components/Evidence.astro';
 import Compare from '../../components/Compare';
 import Atlas from '../../components/Atlas';
+import Market from '../../components/Market.astro';
 import { PropulsionLab, SurveyLab } from '../../components/Labs';
 import { aircraft, collections, coverage, facilities, launchThresholds, lookupModel, observations, type Section } from '../../lib/data';
 import { labels, page, path } from '../../lib/navigation';
@@ -18,7 +18,7 @@ const descriptions: Record<string,string> = {
   learn:'Eight short lessons from the airframe and flight to supply chains, operations, and recycling.',
   bottlenecks:'See what limits supply and which parts of the industry depend on it.',
   regulations:'Browse equipment, operations, and procurement sources by jurisdiction.',
-  market:'Explore indicators with their geography, period, segment, and methodology.',
+  market:'Explore sourced drone shipments, sales, and market shares by geography, segment, and period.',
   compare:'Select two aircraft. Published values keep their variant, conditions, and source.',
   labs:'Change assumptions and see how they affect two simple flight and survey models.',
   atlas:'Explore public facilities, mineral production and reserves, and regional industrial cost layers.',
@@ -50,6 +50,7 @@ const counterLabels: Record<keyof typeof coverage,string> = {
   {section === 'compare' && <Compare aircraft={aircraft} base={path()} client:load />}
   {section === 'labs' && <div class="grid two"><PropulsionLab client:load /><SurveyLab client:visible /></div>}
   {section === 'atlas' && <Atlas facilities={facilities} observations={observations} base={path()} client:load />}
+  {section === 'market' && <Market entries={collections.market} />}
   {section === 'search' && <>
     <div id="search-widget" data-base={path()} class="panel"></div>
     <p class="note" id="search-browse">Browse <a href={page('aircraft')}>aircraft</a>, <a href={page('parts')}>parts</a>, or <a href={page('history')}>history</a>.</p>
@@ -78,6 +79,7 @@ const counterLabels: Record<keyof typeof coverage,string> = {
       ['aircraft.csv','Aircraft specifications','Variant, observation conditions, units, and source.'],
       ['facilities.geojson','Facilities GeoJSON','Facility coordinates, precision, status, and evidence.'],
       ['observations.csv','Atlas observations','Published country metrics and their source definitions.'],
+      ['market.csv','Market records','Shipment, sales, share, and adoption figures with their original scope and sources.'],
       ['events.csv','Timeline records','Events and consequences in long format.'],
       ['release.json','Snapshot manifest','Schema version, coverage, attribution, and file hashes.'],
       ['SHA256SUMS.txt','File checksums','SHA-256 digests for verifying the downloaded snapshot.'],
@@ -92,11 +94,10 @@ const counterLabels: Record<keyof typeof coverage,string> = {
       <article class="panel"><h2>Coverage gaps</h2><p>Manufacturers rarely disclose complete internal assemblies or supplier tiers. Facility records have different observation dates and precision. Energy and labor observations are regional. The market page lists published indicators with different geographies and methods.</p><p>Defense coverage is limited to public policy or procurement context for relevant organizations.</p></article>
     </div>
   </>}
-  {section === 'market' && <div class="note">Fleet estimates and cumulative registrations measure different things. This snapshot only displays a market share when its denominator and coverage are available.</div>}
   {section === 'supply' && <p class="note">Representative pathways explain the industry process. Aircraft-specific connections require a source naming that relationship.</p>}
   {section === 'organizations' && <p class="note">Entries marked as FAA-declared makes are names appearing in a declaration dataset. A declared make can be a brand or an individual producer.</p>}
 
-  {ordered.length > 0 && <div data-filter-root>
+  {section !== 'market' && ordered.length > 0 && <div data-filter-root>
     <div class="controls">
       <label>Filter {title.toLowerCase()}<input type="search" data-filter-search placeholder="Type to filter this list" /></label>
       {categories.length > 0 && <label>{section === 'aircraft' ? 'Mission' : 'Category'}<select data-filter-category><option value="">All categories</option>{categories.map(([id,name]) => <option value={id}>{name}</option>)}</select></label>}
@@ -113,7 +114,6 @@ const counterLabels: Record<keyof typeof coverage,string> = {
           <h3><a href={page(section,row.id)}>{row.name}</a></h3><p>{row.summary}</p>
           {'kind' in row && <p><strong>{row.value.toLocaleString('en-US')} {row.unit}</strong> · {row.geography}</p>}
           {model && <span class:list={['tag',{warn:model.representative}]}>{model.representative ? 'Representative 3D' : 'Model-specific 3D'}</span>}
-          {section === 'market' && <Evidence source={row.source} compact />}
         </article>;
       })}
     </div>

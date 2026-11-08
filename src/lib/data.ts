@@ -69,7 +69,7 @@ export const collections = {
   learn: lessons,
   bottlenecks,
   regulations,
-  market: indicators,
+  market: [...indicators, ...z.array(schema.indicator).parse(read('data/market.json'))],
 };
 export type Section = keyof typeof collections;
 export type RecordEntry = (typeof collections)[Section][number];

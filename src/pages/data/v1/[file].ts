@@ -12,7 +12,7 @@ import {
 } from '../../../lib/data';
 import type { Evidence } from '../../../lib/schema';
 
-const schemaVersion = '1.0.0';
+const schemaVersion = '1.1.0';
 const snapshot = process.env.SNAPSHOT_VERSION || 'development';
 const json = (value: unknown) => `${JSON.stringify(value, null, 2)}\n`;
 const digest = (value: string) =>
@@ -182,6 +182,18 @@ const datasets: Record<string, string> = {
       row.value,
       row.unit,
       ...evidence(row.source),
+    ]),
+  ]),
+  'market.csv': csv([
+    [
+      'id', 'name', 'subject', 'kind', 'basis', 'geography', 'segment', 'period',
+      'value', 'unit', 'qualifier', 'estimate', 'denominator', 'method', 'summary',
+      'source_published', ...evidenceHeaders,
+    ],
+    ...collections.market.map((row) => [
+      row.id, row.name, row.subject, row.kind, row.basis, row.geography, row.segment,
+      row.period, row.value, row.unit, row.qualifier, String(row.estimate),
+      row.denominator, row.method, row.summary, row.source.published, ...evidence(row.source),
     ]),
   ]),
   'events.csv': csv([

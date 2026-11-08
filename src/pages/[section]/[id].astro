@@ -6,6 +6,7 @@ import PartExplainer from '../../components/PartExplainer';
 import Evidence from '../../components/Evidence.astro';
 import { collections, facilities, lookupModel, parts, relationships, type RecordEntry, type Section } from '../../lib/data';
 import { forms, metrics, segments } from '../../lib/schema';
+import { marketMeasure, marketValue } from '../../lib/market';
 import { labels, page } from '../../lib/navigation';
 export function getStaticPaths() {
   return Object.entries(collections).flatMap(([section,rows]) => rows.map(row => ({ params:{section,id:row.id}, props:{row} })));
@@ -82,7 +83,13 @@ const badges = 'maker' in row ? [segments[row.segment],forms[row.form]] : 'mode'
     <div class="actions">{row.part && <a class="button small" href={page('parts',row.part)}>Explore the part</a>}<a href={page('labs')}>Try a lab</a><a href={page('learn')}>All lessons</a></div>
   </article>}
 
-  {'kind' in row && <section class="panel"><h2>{row.value.toLocaleString('en-US')} {row.unit}</h2><div class="meta"><span class="tag">{row.kind}</span>{row.estimate && <span class="tag neutral">Estimate</span>}<span class="tag neutral">{row.period}</span></div><p>{row.geography} · {row.segment}</p>{row.denominator && <p>Denominator: {row.denominator}</p>}</section>}
+  {'kind' in row && <section class="panel">
+    <h2>{marketValue(row)}</h2>
+    <div class="meta"><span class="tag">{marketMeasure(row)}</span>{row.estimate && <span class="tag neutral">Estimate</span>}<span class="tag neutral">{row.period}</span></div>
+    <p>{row.geography} · {row.segment}</p>
+    {row.denominator && <p><strong>Denominator:</strong> {row.denominator}</p>}
+    {row.method && <p>{row.method}</p>}
+  </section>}
   {'axis' in row && <p class="note">Jurisdiction: {row.jurisdiction}. {row.effective ? `Effective ${row.effective}.` : 'See the issuing authority for the current version and applicability.'}</p>}
 
   {(connected.length > 0 || linkedOrganizations.length > 0) && <section class="section-block" aria-labelledby="relationships-title">

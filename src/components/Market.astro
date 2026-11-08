@@ -1,0 +1,84 @@
+---
+import Evidence from './Evidence.astro';
+import { marketMeasure, marketValue } from '../lib/market';
+import { page, path } from '../lib/navigation';
+import type { MarketIndicator } from '../lib/schema';
+interface Props { entries: MarketIndicator[] }
+const { entries } = Astro.props;
+const options = (key: 'geography' | 'segment') => [...new Set(entries.map(row => row[key]))].sort((a, b) => a.localeCompare(b, 'en'));
+const groups = [
+  { id: 'volume', title: 'Aircraft shipments and unit sales', kinds: ['shipment', 'sales'], description: 'Shipments count aircraft sent to customers or channels. Sales count aircraft sold, as defined by the source. Company totals and survey totals keep their original scope.' },
+  { id: 'shares', title: 'Market shares', kinds: ['share'], description: 'Compare figures within the same geography, segment, period, and measurement basis. Revenue and unit shares answer different questions.' },
+  { id: 'adoption', title: 'Registrations, fleets, and delivery activity', kinds: ['registration', 'registration-share', 'fleet', 'deployment'], description: 'These figures describe aircraft registrations, aircraft in use, or operator activity. Each retains its own measurement and scope.' },
+];
+---
+<div data-market>
+  <div class="controls market-controls" role="group" aria-label="Filter market data">
+    <label>Geography<select data-market-geography><option value="">All geographies</option>{options('geography').map(value => <option>{value}</option>)}</select></label>
+    <label>Segment<select data-market-segment><option value="">All segments</option>{options('segment').map(value => <option>{value}</option>)}</select></label>
+    <p class="label" data-market-count role="status">{entries.length} records</p>
+    <a href={path('data/v1/market.csv')} download>Download market CSV ↓</a>
+  </div>
+  <p class="note" data-market-empty hidden>No published records match these filters.</p>
+  {groups.map(group => <section class="section-block market-group" aria-labelledby={`market-${group.id}`} data-market-group>
+    <h2 id={`market-${group.id}`}>{group.title}</h2>
+    <p class="lede">{group.description}</p>
+    <div class="table-wrap market-table" tabindex="0">
+      <table aria-labelledby={`market-${group.id}`}>
+        <thead><tr><th scope="col">Observation</th><th scope="col">Geography, segment, period</th><th scope="col">Reported value</th><th scope="col">Scope and source</th></tr></thead>
+        <tbody>{entries.filter(row => group.kinds.includes(row.kind)).map(row =>
+          <tr data-market-row data-geography={row.geography} data-segment={row.segment}>
+            <th scope="row"><a href={page('market', row.id)}>{row.name}</a></th>
+            <td>{row.geography}<small>{row.segment} · {row.period}</small></td>
+            <td><strong>{marketValue(row)}</strong><small>{marketMeasure(row)}{row.estimate ? ' · Estimate' : ''}</small></td>
+            <td>{row.denominator && <p><strong>Denominator:</strong> {row.denominator}</p>}<p>{row.method ?? row.summary}</p><Evidence source={row.source} compact /></td>
+          </tr>,
+        )}</tbody>
+      </table>
+    </div>
+  </section>)}
+  <p class="note">Coverage varies by segment and geography. The page lists figures with public source evidence; an empty result means no matching record is published here.</p>
+</div>
+
+<style>
+  .market-controls { align-items: end; }
+  .market-controls [role='status'] { margin: 0; }
+  .market-table { margin-top: 1rem; }
+  .market-table:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+  .market-table table { min-width: 42rem; }
+  .market-table tbody th { white-space: normal; min-width: 10rem; }
+  .market-table td:nth-child(3) { min-width: 8rem; }
+  .market-table td:last-child p { margin: 0 0 .35rem; }
+</style>
+
+<script>
+  for (const market of document.querySelectorAll<HTMLElement>('[data-market]')) {
+    const geography = market.querySelector<HTMLSelectElement>('[data-market-geography]');
+    const segment = market.querySelector<HTMLSelectElement>('[data-market-segment]');
+    const count = market.querySelector<HTMLElement>('[data-market-count]');
+    const empty = market.querySelector<HTMLElement>('[data-market-empty]');
+    const groups = [...market.querySelectorAll<HTMLElement>('[data-market-group]')].map(group => ({
+      group,
+      rows: [...group.querySelectorAll<HTMLElement>('[data-market-row]')],
+    }));
+    function filter() {
+      let total = 0;
+      for (const {group, rows} of groups) {
+        const matches = rows.filter(row => {
+          row.hidden = Boolean(
+            (geography?.value && row.dataset.geography !== geography.value) ||
+            (segment?.value && row.dataset.segment !== segment.value),
+          );
+          return !row.hidden;
+        }).length;
+        group.hidden = matches === 0;
+        total += matches;
+      }
+      if (count) count.textContent = `${total} ${total === 1 ? 'record' : 'records'}`;
+      if (empty) empty.hidden = total > 0;
+    }
+    geography?.addEventListener('change', filter);
+    segment?.addEventListener('change', filter);
+    filter();
+  }
+</script>
