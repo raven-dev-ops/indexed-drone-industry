@@ -1,0 +1,298 @@
+[
+  {
+    "id": "holybro-x500-v2",
+    "label": "Holybro X500 V2 ARF (SKU 30125)",
+    "representative": false,
+    "fidelity": "documented-assembly",
+    "parts": [
+      "frame",
+      "landing-gear",
+      "pdb",
+      "esc",
+      "motor",
+      "propeller"
+    ],
+    "source": {
+      "title": "X500 V2 Kits",
+      "publisher": "Holybro",
+      "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+      "locator": "Kit contents, frame details and mechanical specifications"
+    },
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "dji-mini-4-pro",
+    "label": "DJI Mini 4 Pro",
+    "representative": false,
+    "fidelity": "exterior-schematic",
+    "parts": [
+      "frame",
+      "motor",
+      "propeller",
+      "battery",
+      "payload"
+    ],
+    "source": {
+      "title": "DJI Mini 4 Pro",
+      "publisher": "DJI",
+      "url": "https://www.dji.com/mini-4-pro",
+      "locator": "Product imagery and camera overview"
+    },
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "dji-avata-2",
+    "label": "DJI Avata 2",
+    "representative": false,
+    "fidelity": "exterior-schematic",
+    "parts": [
+      "frame",
+      "motor",
+      "propeller",
+      "battery",
+      "payload"
+    ],
+    "source": {
+      "title": "DJI Avata 2",
+      "publisher": "DJI",
+      "url": "https://www.dji.com/avata-2",
+      "locator": "Product imagery and integrated propeller guards"
+    },
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "dji-matrice-30t",
+    "label": "DJI Matrice 30T",
+    "representative": false,
+    "fidelity": "exterior-schematic",
+    "parts": [
+      "frame",
+      "motor",
+      "propeller",
+      "battery",
+      "landing-gear",
+      "payload"
+    ],
+    "source": {
+      "title": "Matrice 30 Series",
+      "publisher": "DJI Enterprise",
+      "url": "https://enterprise.dji.com/matrice-30",
+      "locator": "M30T aircraft and integrated camera system"
+    },
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "dji-agras-t70p",
+    "label": "DJI Agras T70P",
+    "representative": false,
+    "fidelity": "exterior-schematic",
+    "parts": [
+      "frame",
+      "motor",
+      "propeller",
+      "battery",
+      "landing-gear",
+      "payload"
+    ],
+    "source": {
+      "title": "DJI Agras T70P specs",
+      "publisher": "DJI Agriculture",
+      "url": "https://ag.dji.com/t70p/specs",
+      "locator": "Aircraft, propulsion and spraying system"
+    },
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "wingtraone-gen-ii",
+    "label": "WingtraOne GEN II",
+    "representative": false,
+    "fidelity": "exterior-schematic",
+    "parts": [
+      "wing",
+      "frame",
+      "landing-gear",
+      "motor",
+      "propeller",
+      "battery",
+      "payload"
+    ],
+    "source": {
+      "title": "Getting started with WingtraOne GEN II",
+      "publisher": "Wingtra",
+      "url": "https://knowledge.wingtra.com/en/register-your-drone",
+      "locator": "Aircraft component diagram and battery compartment"
+    },
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "crazyflie-2-1-plus",
+    "label": "Bitcraze Crazyflie 2.1+",
+    "representative": false,
+    "fidelity": "exterior-schematic",
+    "parts": [
+      "frame",
+      "flight-controller",
+      "radio",
+      "motor",
+      "propeller",
+      "battery"
+    ],
+    "source": {
+      "title": "Crazyflie 2.1+",
+      "publisher": "Bitcraze",
+      "url": "https://www.bitcraze.io/products/crazyflie-2-1-plus/",
+      "locator": "Aircraft imagery, mechanics and radio"
+    },
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "zipline-platform-2",
+    "label": "Zipline Platform 2",
+    "representative": false,
+    "fidelity": "exterior-schematic",
+    "parts": [
+      "frame",
+      "wing",
+      "motor",
+      "propeller",
+      "payload"
+    ],
+    "source": {
+      "title": "Zipline Dallas–Fort Worth final environmental assessment",
+      "publisher": "FAA",
+      "url": "https://www.faa.gov/uas/advanced_operations/nepa_and_drones/20251223_Zipline_Final_DFW_EA_508_signed.pdf",
+      "locator": "Section 2.2.1 and Figure 2.2-4, P2 Zip aircraft"
+    },
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "class-quad",
+    "label": "Quadcopter",
+    "representative": true,
+    "fidelity": "representative",
+    "parts": [
+      "frame",
+      "motor",
+      "propeller",
+      "battery",
+      "flight-controller",
+      "gnss",
+      "landing-gear"
+    ],
+    "source": {
+      "title": "Airframes",
+      "publisher": "PX4",
+      "url": "https://docs.px4.io/v1.14/en/dev_airframes/",
+      "locator": "Planes, multicopters and VTOL airframes"
+    },
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "class-fpv",
+    "label": "Guarded FPV quadcopter",
+    "representative": true,
+    "fidelity": "representative",
+    "parts": [
+      "frame",
+      "motor",
+      "propeller",
+      "battery",
+      "payload"
+    ],
+    "source": {
+      "title": "DJI Avata 2",
+      "publisher": "DJI",
+      "url": "https://www.dji.com/avata-2",
+      "locator": "Integrated propeller guards as one FPV configuration"
+    },
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "class-multirotor",
+    "label": "Hexacopter",
+    "representative": true,
+    "fidelity": "representative",
+    "parts": [
+      "frame",
+      "motor",
+      "propeller",
+      "battery",
+      "flight-controller",
+      "gnss",
+      "landing-gear",
+      "payload"
+    ],
+    "source": {
+      "title": "Airframes",
+      "publisher": "PX4",
+      "url": "https://docs.px4.io/v1.14/en/dev_airframes/",
+      "locator": "Planes, multicopters and VTOL airframes"
+    },
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "class-fixed-wing",
+    "label": "Fixed-wing aircraft",
+    "representative": true,
+    "fidelity": "representative",
+    "parts": [
+      "frame",
+      "wing",
+      "motor",
+      "propeller",
+      "battery",
+      "flight-controller",
+      "payload"
+    ],
+    "source": {
+      "title": "Airframes",
+      "publisher": "PX4",
+      "url": "https://docs.px4.io/v1.14/en/dev_airframes/",
+      "locator": "Planes, multicopters and VTOL airframes"
+    },
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "class-vtol",
+    "label": "Lift-and-cruise VTOL",
+    "representative": true,
+    "fidelity": "representative",
+    "parts": [
+      "frame",
+      "wing",
+      "motor",
+      "propeller",
+      "battery",
+      "flight-controller",
+      "payload"
+    ],
+    "source": {
+      "title": "Airframes",
+      "publisher": "PX4",
+      "url": "https://docs.px4.io/v1.14/en/dev_airframes/",
+      "locator": "Planes, multicopters and VTOL airframes"
+    },
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "class-helicopter",
+    "label": "Single-main-rotor helicopter",
+    "representative": true,
+    "fidelity": "representative",
+    "parts": [
+      "frame",
+      "motor",
+      "propeller",
+      "battery",
+      "flight-controller",
+      "landing-gear"
+    ],
+    "source": {
+      "title": "Airframes",
+      "publisher": "PX4",
+      "url": "https://docs.px4.io/v1.14/en/dev_airframes/",
+      "locator": "Planes, multicopters and VTOL airframes"
+    },
+    "license": "CC-BY-4.0"
+  }
+]

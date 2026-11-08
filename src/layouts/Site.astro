@@ -1,0 +1,41 @@
+---
+import '../styles/site.css';
+import { page, path, labels } from '../lib/navigation';
+interface Props { title: string; description?: string; section?: string }
+const { title, description = 'Explore aircraft, parts, materials and the global drone supply chain.', section } = Astro.props;
+const nav = ['aircraft', 'supply', 'atlas', 'labs', 'history', 'learn'];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#111c27" />
+    <title>{title === 'Indexed Drone Industry' ? title : `${title} · Indexed Drone Industry`}</title>
+  </head>
+  <body>
+    <a href="#content" class="skip">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href={path()}>
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 7l18 18M25 7L7 25"/><circle cx="7" cy="7" r="4"/><circle cx="25" cy="7" r="4"/><circle cx="7" cy="25" r="4"/><circle cx="25" cy="25" r="4"/><path d="m16 11 5 5-5 5-5-5z"/></svg>
+          <span>Indexed<span class="brand-sub"> Drone Industry</span></span>
+        </a>
+        <nav aria-label="Main navigation">
+          {nav.map(item => <a href={page(item)} aria-current={section === item ? 'page' : undefined}>{labels[item]}</a>)}
+        </nav>
+        <a class="search-link" href={page('search')}><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg>Search</a>
+      </div>
+    </header>
+    <main id="content" class="shell" data-pagefind-body><slot /></main>
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <div><a class="footer-brand" href={path()}>Indexed Drone Industry</a><p>An independent, source-linked field guide to the drone industry.</p></div>
+        <nav aria-label="Index tools">
+          {['compare','parts','materials','organizations','facilities','bottlenecks','regulations','market','downloads','coverage'].map(item => <a href={page(item)}>{labels[item]}</a>)}
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

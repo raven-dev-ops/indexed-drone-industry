@@ -1,0 +1,2194 @@
+[
+  {
+    "country": "AT",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1986,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / AT / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies / Eurostat observation flag: estimated.",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "BE",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1866,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / BE / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "BG",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1413,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / BG / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "CY",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.2429,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / CY / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "CZ",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1825,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / CZ / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "DE",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.2264,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / DE / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "DK",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1216,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / DK / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "EE",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.141,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / EE / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "ES",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1324,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / ES / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "FI",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.0748,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / FI / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "FR",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1534,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / FR / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "GR",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1738,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / EL / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "HR",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1548,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / HR / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "HU",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.2132,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / HU / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "IE",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.2552,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / IE / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "IS",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1075,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / IS / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies / Eurostat observation flag: estimated.",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "IT",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.2203,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / IT / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "LI",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1789,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / LI / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "LT",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1591,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / LT / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "LU",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1717,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / LU / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "LV",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1361,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / LV / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "MT",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1359,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / MT / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "NL",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.2011,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / NL / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "NO",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.0827,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / NO / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "PL",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1935,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / PL / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "PT",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1329,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / PT / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "RO",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1887,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / RO / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "SE",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.097,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / SE / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "SI",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.1503,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / SI / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "SK",
+    "layer": "electricity",
+    "name": "Non-household electricity price",
+    "year": "2025-S2",
+    "value": 0.209,
+    "unit": "EUR/kWh",
+    "source": {
+      "title": "Electricity prices for non-household consumers - bi-annual data",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+      "locator": "nrg_pc_205 / SK / 2025-S2 / Annual consumption band IC (500–1,999 MWh); excluding VAT and other recoverable taxes and levies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "AT",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 200,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Austria / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "BR",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 65000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Brazil / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CA",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 8000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Canada / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CN",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 1400000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / China / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "DE",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 140,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Germany / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "IN",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 17000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / India / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "KP",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 8000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Korea, North / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "KR",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 500,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Korea, Republic of / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "LK",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 3200,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Sri Lanka / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "MG",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 80000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Madagascar / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "MX",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 740,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Mexico / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "MZ",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 60000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Mozambique / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "NO",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 6600,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Norway / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "RU",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 25000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Russia / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "TR",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 2200,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Turkey / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "TZ",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 75000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Tanzania / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "UA",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 800,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Ukraine / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "US",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 0,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / United States / 2025 mine production / USGS marks this value as zero.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "VN",
+    "layer": "graphite-production",
+    "name": "Natural graphite mine production",
+    "year": "2025",
+    "value": 500,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Vietnam / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "BR",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 74000000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Brazil / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CA",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 5900000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Canada / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CN",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 100000000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / China / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "IN",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 8600000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / India / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "KP",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 2000000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Korea, North / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "KR",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 1800000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Korea, Republic of / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "LK",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 1500000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Sri Lanka / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "MG",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 27000000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Madagascar / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "MX",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 3100000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Mexico / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "MZ",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 25000000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Mozambique / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "NO",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 600000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Norway / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "RU",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 14000000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Russia / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "TR",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 6900000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Turkey / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "TZ",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 18000000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Tanzania / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "VN",
+    "layer": "graphite-reserves",
+    "name": "Natural graphite reserves",
+    "year": "2025",
+    "value": 9700000,
+    "unit": "metric tons",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / GRAPHITE (NATURAL) / World Mine Production and Reserves / Vietnam / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "AT",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 51.3,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / AT / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies / Eurostat observation flag: provisional.",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "BG",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 10.2,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / BG / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "CY",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 14.6,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / CY / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "CZ",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 20.2,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / CZ / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "DE",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 49.5,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / DE / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "DK",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 55,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / DK / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "EE",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 19.5,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / EE / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "ES",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 28.2,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / ES / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "FI",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 43.6,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / FI / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "FR",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 47.1,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / FR / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "GR",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 18.2,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / EL / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "HR",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 19.2,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / HR / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "HU",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 15.6,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / HU / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "IE",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 42.4,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / IE / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "IS",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 61.2,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / IS / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies / Eurostat observation flag: provisional.",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "IT",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 32.8,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / IT / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "LT",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 16.4,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / LT / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "LU",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 48.4,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / LU / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "LV",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 14.9,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / LV / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "MT",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 20,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / MT / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "NO",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 53.8,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / NO / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "PL",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 17.1,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / PL / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "PT",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 16.5,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / PT / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "RO",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 12,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / RO / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "SE",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 47.2,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / SE / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "SI",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 29.8,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / SI / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "SK",
+    "layer": "labour",
+    "name": "Manufacturing hourly labour cost",
+    "year": "2025",
+    "value": 19.3,
+    "unit": "EUR/hour",
+    "source": {
+      "title": "Labour cost levels by NACE Rev. 2 activity",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/lc_lci_lev/default/table",
+      "locator": "lc_lci_lev / SK / 2025 / NACE Rev. 2 section C, compensation of employees plus taxes minus subsidies",
+      "accessed": "2026-11-08",
+      "rights": "Eurostat statistical data reused with attribution. Filtered to EU and EFTA reporters and normalized by Indexed Drone Industry. Eurostat is not responsible for this adaptation."
+    }
+  },
+  {
+    "country": "AR",
+    "layer": "lithium-production",
+    "name": "Lithium mine production",
+    "year": "2025",
+    "value": 23000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Argentina / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "AU",
+    "layer": "lithium-production",
+    "name": "Lithium mine production",
+    "year": "2025",
+    "value": 92000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Australia / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "BR",
+    "layer": "lithium-production",
+    "name": "Lithium mine production",
+    "year": "2025",
+    "value": 12000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Brazil / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CA",
+    "layer": "lithium-production",
+    "name": "Lithium mine production",
+    "year": "2025",
+    "value": 5600,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Canada / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CL",
+    "layer": "lithium-production",
+    "name": "Lithium mine production",
+    "year": "2025",
+    "value": 56000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Chile / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CN",
+    "layer": "lithium-production",
+    "name": "Lithium mine production",
+    "year": "2025",
+    "value": 62000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / China / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "ML",
+    "layer": "lithium-production",
+    "name": "Lithium mine production",
+    "year": "2025",
+    "value": 9400,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Mali / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "PT",
+    "layer": "lithium-production",
+    "name": "Lithium mine production",
+    "year": "2025",
+    "value": 380,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Portugal / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "ZW",
+    "layer": "lithium-production",
+    "name": "Lithium mine production",
+    "year": "2025",
+    "value": 28000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Zimbabwe / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "AR",
+    "layer": "lithium-reserves",
+    "name": "Lithium reserves",
+    "year": "2025",
+    "value": 4400000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Argentina / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "AU",
+    "layer": "lithium-reserves",
+    "name": "Lithium reserves",
+    "year": "2025",
+    "value": 8400000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Australia / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "BR",
+    "layer": "lithium-reserves",
+    "name": "Lithium reserves",
+    "year": "2025",
+    "value": 540000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Brazil / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CA",
+    "layer": "lithium-reserves",
+    "name": "Lithium reserves",
+    "year": "2025",
+    "value": 1600000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Canada / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CL",
+    "layer": "lithium-reserves",
+    "name": "Lithium reserves",
+    "year": "2025",
+    "value": 9200000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Chile / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CN",
+    "layer": "lithium-reserves",
+    "name": "Lithium reserves",
+    "year": "2025",
+    "value": 4600000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / China / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "ML",
+    "layer": "lithium-reserves",
+    "name": "Lithium reserves",
+    "year": "2025",
+    "value": 370000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Mali / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "PT",
+    "layer": "lithium-reserves",
+    "name": "Lithium reserves",
+    "year": "2025",
+    "value": 60000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Portugal / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "US",
+    "layer": "lithium-reserves",
+    "name": "Lithium reserves",
+    "year": "2025",
+    "value": 4400000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / United States / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "ZW",
+    "layer": "lithium-reserves",
+    "name": "Lithium reserves",
+    "year": "2025",
+    "value": 500000,
+    "unit": "metric tons of lithium content",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / LITHIUM / World Mine Production and Reserves / Zimbabwe / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "AU",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 29000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Australia / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "BR",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 2000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Brazil / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CA",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 0,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Canada / 2025 mine production / USGS marks this value as zero.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CN",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 270000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / China / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "GL",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 0,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Greenland / 2025 mine production / USGS marks this value as zero.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "IN",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 2900,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / India / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "MG",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 2700,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Madagascar / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "MM",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 22000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Burma / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "MY",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 110,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Malaysia / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "NG",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 1500,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Nigeria / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "RU",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 2600,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Russia / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "TH",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 4800,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Thailand / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "TZ",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 0,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Tanzania / 2025 mine production / USGS marks this value as zero.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "US",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 51000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / United States / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "VN",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 150,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Vietnam / 2025 mine production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "ZA",
+    "layer": "rare-earths-production",
+    "name": "Rare earths mine production",
+    "year": "2025",
+    "value": 0,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / South Africa / 2025 mine production / USGS marks this value as zero.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "AU",
+    "layer": "rare-earths-reserves",
+    "name": "Rare earths reserves",
+    "year": "2025",
+    "value": 6300000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Australia / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "BR",
+    "layer": "rare-earths-reserves",
+    "name": "Rare earths reserves",
+    "year": "2025",
+    "value": 21000000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Brazil / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CA",
+    "layer": "rare-earths-reserves",
+    "name": "Rare earths reserves",
+    "year": "2025",
+    "value": 830000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Canada / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CN",
+    "layer": "rare-earths-reserves",
+    "name": "Rare earths reserves",
+    "year": "2025",
+    "value": 44000000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / China / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "GL",
+    "layer": "rare-earths-reserves",
+    "name": "Rare earths reserves",
+    "year": "2025",
+    "value": 1500000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Greenland / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "MY",
+    "layer": "rare-earths-reserves",
+    "name": "Rare earths reserves",
+    "year": "2025",
+    "value": 710000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Malaysia / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "RU",
+    "layer": "rare-earths-reserves",
+    "name": "Rare earths reserves",
+    "year": "2025",
+    "value": 3800000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Russia / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "TZ",
+    "layer": "rare-earths-reserves",
+    "name": "Rare earths reserves",
+    "year": "2025",
+    "value": 890000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Tanzania / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "US",
+    "layer": "rare-earths-reserves",
+    "name": "Rare earths reserves",
+    "year": "2025",
+    "value": 1900000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / United States / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "VN",
+    "layer": "rare-earths-reserves",
+    "name": "Rare earths reserves",
+    "year": "2025",
+    "value": 3500000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / Vietnam / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "ZA",
+    "layer": "rare-earths-reserves",
+    "name": "Rare earths reserves",
+    "year": "2025",
+    "value": 860000,
+    "unit": "metric tons of rare-earth-oxide equivalent",
+    "source": {
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / RARE EARTHS / World Mine Production and Reserves / South Africa / 2025 reserves",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  }
+]

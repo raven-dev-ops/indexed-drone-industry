@@ -1,0 +1,104 @@
+---
+import Site from '../../layouts/Site.astro';
+import Anatomy from '../../components/Anatomy';
+import Supply from '../../components/Supply';
+import PartExplainer from '../../components/PartExplainer';
+import Evidence from '../../components/Evidence.astro';
+import { collections, facilities, lookupModel, parts, relationships, type RecordEntry, type Section } from '../../lib/data';
+import { forms, metrics, segments } from '../../lib/schema';
+import { labels, page } from '../../lib/navigation';
+export function getStaticPaths() {
+  return Object.entries(collections).flatMap(([section,rows]) => rows.map(row => ({ params:{section,id:row.id}, props:{row} })));
+}
+interface Props { row: RecordEntry }
+const { row } = Astro.props;
+const section = Astro.params.section as Section;
+const model = 'maker' in row ? lookupModel(row) : undefined;
+const linkedParts = model?.parts.flatMap(id => parts.filter(part => part.id === id).map(part => ({
+  id, name:part.name, href:page('parts',id), note:part.summary,
+}))) ?? [];
+const linkedOrganizations = 'organizationId' in row && row.organizationId ? collections.organizations.filter(org => org.id === row.organizationId) : [];
+const connected = relationships.filter(edge => [edge.from,edge.to].some(endpoint => endpoint.section === section && endpoint.id === row.id));
+const atlasLayer: Record<string,string> = { motors:'rare-earths-production', battery:'lithium-production', 'rare-earths':'rare-earths-production', lithium:'lithium-production', graphite:'graphite-production', 'skydio-battery':'lithium-production' };
+const atlas = `${page('atlas')}${atlasLayer[row.id] ? `?layer=${atlasLayer[row.id]}` : ''}`;
+const mountainPass = facilities.find(item => item.id === 'mountain-pass-rare-earth');
+const badges = 'maker' in row ? [segments[row.segment],forms[row.form]] : 'mode' in row ? [row.mode === 'representative' ? 'Representative pathway' : 'Historical scenario'] : 'type' in row ? [row.type,row.date] : 'activity' in row ? [row.activity, row.country] : 'axis' in row ? [row.jurisdiction,row.axis] : 'role' in row ? [row.role] : [];
+---
+<Site title={row.name} description={row.summary} section={section}>
+  <div class="crumb"><a href={page(section)}>{labels[section]}</a><span aria-hidden="true">/</span><span>{row.name}</span></div>
+  <header class="pagehead" style="padding-top:1.5rem">
+    <div class="meta">{badges.map(badge => <span class="tag neutral">{badge}</span>)}</div>
+    <h1>{row.name}</h1><p class="lede">{row.summary}</p>
+    {'maker' in row && <p class="fact-source"><strong>Indexed variant:</strong> {row.variant}</p>}
+  </header>
+
+  {'maker' in row && <>
+    {model && <section aria-labelledby="aircraft-anatomy">
+      <div class="section-head"><div><span class="eyebrow">Aircraft anatomy</span><h2 id="aircraft-anatomy">Explore the parts</h2></div><a class="button secondary small" href={`${page('compare')}?a=${row.id}`}>Compare this aircraft</a></div>
+      <Anatomy model={model.id} label={model.label} representative={model.representative} parts={linkedParts} client:visible />
+      {model.fidelity === 'exterior-schematic' && <p class="note">The exterior arrangement follows the cited aircraft. Part geometry is simplified and undisclosed internals are illustrative.</p>}
+      {model.fidelity === 'documented-assembly' && <p class="note">The kit layout follows the documented assembly. Battery, GNSS and flight controller are separate from the indexed SKU.</p>}
+      {model.source && <Evidence source={model.source} />}
+    </section>}
+    <section class="section-block" aria-labelledby="specs-title"><div class="section-head"><h2 id="specs-title">Published specifications</h2><a href={`${page('compare')}?a=${row.id}`}>Compare aircraft →</a></div>
+      {row.specs.length ? <div class="table-wrap"><table><thead><tr><th scope="col">Metric</th><th scope="col">Reported value</th><th scope="col">Conditions</th><th scope="col">Evidence</th></tr></thead>
+        <tbody>{row.specs.map(spec => <tr><th scope="row">{metrics[spec.key]}</th><td>{spec.value ?? (spec.status === 'not-applicable' ? 'Not applicable' : 'Unknown')}{spec.value !== null && spec.unit ? ` ${spec.unit}` : ''}{spec.status !== 'current' && <small>{spec.status}</small>}</td><td>{spec.condition ?? 'Conditions unavailable'}{spec.observed && <small>Observed {spec.observed}</small>}</td><td><Evidence source={spec.source ?? row.source} compact /></td></tr>)}</tbody>
+      </table></div> : <p class="note">This profile has no reviewed quantitative specifications in the index.</p>}
+    </section>
+  </>}
+
+  {'materials' in row && <div class="grid two">
+    <section class="panel"><h2>What it’s made of</h2><p>{row.materials}</p><Evidence source={row.source} /></section>
+    <section class="panel"><h2>Keep exploring</h2><p>Use a lab to change a flight or camera input, or follow this part into a representative supply chain.</p><div class="actions">{row.pathway && <a class="button small" href={page('supply',row.pathway)}>Trace its supply chain →</a>}{row.lesson && <a class="button secondary small" href={page('learn',row.lesson)}>Read the lesson</a>}<a href={page('labs')}>Try the labs</a></div></section>
+  </div>}
+  {'materials' in row && <PartExplainer part={row.id} client:visible />}
+
+  {'pathway' in row && !('materials' in row) && <section class="panel">
+    {'affects' in row && <><h2>Who depends on it?</h2><p>{row.affects}</p><h3>What could ease the constraint?</h3><p>{row.mitigation}</p></>}
+    <div class="actions"><a class="button small" href={page('supply',row.pathway)}>Explore the pathway</a><a href={atlas}>Open the world atlas →</a></div>
+  </section>}
+
+  {'nodes' in row && <>
+    <Supply scenario={row} client:load />
+    <section class="section-block panel"><h2>Take the next step</h2><div class="actions"><a class="button small" href={atlas}>Open the world atlas →</a>
+      {row.id === 'motors' && mountainPass && <a href={page('facilities',mountainPass.id)}>See a documented rare earth facility</a>}
+      {row.event && collections.history.some(event => event.id === row.event) && <a href={page('history',row.event)}>Read the documented case</a>}
+      {row.id === 'motors' && <a href={page('history','skydio-battery-2024')}>Explore a documented battery disruption</a>}
+    </div></section>
+  </>}
+
+  {'activity' in row && <section class="panel">
+    <h2>Facility record</h2><dl><dt>Reported status</dt><dd>{row.status}</dd><dt>Location precision</dt><dd>{row.precision}</dd><dt>Map coordinates</dt><dd>{row.lat.toFixed(row.precision === 'site' ? 4 : 2)}, {row.lon.toFixed(row.precision === 'site' ? 4 : 2)}</dd></dl>
+    <a href={page('atlas')}>Return to the atlas →</a>
+  </section>}
+
+  {'effects' in row && <section class="panel">
+    <h2>Documented effects</h2>
+    {row.effects.length ? <ol class="timeline">{row.effects.map(effect => <li><span class="tag neutral">{['','First','Second','Third'][effect.order]} order</span><p>{effect.text}</p><Evidence source={effect.source} compact /></li>)}</ol> : <p>Consequences have yet to be recorded for this entry.</p>}
+    {row.scenarioId && <p class="fact-source"><a class="button small" href={page('supply',row.scenarioId)}>Open the separate simulation →</a></p>}
+  </section>}
+
+  {'body' in row && <article class="prose">{row.body.map(paragraph => <p>{paragraph}</p>)}
+    <div class="actions">{row.part && <a class="button small" href={page('parts',row.part)}>Explore the part</a>}<a href={page('labs')}>Try a lab</a><a href={page('learn')}>All lessons</a></div>
+  </article>}
+
+  {'kind' in row && <section class="panel"><h2>{row.value.toLocaleString('en-US')} {row.unit}</h2><div class="meta"><span class="tag">{row.kind}</span>{row.estimate && <span class="tag neutral">Estimate</span>}<span class="tag neutral">{row.period}</span></div><p>{row.geography} · {row.segment}</p>{row.denominator && <p>Denominator: {row.denominator}</p>}</section>}
+  {'axis' in row && <p class="note">Jurisdiction: {row.jurisdiction}. {row.effective ? `Effective ${row.effective}.` : 'See the issuing authority for the current version and applicability.'}</p>}
+
+  {(connected.length > 0 || linkedOrganizations.length > 0) && <section class="section-block" aria-labelledby="relationships-title">
+    <div class="section-head"><h2 id="relationships-title">Related records</h2></div>
+    <div class="grid">{linkedOrganizations.map(org => <article class="card"><h3><a href={page('organizations',org.id)}>{org.name}</a></h3><p>{org.role}</p></article>)}
+      {connected.map(edge => {
+        const other = edge.from.section === section && edge.from.id === row.id ? edge.to : edge.from;
+        const name = collections[other.section].find(item => item.id === other.id)?.name;
+        return <article class="card"><span class="tag neutral">{edge.evidenceType} · {edge.relation}</span><h3><a href={page(other.section,other.id)}>{name}</a></h3><p>{edge.summary}</p><Evidence source={edge.source} compact /></article>;
+      })}
+    </div>
+  </section>}
+  {'role' in row && (row.id === 'skydio' || row.id === 'parrot') && <section class="section-block panel"><h2>Public procurement context</h2><p>This organization has public safety and defense offerings. The regulation index separates procurement listings from civil operations and equipment requirements.</p><div class="actions"><a href={page('regulations','us-blue-uas')}>U.S. Blue List procurement context</a><a href={row.id === 'skydio' ? 'https://www.skydio.com/solutions/national-security' : 'https://www.parrot.com/us/drones/anafi-usa'}>Manufacturer’s public description</a></div></section>}
+  {'role' in row && <section class="section-block panel"><h2>Linked aircraft and facilities</h2><ul>
+    {collections.aircraft.filter(item => item.organizationId === row.id || item.maker.toLowerCase() === row.name.toLowerCase()).map(item => <li><a href={page('aircraft',item.id)}>{item.name}</a></li>)}
+    {collections.facilities.filter(item => item.organizationId === row.id).map(item => <li><a href={page('facilities',item.id)}>{item.name}</a></li>)}
+  </ul></section>}
+  <section class="section-block panel" aria-labelledby="evidence-title"><h2 id="evidence-title">Source record</h2><Evidence source={row.source} /></section>
+</Site>

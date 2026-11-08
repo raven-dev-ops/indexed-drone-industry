@@ -1,0 +1,57 @@
+---
+import Site from '../layouts/Site.astro';
+import { aircraft, coverage, events } from '../lib/data';
+import { page } from '../lib/navigation';
+const featured = aircraft.find(row => row.id === 'holybro-x500-v2');
+const incident = events.find(row => row.id === 'skydio-battery-2024');
+const tools = [
+  ['aircraft', 'Aircraft & anatomy', 'Explore the aircraft and separate its components in 3D.'],
+  ['compare', 'Compare aircraft', 'See the variants and test conditions behind the numbers.'],
+  ['supply', 'Supply chains', 'Follow a material through processing, assembly, and the finished aircraft.'],
+  ['atlas', 'World atlas', 'Find mines, factories, assembly sites, and material production by country.'],
+  ['labs', 'Interactive labs', 'Change the inputs behind hover endurance and survey coverage.'],
+  ['history', 'Disruption history', 'Read what happened when supply was interrupted and see which effects were documented.'],
+];
+---
+<Site title="Indexed Drone Industry">
+  <section class="home-hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <span class="eyebrow">Open field guide · Uncrewed aircraft</span>
+      <h1 id="hero-title">The drone industry, <em>part by part.</em></h1>
+      <p>Take an aircraft apart. Follow its parts back to the materials, factories, and people that make flight possible.</p>
+      <div class="actions"><a class="button" href={featured ? page('aircraft', featured.id) : page('aircraft')}>Open the X500 teardown <span aria-hidden="true">↗</span></a><a class="button secondary" href={page('learn')}>Start learning</a></div>
+    </div>
+    <figure class="hero-figure">
+      <svg viewBox="0 0 600 425" role="img" aria-label="Illustrated quadcopter in exploded view with separated motors, frame, and battery">
+        <defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#223542" stroke-width="1"/></pattern><radialGradient id="fade"><stop stop-color="white"/><stop offset="1" stop-color="black"/></radialGradient><mask id="fademask"><ellipse cx="300" cy="215" rx="317" ry="230" fill="url(#fade)"/></mask></defs>
+        <rect width="600" height="425" fill="url(#grid)" mask="url(#fademask)"/>
+        <ellipse cx="305" cy="218" rx="219" ry="113" fill="none" stroke="#3c515d" stroke-dasharray="4 9"/>
+        <ellipse cx="305" cy="218" rx="167" ry="80" fill="none" stroke="#2d414d"/>
+        <path d="M304 35v350M72 218h464" stroke="#2f424d" stroke-dasharray="6 9"/>
+        <g stroke="#668987" stroke-dasharray="4 6" fill="none"><path d="M127 108v93m98-150v91m189-91v92m69-41v101M304 164v121m0 22v41"/><path d="M123 109h-49l-31 28M414 52h55l39 23m-5 156h35l23-14M273 319l-61 29h-67"/></g>
+        <g stroke="#709591" stroke-width="1.5" fill="#223b45"><path d="m267 211-125-34-15 14 119 58 22-11zm31-12-67-74-16 8 42 91 17 1zm40 6 71-78 18 12-55 89-24 2zm11 15 124-37 17 13-111 55-27-5z"/><path d="m249 212 75-29 67 35-71 37z"/><path d="m249 212v15l71 42v-14zm71 43 71-37v15l-71 36z" fill="#142b34"/></g>
+        <g fill="#a4d678" stroke="#c2eb91" stroke-width="1.4"><path d="m275 147 40-16 36 18-38 21z"/><path d="m275 147v9l38 22v-8l38-21v9l-38 20z" fill="#416a46"/><path d="m275 301 43-17 40 20-41 20z"/><path d="m275 301v15l42 23v-15l41-20v14l-41 21z" fill="#4e7247"/></g>
+        <g fill="#58766e" stroke="#9cc69e" stroke-width="1.6"><ellipse cx="127" cy="147" rx="18" ry="9"/><ellipse cx="225" cy="95" rx="17" ry="9"/><ellipse cx="414" cy="96" rx="17" ry="9"/><ellipse cx="483" cy="147" rx="18" ry="9"/></g>
+        <g stroke="#bbdf8b" stroke-width="3" stroke-linecap="round"><path d="m91 100 71 15m26-67 74 11m114-7 75 5m-4 61 73-13"/></g>
+        <g fill="#b6d1ba" font-family="monospace" font-size="10" letter-spacing="1.1"><text x="26" y="153">01 / ROTOR</text><text x="484" y="66">02 / DRIVE</text><text x="512" y="243">03 / FRAME</text><text x="87" y="361">04 / POWER</text></g>
+        <g fill="#c1e985"><circle cx="127" cy="108" r="3"/><circle cx="414" cy="52" r="3"/><circle cx="500" cy="231" r="3"/><circle cx="273" cy="319" r="3"/></g>
+      </svg>
+      <figcaption>FIG. 01 / REPRESENTATIVE QUADCOPTER</figcaption>
+    </figure>
+  </section>
+  <div class="home-stats" aria-label="Index coverage">
+    <div><strong>{coverage.aircraft}</strong><span>Aircraft in the catalog</span></div>
+    <div><strong>{coverage.pathways}</strong><span>Supply pathways</span></div>
+    <div><strong>{coverage.countries}</strong><span>Countries with facilities</span></div>
+    <div><strong>{coverage.disruptions}</strong><span>Documented disruptions</span></div>
+  </div>
+  <section class="section-block" aria-labelledby="tools-title">
+    <div class="section-head"><div><span class="eyebrow">Explore the index</span><h2 id="tools-title">Tools for following the evidence</h2></div><a href={page('coverage')}>See what’s covered →</a></div>
+    <div class="grid">{tools.map(([section, title, copy], i) => <article class="card tool-card"><span class="index-number">{String(i + 1).padStart(2, '0')} / Tool</span><h3><a href={page(section)}>{title} ↗</a></h3><p>{copy}</p></article>)}</div>
+  </section>
+  <section class="section-block panel" aria-labelledby="tour-title">
+    <span class="eyebrow">A guided tour</span><h2 id="tour-title">From a motor to the material it depends on</h2>
+    <p>Start with the documented X500 kit, explore a representative magnet route, then compare a modeled disruption with the historical record.</p>
+    <ol class="trail"><li><a href={page('aircraft','holybro-x500-v2')}>1. Aircraft teardown</a></li><li><a href={page('parts','motor')}>2. Motor evidence</a></li><li><a href={page('supply','motors')}>3. Magnet pathway</a></li><li><a href={`${page('atlas')}?layer=rare-earths-production`}>4. World atlas</a></li>{incident && <li><a href={page('history',incident.id)}>5. A documented disruption</a></li>}</ol>
+  </section>
+</Site>

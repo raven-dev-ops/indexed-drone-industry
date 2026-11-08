@@ -1,0 +1,40 @@
+{
+  "name": "indexed-drone-industry",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@11.28.11",
+  "engines": { "node": ">=24.22.2 <25" },
+  "scripts": {
+    "dev": "node scripts/generate-models.mjs && astro dev",
+    "build": "node scripts/generate-models.mjs && astro build && pagefind --site dist && node scripts/check-dist.mjs",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "vitest run tests/unit",
+    "test:e2e": "playwright test",
+    "release:check": "node --experimental-strip-types scripts/release-check.ts"
+  },
+  "dependencies": {
+    "@astrojs/react": "^7.1.4",
+    "astro": "^7.4.7",
+    "maplibre-gl": "^5.20.0",
+    "oxc-transform-react": "^0.145.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "three": "^0.182.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/three": "^0.182.0",
+    "pagefind": "^1.4.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.0"
+  }
+}

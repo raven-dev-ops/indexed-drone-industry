@@ -1,0 +1,1411 @@
+[
+  {
+    "id": "dji-mini-4-pro",
+    "name": "DJI Mini 4 Pro",
+    "maker": "DJI",
+    "segment": "camera",
+    "form": "quad",
+    "variant": "Standard Intelligent Flight Battery",
+    "summary": "Foldable camera quadcopter with a stabilized camera and obstacle sensing in all directions.",
+    "source": {
+      "title": "DJI Mini 4 Pro specifications",
+      "publisher": "DJI",
+      "url": "https://www.dji.com/mini-4-pro/specs",
+      "locator": "Aircraft → Takeoff Weight and Max Flight Time; Camera; Sensing",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": "<249",
+        "unit": "g",
+        "condition": "Standard Intelligent Flight Battery, propellers and microSD card. The optional Battery Plus puts the aircraft above 249 g."
+      },
+      {
+        "key": "endurance",
+        "value": 34,
+        "unit": "min",
+        "condition": "Manufacturer maximum at 21.6 km/h in still air at sea-level conditions. Standard battery, obstacle avoidance off, from full charge to empty."
+      },
+      {
+        "key": "sensors",
+        "value": "1/1.3-inch CMOS camera and omnidirectional binocular vision"
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "dji-air-3s",
+    "name": "DJI Air 3S",
+    "maker": "DJI",
+    "segment": "camera",
+    "form": "quad",
+    "variant": "Standard aircraft",
+    "summary": "Foldable camera quadcopter with a wide camera, medium telephoto camera and front LiDAR.",
+    "source": {
+      "title": "DJI Air 3S specifications",
+      "publisher": "DJI",
+      "url": "https://www.dji.com/air-3s/specs",
+      "locator": "Aircraft → Takeoff Weight and Max Flight Time; Camera; Sensing",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 724,
+        "unit": "g"
+      },
+      {
+        "key": "endurance",
+        "value": 45,
+        "unit": "min",
+        "condition": "Manufacturer maximum at 32.4 km/h in still air at sea-level conditions. Photo mode, obstacle avoidance set to Brake, from full charge to empty."
+      },
+      {
+        "key": "sensors",
+        "value": "Wide and medium telephoto cameras; forward LiDAR"
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "dji-mavic-4-pro",
+    "name": "DJI Mavic 4 Pro",
+    "maker": "DJI",
+    "segment": "camera",
+    "form": "quad",
+    "variant": "Standard 64 GB aircraft",
+    "summary": "Foldable camera quadcopter with three focal lengths in a gimbal assembly.",
+    "source": {
+      "title": "DJI Mavic 4 Pro specifications",
+      "publisher": "DJI",
+      "url": "https://www.dji.com/uk/mavic-4-pro/specs",
+      "locator": "Aircraft → Takeoff Weight and Max Flight Time; Camera → Image Sensor",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 1063,
+        "unit": "g",
+        "condition": "Approximate takeoff weight for standard aircraft."
+      },
+      {
+        "key": "endurance",
+        "value": 51,
+        "unit": "min",
+        "condition": "Manufacturer maximum at 32.4 km/h in still air at sea-level conditions. Photo mode and obstacle avoidance set to Brake."
+      },
+      {
+        "key": "sensors",
+        "value": "4/3 main camera; medium telephoto and telephoto cameras"
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "dji-neo",
+    "name": "DJI Neo",
+    "maker": "DJI",
+    "segment": "camera",
+    "form": "quad",
+    "variant": "Original DJI Neo",
+    "summary": "Compact camera quadcopter that can launch from and land on a hand.",
+    "source": {
+      "title": "DJI Neo specifications",
+      "publisher": "DJI",
+      "url": "https://www.dji.com/neo/specs",
+      "locator": "Aircraft → Takeoff Weight and Max Flight Time",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 135,
+        "unit": "g",
+        "condition": "Approximate takeoff weight."
+      },
+      {
+        "key": "endurance",
+        "value": 18,
+        "unit": "min",
+        "condition": "Approximate maximum without propeller guards. Test at 2 m/s in still air at sea-level conditions, photo mode, until forced landing. DJI lists about 17 min with guards."
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "dji-flip",
+    "name": "DJI Flip",
+    "maker": "DJI",
+    "segment": "camera",
+    "form": "quad",
+    "variant": "Standard Intelligent Flight Battery",
+    "summary": "Compact foldable camera drone with guards that enclose its propellers.",
+    "source": {
+      "title": "DJI Flip specifications",
+      "publisher": "DJI",
+      "url": "https://www.dji.com/flip/specs",
+      "locator": "Aircraft → Takeoff Weight and Max Flight Time",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": "<249",
+        "unit": "g",
+        "condition": "Standard aircraft with battery, propellers and microSD card."
+      },
+      {
+        "key": "endurance",
+        "value": 31,
+        "unit": "min",
+        "condition": "Manufacturer maximum at 6 m/s in still air, 20 m above sea level, photo mode without shooting, from full charge to empty."
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "autel-evo-nano-plus",
+    "name": "Autel EVO Nano+",
+    "maker": "Autel Robotics",
+    "segment": "camera",
+    "form": "quad",
+    "variant": "EVO Nano+",
+    "summary": "Foldable camera quadcopter with a 50 MP camera.",
+    "source": {
+      "title": "Autel EVO Nano+ product documentation",
+      "publisher": "Autel Robotics",
+      "url": "https://shop.autelrobotics.com/products/drones-evo-nano-plus",
+      "locator": "EVO Nano+ → Product description and camera",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 249,
+        "unit": "g",
+        "condition": "Manual lists the value for the Nano series with propellers and battery.",
+        "source": {
+          "title": "EVO Nano Series Aircraft User Manual v3.0.6",
+          "publisher": "Autel Robotics",
+          "url": "https://www.autelrobotics.com/wp-content/uploads/2024/06/EN_EVO-Nano-Series-Aircraft-User-Manual_V3.0.6.pdf",
+          "locator": "Technical specifications → Aircraft weight",
+          "accessed": "2026-11-08"
+        }
+      },
+      {
+        "key": "endurance",
+        "value": 28,
+        "unit": "min",
+        "condition": "Manufacturer maximum without wind.",
+        "source": {
+          "title": "EVO Nano Series User Manual",
+          "publisher": "Autel Robotics",
+          "url": "https://www.autelrobotics.com/userfiles/files/2021/12/30/EVO%20Nano%20Series%20User%20Manual-EN.pdf",
+          "locator": "Chapter 7 → Aircraft → Max flight time",
+          "accessed": "2026-11-08"
+        }
+      },
+      {
+        "key": "sensors",
+        "value": "50 MP 1/1.28-inch CMOS camera",
+        "condition": "EVO Nano+ camera, distinct from the EVO Nano camera."
+      }
+    ],
+    "organizationId": "autel-robotics"
+  },
+  {
+    "id": "hoverair-x1-promax",
+    "name": "HOVERAir X1 PROMAX",
+    "maker": "HOVERAir",
+    "segment": "camera",
+    "form": "quad",
+    "variant": "X1 PROMAX",
+    "summary": "Pocket-size camera quadcopter with automatic tracking modes and up to 8K video.",
+    "source": {
+      "title": "HOVERAir X1 PROMAX product documentation",
+      "publisher": "HOVERAir",
+      "url": "https://hoverair.com/pages/x1-pro-and-promax",
+      "locator": "Compare X1 PROMAX and X1 PRO → Max Take-off Weight, Max Flight Time and Video",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mtow",
+        "value": 193.1,
+        "unit": "g",
+        "condition": "Manufacturer lists this maximum with ND filter."
+      },
+      {
+        "key": "endurance",
+        "value": 16,
+        "unit": "min",
+        "condition": "Manufacturer maximum. Flight test details are unspecified in the comparison table."
+      }
+    ]
+  },
+  {
+    "id": "dji-avata-2",
+    "name": "DJI Avata 2",
+    "maker": "DJI",
+    "segment": "fpv",
+    "form": "fpv",
+    "variant": "Standard aircraft",
+    "summary": "First-person-view quadcopter with integrated propeller guards and digital video transmission.",
+    "source": {
+      "title": "DJI Avata 2 specifications",
+      "publisher": "DJI",
+      "url": "https://www.dji.com/avata-2/specs",
+      "locator": "Aircraft → Takeoff Weight and Max Flight Time; Video Transmission",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 377,
+        "unit": "g",
+        "condition": "Approximate takeoff weight."
+      },
+      {
+        "key": "endurance",
+        "value": 23,
+        "unit": "min",
+        "condition": "Approximate manufacturer maximum. Manufacturer maximum at 21.6 km/h in still air at sea-level conditions."
+      },
+      {
+        "key": "ecosystem",
+        "value": "DJI O4 digital video transmission"
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "dji-fpv",
+    "name": "DJI FPV",
+    "maker": "DJI",
+    "segment": "fpv",
+    "form": "fpv",
+    "variant": "Original DJI FPV aircraft",
+    "summary": "First-person-view camera quadcopter designed for use with compatible DJI goggles.",
+    "source": {
+      "title": "DJI FPV specifications",
+      "publisher": "DJI",
+      "url": "https://www.dji.com/support/product/dji-fpv",
+      "locator": "Specs → Aircraft; FAQ → Aircraft flight time and weight",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 795,
+        "unit": "g",
+        "condition": "Approximate aircraft weight with battery and propellers."
+      },
+      {
+        "key": "endurance",
+        "value": 20,
+        "unit": "min",
+        "condition": "Approximate manufacturer maximum at 40 km/h in still air."
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "geprc-mark5-dc-hd-o3",
+    "name": "GEPRC MARK5 DC HD O3",
+    "maker": "GEPRC",
+    "segment": "fpv",
+    "form": "fpv",
+    "variant": "MK5D dead-cat frame, O3 version",
+    "summary": "Freestyle FPV quadcopter with a dead-cat frame layout and DJI O3 Air Unit.",
+    "source": {
+      "title": "GEPRC MARK5 DC HD O3 product documentation",
+      "publisher": "GEPRC",
+      "url": "https://geprc.com/product/geprc-mark5-dc-hd-o3-fpv/",
+      "locator": "Specifications → Model, video transmission and weight",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 426,
+        "unit": "g",
+        "condition": "MK5D including 3D-printed parts. Manufacturer does not specify battery in the listed weight."
+      },
+      {
+        "key": "ecosystem",
+        "value": "DJI O3 Air Unit"
+      }
+    ]
+  },
+  {
+    "id": "geprc-cinelog35-v2-hd-wasp",
+    "name": "GEPRC CineLog35 V2 HD Wasp",
+    "maker": "GEPRC",
+    "segment": "fpv",
+    "form": "fpv",
+    "variant": "HD Wasp with TBS Nano receiver",
+    "summary": "Guarded FPV filming quadcopter with digital video and an action-camera mounting option.",
+    "source": {
+      "title": "GEPRC CineLog35 V2 HD Wasp product documentation",
+      "publisher": "GEPRC",
+      "url": "https://geprc.com/product/geprc-cinelog35-v2-hd-wasp-fpv-drone/",
+      "locator": "Specifications → Receiver, weight and flight time",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 277.2,
+        "unit": "g",
+        "condition": "TBS Nano RX configuration. Manufacturer does not specify battery in the listed weight."
+      },
+      {
+        "key": "endurance",
+        "value": "5–8.5",
+        "unit": "min",
+        "condition": "Manufacturer range. The page does not specify the payload, flight style or battery used for this figure."
+      },
+      {
+        "key": "ecosystem",
+        "value": "RunCam Link Wasp digital video system"
+      }
+    ]
+  },
+  {
+    "id": "betafpv-pavo20-pro",
+    "name": "BETAFPV Pavo20 Pro",
+    "maker": "BETAFPV",
+    "segment": "fpv",
+    "form": "fpv",
+    "variant": "O3 PNP version",
+    "summary": "Compact brushless cinewhoop sold in versions prepared for different DJI video units.",
+    "source": {
+      "title": "BETAFPV Pavo20 Pro product documentation",
+      "publisher": "BETAFPV",
+      "url": "https://betafpv.com/products/pavo20-pro-brushless-whoop-quadcopter",
+      "locator": "Specification → O3 PNP weight; Features → Extended Flight Performance",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 66.3,
+        "unit": "g",
+        "condition": "O3 PNP listed weight. The DJI O3 Air Unit is sold separately."
+      },
+      {
+        "key": "endurance",
+        "value": 6.67,
+        "unit": "min",
+        "condition": "Manufacturer reports up to 6 min 40 s with the LAVA 3S 550 mAh 75C battery."
+      },
+      {
+        "key": "ecosystem",
+        "value": "O3 PNP version prepared for DJI O3 Air Unit"
+      }
+    ]
+  },
+  {
+    "id": "dji-mavic-3e",
+    "name": "DJI Mavic 3E",
+    "maker": "DJI",
+    "segment": "enterprise",
+    "form": "quad",
+    "variant": "Standard Intelligent Flight Battery and propellers",
+    "summary": "Foldable surveying quadcopter whose wide camera has a mechanical shutter.",
+    "source": {
+      "title": "DJI Mavic 3E specifications",
+      "publisher": "DJI",
+      "url": "https://enterprise.dji.com/mavic-3-enterprise/specs",
+      "locator": "Aircraft → Weight, Max Takeoff Weight and Max Flight Time; Camera → Shutter Speed",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 915,
+        "unit": "g",
+        "condition": "Mavic 3E with propellers and aircraft battery."
+      },
+      {
+        "key": "mtow",
+        "value": 1050,
+        "unit": "g",
+        "condition": "Standard configuration. DJI lists 899 g with the EU C1 battery and low-noise propellers."
+      },
+      {
+        "key": "endurance",
+        "value": 45,
+        "unit": "min",
+        "condition": "Manufacturer maximum in still air with the standard Mavic 3 Series Intelligent Flight Battery and Enterprise Series propellers."
+      },
+      {
+        "key": "sensors",
+        "value": "4/3 CMOS wide camera with mechanical shutter; telephoto camera"
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "dji-matrice-4e",
+    "name": "DJI Matrice 4E",
+    "maker": "DJI",
+    "segment": "enterprise",
+    "form": "quad",
+    "variant": "Matrice 4E with standard propellers",
+    "summary": "Enterprise mapping quadcopter with a mechanical shutter on its wide camera and a laser rangefinder.",
+    "source": {
+      "title": "DJI Matrice 4E specifications",
+      "publisher": "DJI",
+      "url": "https://enterprise.dji.com/matrice-4-series/specs",
+      "locator": "Aircraft → Takeoff Weight, Max Takeoff Weight and Max Flight Time; Camera; Laser Rangefinder",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 1219,
+        "unit": "g",
+        "condition": "With standard propellers, battery and microSD card."
+      },
+      {
+        "key": "mtow",
+        "value": 1420,
+        "unit": "g",
+        "condition": "With standard propellers."
+      },
+      {
+        "key": "endurance",
+        "value": 49,
+        "unit": "min",
+        "condition": "Manufacturer maximum at about 9 m/s in still air, no payload, standard propellers, until battery reaches 0%."
+      },
+      {
+        "key": "payload",
+        "value": 200,
+        "unit": "g",
+        "condition": "Manufacturer maximum for an added payload."
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "dji-matrice-400",
+    "name": "DJI Matrice 400",
+    "maker": "DJI",
+    "segment": "enterprise",
+    "form": "quad",
+    "variant": "Matrice 400 with standard battery and propellers",
+    "summary": "Enterprise quadcopter with modular payload connectors and optional camera and survey payloads.",
+    "source": {
+      "title": "DJI Matrice 400 specifications",
+      "publisher": "DJI",
+      "url": "https://enterprise.dji.com/matrice-400/specs",
+      "locator": "Aircraft → Takeoff Weight, Max Takeoff Weight, Max Payload and Max Flight Time",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 9740,
+        "unit": "g",
+        "condition": "With battery and propellers. DJI specifies ±40 g."
+      },
+      {
+        "key": "mtow",
+        "value": 15.8,
+        "unit": "kg"
+      },
+      {
+        "key": "payload",
+        "value": 6,
+        "unit": "kg",
+        "condition": "Maximum measured at the third gimbal connector at sea level. Capacity decreases with altitude."
+      },
+      {
+        "key": "endurance",
+        "value": 59,
+        "unit": "min",
+        "condition": "Manufacturer maximum at 10 m/s in still air at sea-level conditions. H30T payload only, total 10.67 kg, until forced landing from battery depletion."
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "autel-evo-max-4t",
+    "name": "Autel EVO Max 4T",
+    "maker": "Autel Robotics",
+    "segment": "enterprise",
+    "form": "quad",
+    "variant": "EVO Max 4T with ABX40 and Fusion 4T",
+    "summary": "Enterprise inspection quadcopter with wide, zoom and thermal imaging and a laser rangefinder.",
+    "source": {
+      "title": "Autel EVO Max 4T product documentation",
+      "publisher": "Autel Robotics",
+      "url": "https://www.autelrobotics.com/wp-content/uploads/2025/08/EVO-Max-Series-Multi-rotor-Drone-User-Manual_V1.3.0.pdf",
+      "locator": "Aircraft technical specifications → EVO Max 4T Weight; Fusion 4T gimbal",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 1645,
+        "unit": "g",
+        "condition": "ABX40 smart battery, Fusion 4T gimbal and propellers included."
+      },
+      {
+        "key": "endurance",
+        "value": 42,
+        "unit": "min",
+        "condition": "Manufacturer maximum without wind.",
+        "source": {
+          "title": "EVO Max 4T Aircraft Specifications",
+          "publisher": "Autel Robotics",
+          "url": "https://shop.autelrobotics.com/pages/evo-max-4t-aircraft",
+          "locator": "Aircraft → Max Flight Time (windless)",
+          "accessed": "2026-11-08"
+        }
+      },
+      {
+        "key": "sensors",
+        "value": "Fusion 4T gimbal with wide, zoom and thermal cameras and laser rangefinder"
+      }
+    ],
+    "organizationId": "autel-robotics"
+  },
+  {
+    "id": "freefly-astro",
+    "name": "Freefly Astro",
+    "maker": "Freefly Systems",
+    "segment": "enterprise",
+    "form": "quad",
+    "variant": "Astro with F45 motors",
+    "summary": "Modular commercial quadcopter with interchangeable imaging and survey payloads.",
+    "source": {
+      "title": "Freefly Astro product documentation",
+      "publisher": "Freefly Systems",
+      "url": "https://docs.freeflysystems.com/astro/other-user-manuals/specs-and-interfaces/performance",
+      "locator": "Astro (F45) → Flight Time and Payload",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "payload",
+        "value": 1500,
+        "unit": "g",
+        "condition": "Manufacturer maximum for Astro.",
+        "source": {
+          "title": "How long can Astro or Astro Max fly?",
+          "publisher": "Freefly Systems",
+          "url": "https://freeflysystems.com/knowledge-base/how-long-can-astro-fly",
+          "locator": "Astro → 1500 g payload",
+          "accessed": "2026-11-08"
+        }
+      },
+      {
+        "key": "endurance",
+        "value": 25,
+        "unit": "min",
+        "condition": "With the maximum 1500 g payload in Freefly's flight-time summary.",
+        "source": {
+          "title": "How long can Astro or Astro Max fly?",
+          "publisher": "Freefly Systems",
+          "url": "https://freeflysystems.com/knowledge-base/how-long-can-astro-fly",
+          "locator": "Astro → 25 min with 1500 g payload",
+          "accessed": "2026-11-08"
+        }
+      }
+    ],
+    "organizationId": "freefly-systems"
+  },
+  {
+    "id": "wingtraone-gen-ii",
+    "name": "WingtraOne GEN II",
+    "maker": "Wingtra",
+    "segment": "enterprise",
+    "form": "vtol",
+    "variant": "GEN II as documented in later specifications",
+    "summary": "Fixed-wing surveying aircraft that takes off and lands vertically.",
+    "source": {
+      "title": "WingtraOne GEN II product documentation",
+      "publisher": "Wingtra",
+      "url": "https://wingtra.com/wingtraone-gen-ii-drone/",
+      "locator": "Key WingtraOne GEN II technical specifications → Maximum take-off weight and airframe type",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mtow",
+        "value": 4.8,
+        "unit": "kg",
+        "condition": "As listed in Wingtra's later GEN II specifications."
+      },
+      {
+        "key": "endurance",
+        "value": 59,
+        "unit": "min",
+        "condition": "Manufacturer example with RedEdge MX sensor at 0–500 m takeoff altitude, 16 m/s cruise.",
+        "source": {
+          "title": "Flight time, coverage and job time with the WingtraOne",
+          "publisher": "Wingtra",
+          "url": "https://knowledge.wingtra.com/en/flight-time",
+          "locator": "WingtraOne GEN II table → RedEdge MX row",
+          "accessed": "2026-11-08"
+        }
+      }
+    ],
+    "organizationId": "wingtra"
+  },
+  {
+    "id": "dji-agras-t25p",
+    "name": "DJI Agras T25P",
+    "maker": "DJI",
+    "segment": "agriculture",
+    "form": "quad",
+    "variant": "Spraying system with battery",
+    "summary": "Agricultural quadcopter with interchangeable spraying and spreading equipment.",
+    "source": {
+      "title": "DJI Agras T25P specifications",
+      "publisher": "DJI",
+      "url": "https://ag.dji.com/t25p/specs",
+      "locator": "Aircraft → Weight and Max Takeoff Weight; Spraying System → Operating Payload",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 33,
+        "unit": "kg",
+        "condition": "Spraying configuration with battery."
+      },
+      {
+        "key": "mtow",
+        "value": 53,
+        "unit": "kg",
+        "condition": "Maximum for spraying."
+      },
+      {
+        "key": "payload",
+        "value": 20,
+        "unit": "kg",
+        "condition": "Spraying operating payload."
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "dji-agras-t50",
+    "name": "DJI Agras T50",
+    "maker": "DJI",
+    "segment": "agriculture",
+    "form": "multirotor",
+    "variant": "Spraying system with battery",
+    "summary": "Coaxial agricultural multirotor for applying liquid and granular products.",
+    "source": {
+      "title": "DJI Agras T50 specifications",
+      "publisher": "DJI",
+      "url": "https://ag.dji.com/t50/specs",
+      "locator": "Aircraft → Weight and Max Takeoff Weight; Spraying System → Operating Payload",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 52,
+        "unit": "kg",
+        "condition": "With battery."
+      },
+      {
+        "key": "mtow",
+        "value": 92,
+        "unit": "kg",
+        "condition": "Maximum for spraying at sea level."
+      },
+      {
+        "key": "payload",
+        "value": 40,
+        "unit": "kg",
+        "condition": "Spraying operating payload."
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "dji-agras-t70p",
+    "name": "DJI Agras T70P",
+    "maker": "DJI",
+    "segment": "agriculture",
+    "form": "multirotor",
+    "variant": "DB2160 battery and standard two-nozzle spray configuration",
+    "summary": "Agricultural multirotor with equipment for spraying, spreading and lifting.",
+    "source": {
+      "title": "DJI Agras T70P specifications",
+      "publisher": "DJI",
+      "url": "https://ag.dji.com/t70p/specs",
+      "locator": "Aircraft → Weight and Max Takeoff Weight; Spraying System → Operating Payload",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 56,
+        "unit": "kg",
+        "condition": "Aircraft with DB2160 Intelligent Flight Battery."
+      },
+      {
+        "key": "mtow",
+        "value": 126,
+        "unit": "kg",
+        "condition": "DB2160 with standard two-nozzle spraying system."
+      },
+      {
+        "key": "payload",
+        "value": 70,
+        "unit": "kg",
+        "condition": "Spraying operating payload. Refer to takeoff and battery limits for the configuration."
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "dji-agras-t100",
+    "name": "DJI Agras T100",
+    "maker": "DJI",
+    "segment": "agriculture",
+    "form": "multirotor",
+    "variant": "Standard two-nozzle spray configuration",
+    "summary": "Heavy agricultural multirotor with spraying, spreading and lifting configurations.",
+    "source": {
+      "title": "DJI Agras T100 specifications",
+      "publisher": "DJI",
+      "url": "https://ag.dji.com/t100/specs",
+      "locator": "Aircraft → Weight and Max Takeoff Weight; Spraying System → Operating Payload",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 75,
+        "unit": "kg",
+        "condition": "Standard two-nozzle spraying configuration."
+      },
+      {
+        "key": "mtow",
+        "value": 175,
+        "unit": "kg",
+        "condition": "Standard two-nozzle spraying configuration."
+      },
+      {
+        "key": "payload",
+        "value": 100,
+        "unit": "kg",
+        "condition": "Spraying operating payload."
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "xag-p100-pro",
+    "name": "XAG P100 Pro",
+    "maker": "XAG",
+    "segment": "agriculture",
+    "form": "multirotor",
+    "variant": "P100 Pro with RevoSpray 3",
+    "summary": "Agricultural aircraft compatible with separate spraying and spreading modules.",
+    "source": {
+      "title": "XAG P100 Pro product documentation",
+      "publisher": "XAG",
+      "url": "https://www.xa.com/en/p100pro/p100prospecs",
+      "locator": "P100 Pro Aircraft → Aircraft Weight; RevoSpray 3 → Rated Payload",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 46,
+        "unit": "kg",
+        "condition": "Aircraft with battery, excluding payload system."
+      },
+      {
+        "key": "payload",
+        "value": 50,
+        "unit": "kg",
+        "condition": "Rated payload for RevoSpray 3."
+      }
+    ],
+    "organizationId": "xag"
+  },
+  {
+    "id": "xag-p150",
+    "name": "XAG P150",
+    "maker": "XAG",
+    "segment": "agriculture",
+    "form": "multirotor",
+    "variant": "P150 with RevoSpray 4 and batteries",
+    "summary": "Agricultural aircraft that can be configured for spraying or spreading.",
+    "source": {
+      "title": "XAG P150 product documentation",
+      "publisher": "XAG",
+      "url": "https://www.xa.com/en/p150/p150specs",
+      "locator": "P150 Aircraft → Aircraft Weight and Rated Takeoff Weight; RevoSpray 4 → Maximum Payload",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 54,
+        "unit": "kg",
+        "condition": "RevoSpray 4 and batteries installed."
+      },
+      {
+        "key": "mtow",
+        "value": 125,
+        "unit": "kg",
+        "condition": "Maximum for spraying. Manufacturer lists 114 kg as rated spraying takeoff weight."
+      },
+      {
+        "key": "payload",
+        "value": 70,
+        "unit": "kg",
+        "condition": "RevoSpray 4 maximum payload."
+      }
+    ],
+    "organizationId": "xag"
+  },
+  {
+    "id": "zipline-platform-1",
+    "name": "Zipline Platform 1",
+    "maker": "Zipline",
+    "segment": "delivery",
+    "form": "fixed-wing",
+    "variant": "P1 aircraft",
+    "summary": "Fixed-wing delivery aircraft that releases parcels with a parachute.",
+    "source": {
+      "title": "Zipline Platform 1 product documentation",
+      "publisher": "Zipline",
+      "url": "https://go.zipline.com/about/zipline-fact-sheet",
+      "locator": "Platform 1 and Platform 2 comparison → Payload and Delivery Mechanism",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "payload",
+        "value": 1.81,
+        "unit": "kg",
+        "condition": "Manufacturer figure of 4 lb, converted to kilograms."
+      },
+      {
+        "key": "ecosystem",
+        "value": "Platform 1 distribution hub and parachute delivery"
+      }
+    ],
+    "organizationId": "zipline"
+  },
+  {
+    "id": "zipline-platform-2",
+    "name": "Zipline Platform 2",
+    "maker": "Zipline",
+    "segment": "delivery",
+    "form": "vtol",
+    "variant": "P2 aircraft with Delivery Zip",
+    "summary": "Delivery aircraft that hovers over its destination while lowering a tethered Delivery Zip.",
+    "source": {
+      "title": "Zipline Fact Sheet",
+      "publisher": "Zipline",
+      "url": "https://go.zipline.com/about/zipline-fact-sheet",
+      "locator": "Platform 1 and Platform 2 comparison → Payload and Delivery Mechanism; Platform 2",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "payload",
+        "value": 3.63,
+        "unit": "kg",
+        "condition": "Manufacturer figure of 8 lb, converted to kilograms."
+      },
+      {
+        "key": "ecosystem",
+        "value": "Platform 2 tethered Delivery Zip"
+      }
+    ],
+    "organizationId": "zipline"
+  },
+  {
+    "id": "matternet-m2",
+    "name": "Matternet M2",
+    "maker": "Matternet",
+    "segment": "delivery",
+    "form": "quad",
+    "variant": "M2 aircraft",
+    "summary": "Battery-powered delivery quadcopter with swappable payload and battery modules.",
+    "source": {
+      "title": "Matternet M2 product documentation",
+      "publisher": "Matternet",
+      "url": "https://www.matternet.com/our-system-aircraft-m2",
+      "locator": "M2 Aircraft → Specs and In Use",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mtow",
+        "value": 13.2,
+        "unit": "kg"
+      },
+      {
+        "key": "payload",
+        "value": 2,
+        "unit": "kg",
+        "condition": "Manufacturer maximum package payload."
+      },
+      {
+        "key": "ecosystem",
+        "value": "Matternet Cloud and compatible automated swap station"
+      }
+    ],
+    "organizationId": "matternet"
+  },
+  {
+    "id": "amazon-mk30",
+    "name": "Amazon Prime Air MK30",
+    "maker": "Amazon Prime Air",
+    "segment": "delivery",
+    "form": "vtol",
+    "variant": "MK30 aircraft",
+    "summary": "Electric delivery aircraft that takes off vertically and carries a parcel in an internal compartment.",
+    "source": {
+      "title": "Amazon Prime Air MK30 product documentation",
+      "publisher": "Amazon Prime Air",
+      "url": "https://www.aboutamazon.com/news/transportation/amazon-drone-prime-air-uk",
+      "locator": "Inside Amazon's first UK drone delivery site → MK30 aircraft and package weight",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "payload",
+        "value": 2.27,
+        "unit": "kg",
+        "condition": "Published 5 lb package limit, converted to kilograms."
+      },
+      {
+        "key": "mtow",
+        "value": 37.74,
+        "unit": "kg",
+        "condition": "FAA table lists 83.2 lb, converted to kilograms.",
+        "source": {
+          "title": "Draft Programmatic Environmental Assessment for Drone Package Delivery in the U.S.",
+          "publisher": "FAA",
+          "url": "https://www.faa.gov/uas/advanced_operations/Part_135_National_DRAFT_PEA_approved_508.pdf",
+          "locator": "Aircraft characteristics table → Amazon Prime Air/MK30",
+          "accessed": "2026-11-08"
+        }
+      }
+    ],
+    "organizationId": "amazon-prime-air"
+  },
+  {
+    "id": "flytrex-ftx-m600p",
+    "name": "Flytrex FTX-M600P",
+    "maker": "Flytrex",
+    "segment": "delivery",
+    "form": "multirotor",
+    "variant": "FTX-M600P in the FAA's national draft assessment",
+    "summary": "Electric delivery hexacopter documented by the FAA for Causey Aviation operations. It lowers packages on a cable while hovering.",
+    "source": {
+      "title": "Draft Programmatic Environmental Assessment for Drone Package Delivery in the U.S.",
+      "publisher": "FAA",
+      "url": "https://www.faa.gov/uas/advanced_operations/Part_135_National_DRAFT_PEA_approved_508.pdf",
+      "locator": "Aircraft characteristics table → Causey Aviation/Flytrex FTX-M600P",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mtow",
+        "value": 15.15,
+        "unit": "kg",
+        "condition": "FAA national draft assessment lists 33.4 lb for this configuration, converted to kilograms."
+      },
+      {
+        "key": "payload",
+        "value": 2.99,
+        "unit": "kg",
+        "condition": "FAA draft assessment lists 6.6 lb maximum package weight, converted to kilograms."
+      }
+    ],
+    "organizationId": "flytrex"
+  },
+  {
+    "id": "wing-hummingbird-7000w-b",
+    "name": "Wing Hummingbird 7000W-B",
+    "maker": "Wing",
+    "segment": "delivery",
+    "form": "vtol",
+    "variant": "7000W-B in the FAA's national draft assessment",
+    "summary": "Electric delivery aircraft that uses separate lift and forward-flight propellers and lowers the package on a cable.",
+    "source": {
+      "title": "Draft Programmatic Environmental Assessment for Drone Package Delivery in the U.S.",
+      "publisher": "FAA",
+      "url": "https://www.faa.gov/uas/advanced_operations/Part_135_National_DRAFT_PEA_approved_508.pdf",
+      "locator": "Aircraft characteristics table → Wing Aviation/Hummingbird 7000W-B",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mtow",
+        "value": 6.35,
+        "unit": "kg",
+        "condition": "FAA national draft assessment lists 14 lb for this configuration, converted to kilograms."
+      },
+      {
+        "key": "payload",
+        "value": 1.04,
+        "unit": "kg",
+        "condition": "FAA national draft assessment lists 2.3 lb maximum package weight, converted to kilograms."
+      }
+    ],
+    "organizationId": "wing"
+  },
+  {
+    "id": "skydio-x10",
+    "name": "Skydio X10",
+    "maker": "Skydio",
+    "segment": "public-safety",
+    "form": "quad",
+    "variant": "X10 with Connect SL",
+    "summary": "Field inspection and public-safety quadcopter with an interchangeable imaging sensor package.",
+    "source": {
+      "title": "Skydio X10 product documentation",
+      "publisher": "Skydio",
+      "url": "https://www.skydio.com/x10/technical-specs",
+      "locator": "Aircraft → Weight, Max Takeoff Weight and Max Flight Time; Sensor Packages",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 2.11,
+        "unit": "kg",
+        "condition": "Connect SL aircraft including battery."
+      },
+      {
+        "key": "mtow",
+        "value": 2.49,
+        "unit": "kg"
+      },
+      {
+        "key": "endurance",
+        "value": 40,
+        "unit": "min",
+        "condition": "Manufacturer maximum flight time. The separate hover figure is 35 min."
+      }
+    ],
+    "organizationId": "skydio"
+  },
+  {
+    "id": "brinc-lemur-2",
+    "name": "BRINC LEMUR 2",
+    "maker": "BRINC",
+    "segment": "public-safety",
+    "form": "quad",
+    "variant": "LEMUR 2 aircraft",
+    "summary": "Public-safety drone designed for indoor missions with communication and imaging tools.",
+    "source": {
+      "title": "BRINC LEMUR 2 product documentation",
+      "publisher": "BRINC",
+      "url": "https://brincdrones.com/lemur-2/specifications/",
+      "locator": "Aircraft → Takeoff Weight and Max Flight Time; Communications",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 1.5,
+        "unit": "kg",
+        "condition": "Manufacturer takeoff weight."
+      },
+      {
+        "key": "endurance",
+        "value": 20,
+        "unit": "min",
+        "condition": "Manufacturer maximum. Test details are unspecified on the specifications page."
+      }
+    ],
+    "organizationId": "brinc"
+  },
+  {
+    "id": "brinc-responder",
+    "name": "BRINC Responder",
+    "maker": "BRINC",
+    "segment": "public-safety",
+    "form": "quad",
+    "variant": "Responder aircraft",
+    "summary": "Emergency response quadcopter with a thermal camera, lights and two-way communications.",
+    "source": {
+      "title": "BRINC Responder product documentation",
+      "publisher": "BRINC",
+      "url": "https://brincdrones.com/responder/",
+      "locator": "Responder overview → Flight Time, Thermal Camera and Communications",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "endurance",
+        "value": 42,
+        "unit": "min",
+        "condition": "Manufacturer published flight time. Test details are unspecified in the overview."
+      },
+      {
+        "key": "sensors",
+        "value": "Thermal camera and zoom camera"
+      }
+    ],
+    "organizationId": "brinc"
+  },
+  {
+    "id": "parrot-anafi-usa",
+    "name": "Parrot ANAFI USA",
+    "maker": "Parrot",
+    "segment": "public-safety",
+    "form": "quad",
+    "variant": "ANAFI USA base version",
+    "summary": "Foldable observation quadcopter with visible and thermal imaging.",
+    "source": {
+      "title": "Parrot ANAFI USA product documentation",
+      "publisher": "Parrot",
+      "url": "https://www.parrot.com/en/drones/anafi-usa/technical-specifications",
+      "locator": "Drone → Mass, Maximum Take-off Mass, Maximum Flight Time; Camera",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 500,
+        "unit": "g"
+      },
+      {
+        "key": "mtow",
+        "value": 644,
+        "unit": "g"
+      },
+      {
+        "key": "endurance",
+        "value": 32,
+        "unit": "min",
+        "condition": "Manufacturer maximum for the base version. The MIL variant has a separate rating."
+      },
+      {
+        "key": "sensors",
+        "value": "Visible imaging cameras and FLIR thermal camera"
+      }
+    ],
+    "organizationId": "parrot"
+  },
+  {
+    "id": "dji-matrice-30t",
+    "name": "DJI Matrice 30T",
+    "maker": "DJI",
+    "segment": "public-safety",
+    "form": "quad",
+    "variant": "M30T with two TB30 batteries",
+    "summary": "Enterprise quadcopter with wide, zoom and thermal cameras plus a laser rangefinder.",
+    "source": {
+      "title": "DJI Matrice 30T specifications",
+      "publisher": "DJI",
+      "url": "https://enterprise.dji.com/matrice-30/specs",
+      "locator": "Aircraft → Weight, Max Takeoff Weight and Max Flight Time; Thermal Camera (M30T)",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 3770,
+        "unit": "g",
+        "condition": "With two batteries. DJI specifies ±10 g."
+      },
+      {
+        "key": "mtow",
+        "value": 4069,
+        "unit": "g",
+        "condition": "Standard limit. DJI lists 3998 g for EU C2 certification."
+      },
+      {
+        "key": "endurance",
+        "value": 41,
+        "unit": "min",
+        "condition": "Manufacturer maximum in a lab test for the Matrice 30 series."
+      },
+      {
+        "key": "sensors",
+        "value": "Wide, zoom and thermal cameras; laser rangefinder"
+      }
+    ],
+    "organizationId": "dji"
+  },
+  {
+    "id": "holybro-x500-v2",
+    "name": "Holybro X500 V2",
+    "maker": "Holybro",
+    "segment": "research",
+    "form": "quad",
+    "variant": "X500 V2 ARF kit, SKU 30125",
+    "summary": "Carbon-fiber development quadcopter kit with motors, ESCs and power distribution hardware. Flight controller and battery are separate for this SKU.",
+    "source": {
+      "title": "Holybro X500 V2 product documentation",
+      "publisher": "Holybro",
+      "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+      "locator": "X500 V2 ARF Kit (SKU 30125) → Kit Contents and X500 V2 Frame Kit Details",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "ecosystem",
+        "value": "2216 KV920 motors, BLHeli S 20 A ESCs and 1045 propellers",
+        "condition": "Parts listed for the ARF SKU on Holybro's product page."
+      }
+    ],
+    "organizationId": "holybro"
+  },
+  {
+    "id": "crazyflie-2-1-plus",
+    "name": "Bitcraze Crazyflie 2.1+",
+    "maker": "Bitcraze",
+    "segment": "research",
+    "form": "quad",
+    "variant": "Crazyflie 2.1+ stock configuration",
+    "summary": "Open-source palm-size quadcopter with expansion connectors for research and teaching.",
+    "source": {
+      "title": "Bitcraze Crazyflie 2.1+ product documentation",
+      "publisher": "Bitcraze",
+      "url": "https://www.bitcraze.io/products/crazyflie-2-1-plus/",
+      "locator": "Mechanical specifications and Flight specifications",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 29,
+        "unit": "g",
+        "condition": "Stock takeoff weight."
+      },
+      {
+        "key": "endurance",
+        "value": 7,
+        "unit": "min",
+        "condition": "With stock battery."
+      },
+      {
+        "key": "payload",
+        "value": 15,
+        "unit": "g",
+        "condition": "Manufacturer maximum recommended payload."
+      }
+    ],
+    "organizationId": "bitcraze"
+  },
+  {
+    "id": "droneblocks-dexi-5",
+    "name": "DroneBlocks DEXI-5",
+    "maker": "DroneBlocks",
+    "segment": "research",
+    "form": "quad",
+    "variant": "Stock DEXI-5 with 6S Li-ion battery",
+    "summary": "PX4 developer quadcopter for autonomy education and ROS 2 experiments.",
+    "source": {
+      "title": "DroneBlocks DEXI-5 product documentation",
+      "publisher": "DroneBlocks",
+      "url": "https://droneblocks.io/hardware/dexi-5/",
+      "locator": "Technical details → PX4, ROS 2 and stock hover time",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "endurance",
+        "value": 15,
+        "unit": "min",
+        "condition": "Approximate hover time in stock configuration with 6S Li-ion battery."
+      },
+      {
+        "key": "ecosystem",
+        "value": "PX4 and ROS 2"
+      }
+    ]
+  },
+  {
+    "id": "modalai-starling-2-max",
+    "name": "ModalAI Starling 2 Max",
+    "maker": "ModalAI",
+    "segment": "research",
+    "form": "quad",
+    "variant": "Starling 2 Max",
+    "summary": "Development quadcopter with a VOXL 2 onboard computer for autonomous flight.",
+    "source": {
+      "title": "ModalAI Starling 2 Max product documentation",
+      "publisher": "ModalAI",
+      "url": "https://docs.modalai.com/starling-2-max-datasheet/",
+      "locator": "Specifications → Take-off Weight, Payload Capacity and Flight Time",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 566,
+        "unit": "g",
+        "condition": "Datasheet takeoff weight."
+      },
+      {
+        "key": "payload",
+        "value": 500,
+        "unit": "g",
+        "condition": "Datasheet capacity. ModalAI notes added payload affects flight time."
+      },
+      {
+        "key": "endurance",
+        "value": 55,
+        "unit": "min",
+        "condition": "Approximate with Amprius cells. ModalAI lists about 40 min with its other Li-ion configuration."
+      },
+      {
+        "key": "ecosystem",
+        "value": "ModalAI VOXL 2"
+      }
+    ]
+  },
+  {
+    "id": "crazyflie-2-1-brushless",
+    "name": "Bitcraze Crazyflie 2.1 Brushless",
+    "maker": "Bitcraze",
+    "segment": "research",
+    "form": "quad",
+    "variant": "Stock aircraft with landing legs",
+    "summary": "Open-source micro quadcopter with brushless motors and expansion support.",
+    "source": {
+      "title": "Bitcraze Crazyflie 2.1 Brushless product documentation",
+      "publisher": "Bitcraze",
+      "url": "https://www.bitcraze.io/products/crazyflie-2-1-brushless/",
+      "locator": "Mechanical specifications and Flight specifications",
+      "accessed": "2026-11-08"
+    },
+    "specs": [
+      {
+        "key": "mass",
+        "value": 34,
+        "unit": "g",
+        "condition": "Takeoff weight with landing legs. Manufacturer lists 37 g with guards."
+      },
+      {
+        "key": "endurance",
+        "value": 10,
+        "unit": "min",
+        "condition": "With stock battery."
+      },
+      {
+        "key": "payload",
+        "value": 40,
+        "unit": "g",
+        "condition": "Manufacturer maximum recommended stock payload."
+      }
+    ],
+    "organizationId": "bitcraze"
+  }
+]

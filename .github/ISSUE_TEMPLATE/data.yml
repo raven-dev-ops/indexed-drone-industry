@@ -1,0 +1,25 @@
+name: Data correction or addition
+description: Correct a sourced claim or propose an aircraft, organization, facility, or other record.
+title: "[Data] "
+body:
+  - type: input
+    id: record
+    attributes:
+      label: Affected page, record ID, or proposed name
+      description: For a correction, include a link or stable record ID.
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed change
+      description: Include the precise value or relationship and the variant, date, geography, units, and test conditions where relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Include the publisher, direct URL, page or section, and applicable reuse terms. Link to any third-party media.
+    validations:
+      required: true

@@ -1,0 +1,12 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "types": ["node", "astro/client"]
+  },
+  "include": [".astro/types.d.ts", "src/**/*", "scripts/**/*.ts", "tests/**/*.ts", "playwright.config.ts"],
+  "exclude": ["dist", "node_modules"]
+}

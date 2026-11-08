@@ -1,0 +1,145 @@
+---
+import Site from '../../layouts/Site.astro';
+import Evidence from '../../components/Evidence.astro';
+import Compare from '../../components/Compare';
+import Atlas from '../../components/Atlas';
+import { PropulsionLab, SurveyLab } from '../../components/Labs';
+import { aircraft, collections, coverage, facilities, launchThresholds, lookupModel, observations, type Section } from '../../lib/data';
+import { labels, page, path } from '../../lib/navigation';
+import { forms, segments } from '../../lib/schema';
+const descriptions: Record<string,string> = {
+  aircraft:'Browse civilian aircraft by mission and airframe. Every 3D view identifies the evidence behind its layout.',
+  parts:'Learn what each subsystem does, which materials it can contain, and how it fits into the aircraft.',
+  materials:'Follow the raw materials and industrial processes that support drone production.',
+  organizations:'Explore manufacturers, declared makes, component suppliers, operators, and service organizations.',
+  facilities:'Search publicly documented extraction, production, assembly, test, and recycling sites.',
+  history:'Explore dated disruptions, deployments, industrial changes, and regulatory milestones.',
+  supply:'Explore material pathways and see how interruptions propagate through modeled dependencies.',
+  learn:'Eight short lessons from the airframe and flight to supply chains, operations, and recycling.',
+  bottlenecks:'See what limits supply and which parts of the industry depend on it.',
+  regulations:'Browse equipment, operations, and procurement sources by jurisdiction.',
+  market:'Explore indicators with their geography, period, segment, and methodology.',
+  compare:'Select two aircraft. Published values keep their variant, conditions, and source.',
+  labs:'Change assumptions and see how they affect two simple flight and survey models.',
+  atlas:'Explore public facilities, mineral production and reserves, and regional industrial cost layers.',
+  downloads:'Get machine-readable snapshots generated from the same evidence records as the site.',
+  coverage:'See the records in this snapshot, the launch targets, and the limits of the evidence.',
+  search:'Find aircraft, parts, materials, facilities, history, and learning modules.',
+};
+export function getStaticPaths() {
+  return [...Object.keys(collections), 'compare','labs','atlas','downloads','coverage','search'].map(section => ({ params:{section} }));
+}
+const { section } = Astro.params;
+const title = labels[section];
+const entries = collections[section as Section] ?? [];
+const categories = section === 'aircraft' ? Object.entries(segments)
+  : section === 'history' ? [['disruption','Disruptions'],['launch','Launches'],['facility','Facilities'],['policy','Policy'],['deployment','Deployments']]
+  : section === 'regulations' ? [['Equipment','Equipment'],['Operations','Operations'],['Procurement','Procurement']] : [];
+const ordered = section === 'history' ? [...collections.history].sort((a,b) => b.date.localeCompare(a.date)) : entries;
+const counterLabels: Record<keyof typeof coverage,string> = {
+  aircraft:'Cataloged aircraft', modeledAircraft:'Aircraft with 3D views', specificLayouts:'Model-specific layouts', segments:'Civilian segments',
+  pathways:'Supply pathways', organizations:'Organizations and declared makes', facilities:'Public facilities', countries:'Countries and territories',
+  disruptions:'Disruption cases', labs:'Interactive labs', lessons:'Learning modules',
+};
+---
+<Site title={title} description={descriptions[section]} section={section}>
+  <header class="pagehead"><span class="eyebrow">The index / {section === 'atlas' ? 'Geography' : 'Explore'}</span><h1>{title}</h1><p class="lede">{descriptions[section]}</p>
+    {section === 'aircraft' && <div class="actions"><a class="button small" href={page('compare')}>Compare two aircraft</a><a class="button secondary small" href={page('aircraft','holybro-x500-v2')}>Flagship teardown</a></div>}
+  </header>
+
+  {section === 'compare' && <Compare aircraft={aircraft} base={path()} client:load />}
+  {section === 'labs' && <div class="grid two"><PropulsionLab client:load /><SurveyLab client:visible /></div>}
+  {section === 'atlas' && <Atlas facilities={facilities} observations={observations} base={path()} client:load />}
+  {section === 'search' && <>
+    <div id="search-widget" data-base={path()} class="panel"></div>
+    <p class="note" id="search-browse">Browse <a href={page('aircraft')}>aircraft</a>, <a href={page('parts')}>parts</a>, or <a href={page('history')}>history</a>.</p>
+    <script>
+      const mount = document.querySelector<HTMLElement>('#search-widget');
+      if (mount) {
+        const url = `${mount.dataset.base}pagefind/pagefind-ui.js`;
+        const style = document.createElement('link');
+        style.rel = 'stylesheet';
+        style.href = `${mount.dataset.base}pagefind/pagefind-ui.css`;
+        document.head.append(style);
+        const script = document.createElement('script');
+        script.src = url;
+        script.onload = () => {
+          const app = window as unknown as { PagefindUI: new (config: { element: string; showImages: boolean; bundlePath: string }) => unknown };
+          new app.PagefindUI({ element: '#search-widget', showImages: false, bundlePath: `${mount.dataset.base}pagefind/` });
+        };
+        script.onerror = () => { mount.textContent = 'The search index is available in the production build.'; };
+        document.head.append(script);
+      }
+    </script>
+  </>}
+  {section === 'downloads' && <div class="grid two">
+    {[
+      ['index.json','Complete index','Canonical normalized records, model manifests, and links.'],
+      ['aircraft.csv','Aircraft specifications','Variant, observation conditions, units, and source.'],
+      ['facilities.geojson','Facilities GeoJSON','Facility coordinates, precision, status, and evidence.'],
+      ['observations.csv','Atlas observations','Published country metrics and their source definitions.'],
+      ['events.csv','Timeline records','Events and consequences in long format.'],
+      ['release.json','Snapshot manifest','Schema version, coverage, attribution, and file hashes.'],
+      ['SHA256SUMS.txt','File checksums','SHA-256 digests for verifying the downloaded snapshot.'],
+    ].map(([file,name,description]) => <article class="card"><h3><a href={path(`data/v1/${file}`)} download>{name} ↓</a></h3><p>{description}</p></article>)}
+  </div>}
+  {section === 'coverage' && <>
+    <div class="table-wrap"><table><thead><tr><th scope="col">Coverage</th><th scope="col">In this snapshot</th><th scope="col">Launch target</th></tr></thead><tbody>
+      {Object.entries(coverage).map(([key,value]) => <tr><th scope="row">{counterLabels[key as keyof typeof coverage]}</th><td>{value}</td><td>{launchThresholds[key as keyof typeof coverage]}</td></tr>)}
+    </tbody></table></div>
+    <div class="section-block grid two">
+      <article class="panel"><h2>How evidence is labeled</h2><p><strong>Documented</strong> connects claims supported by a specific source. <strong>Representative</strong> illustrates a class or industrial process. <strong>Unknown</strong> means the evidence available here cannot resolve the claim.</p><p>Country production does not establish a supplier relationship for any individual aircraft.</p></article>
+      <article class="panel"><h2>Coverage gaps</h2><p>Manufacturers rarely disclose complete internal assemblies or supplier tiers. Facility records have different observation dates and precision. Energy and labor observations are regional. The market page lists published indicators with different geographies and methods.</p><p>Defense coverage is limited to public policy or procurement context for relevant organizations.</p></article>
+    </div>
+  </>}
+  {section === 'market' && <div class="note">Fleet estimates and cumulative registrations measure different things. This snapshot only displays a market share when its denominator and coverage are available.</div>}
+  {section === 'supply' && <p class="note">Representative pathways explain the industry process. Aircraft-specific connections require a source naming that relationship.</p>}
+  {section === 'organizations' && <p class="note">Entries marked as FAA-declared makes are names appearing in a declaration dataset. A declared make can be a brand or an individual producer.</p>}
+
+  {ordered.length > 0 && <div data-filter-root>
+    <div class="controls">
+      <label>Filter {title.toLowerCase()}<input type="search" data-filter-search placeholder="Type to filter this list" /></label>
+      {categories.length > 0 && <label>{section === 'aircraft' ? 'Mission' : 'Category'}<select data-filter-category><option value="">All categories</option>{categories.map(([id,name]) => <option value={id}>{name}</option>)}</select></label>}
+      {section === 'aircraft' && <label>Airframe<select data-filter-form><option value="">All airframes</option>{Object.entries(forms).map(([id,name]) => <option value={id}>{name}</option>)}</select></label>}
+      <p class="label" data-filter-count aria-live="polite">{ordered.length} records</p>
+    </div>
+    <div class="grid">
+      {ordered.map(row => {
+        const model = 'maker' in row ? lookupModel(row) : undefined;
+        const category = 'maker' in row ? row.segment : 'type' in row ? row.type : 'axis' in row ? row.axis : '';
+        const caption = 'maker' in row ? segments[row.segment] : 'type' in row ? `${row.date} · ${row.type}` : 'role' in row ? row.role : 'activity' in row ? row.activity : 'axis' in row ? `${row.jurisdiction} · ${row.axis}` : 'mode' in row ? row.mode === 'case-study' ? 'Historical scenario' : 'Representative pathway' : 'kind' in row ? `${row.kind} · ${row.period}` : '';
+        return <article class="card" data-filter-row data-category={category} data-form={'form' in row ? row.form : ''}>
+          {caption && <span class="tag neutral">{caption}</span>}
+          <h3><a href={page(section,row.id)}>{row.name}</a></h3><p>{row.summary}</p>
+          {'kind' in row && <p><strong>{row.value.toLocaleString('en-US')} {row.unit}</strong> · {row.geography}</p>}
+          {model && <span class:list={['tag',{warn:model.representative}]}>{model.representative ? 'Representative 3D' : 'Model-specific 3D'}</span>}
+          {section === 'market' && <Evidence source={row.source} compact />}
+        </article>;
+      })}
+    </div>
+    <p hidden data-filter-empty class="empty">No records match these filters.</p>
+  </div>}
+</Site>
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>('[data-filter-root]')) {
+    const query = root.querySelector<HTMLInputElement>('[data-filter-search]');
+    const category = root.querySelector<HTMLSelectElement>('[data-filter-category]');
+    const form = root.querySelector<HTMLSelectElement>('[data-filter-form]');
+    const count = root.querySelector<HTMLElement>('[data-filter-count]');
+    const empty = root.querySelector<HTMLElement>('[data-filter-empty]');
+    const rows = Array.from(root.querySelectorAll<HTMLElement>('[data-filter-row]'), row => ({ row, search: row.textContent?.toLowerCase() ?? '' }));
+    function update() {
+      const terms = (query?.value.toLowerCase().trim() ?? '').split(/\s+/).filter(Boolean);
+      let found = 0;
+      for (const { row, search } of rows) {
+        row.hidden = Boolean(category?.value && category.value !== row.dataset.category || form?.value && form.value !== row.dataset.form || !terms.every(term => search.includes(term)));
+        if (!row.hidden) found++;
+      }
+      if (count) count.textContent = `${found} ${found === 1 ? 'record' : 'records'}`;
+      if (empty) empty.hidden = found > 0;
+    }
+    query?.addEventListener('input',update);
+    category?.addEventListener('change',update);
+    form?.addEventListener('change',update);
+  }
+</script>

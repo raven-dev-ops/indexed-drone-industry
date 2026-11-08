@@ -1,0 +1,9 @@
+---
+import type { Evidence } from '../lib/schema';
+interface Props { source: Evidence; compact?: boolean }
+const { source, compact = false } = Astro.props;
+---
+<span class:list={['evidence', { compact }]}>
+  <a href={source.url}>{source.publisher} · {source.title}</a>
+  <span class="source-location">{source.locator}{!compact && ` · Checked ${source.accessed}`}</span>
+</span>

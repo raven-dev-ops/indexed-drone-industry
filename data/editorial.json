@@ -1,0 +1,1262 @@
+{
+  "parts": [
+    {
+      "id": "frame",
+      "name": "Airframe",
+      "summary": "Carries the loads from the motors, battery and payload. Arm stiffness and the way parts are mounted affect how vibration reaches the sensors.",
+      "source": {
+        "title": "X500 V2 Kits",
+        "publisher": "Holybro",
+        "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+        "locator": "SKU 30125 · Specifications and Package Includes"
+      },
+      "materials": "Holybro specifies carbon-fiber plates for SKU 30125. Materials differ by aircraft and may include composites, aluminum, or molded plastics.",
+      "pathway": "composites",
+      "lesson": "aircraft-anatomy"
+    },
+    {
+      "id": "propeller",
+      "name": "Propeller",
+      "summary": "Accelerates air to generate thrust. A rotor’s diameter, pitch, and operating speed influence its thrust and power draw.",
+      "source": {
+        "title": "Propeller Thrust",
+        "publisher": "NASA Glenn Research Center",
+        "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/propeller-thrust/",
+        "locator": "Propeller propulsion system and momentum model"
+      },
+      "materials": "Propeller material is not listed for the X500 kit on this source. Check the propeller maker before assigning a polymer or composite.",
+      "pathway": "motors",
+      "lesson": "flight"
+    },
+    {
+      "id": "motor",
+      "name": "Motor",
+      "summary": "Converts electrical power into rotation. An electronic speed controller switches power between the motor windings.",
+      "source": {
+        "title": "X500 V2 Kits",
+        "publisher": "Holybro",
+        "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+        "locator": "SKU 30125 · Specifications and Package Includes"
+      },
+      "materials": "A typical permanent-magnet motor uses copper windings and magnetic material. The X500 source identifies its installed motor type but does not identify the magnet supplier or chemistry.",
+      "pathway": "motors",
+      "lesson": "propulsion"
+    },
+    {
+      "id": "esc",
+      "name": "Electronic speed controller",
+      "summary": "Switches power to the motor under control of the flight controller.",
+      "source": {
+        "title": "Pixhawk Wiring Quick Start",
+        "publisher": "PX4",
+        "url": "https://docs.px4.io/main/en/assembly/quick_start_pixhawk",
+        "locator": "Power, RC, motors, and GPS connections"
+      },
+      "materials": "Power switching devices and a circuit board are representative components. The kit does not disclose individual silicon suppliers.",
+      "pathway": "electronics",
+      "lesson": "electronics"
+    },
+    {
+      "id": "pdb",
+      "name": "Power distribution board",
+      "summary": "Provides a shared battery power connection for the motors’ speed controllers.",
+      "source": {
+        "title": "X500 V2 Kits",
+        "publisher": "Holybro",
+        "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+        "locator": "SKU 30125 · Specifications and Package Includes"
+      },
+      "materials": "A representative board routes current on copper conductors. Exact materials for the kit board are undisclosed.",
+      "pathway": "electronics",
+      "lesson": "electronics"
+    },
+    {
+      "id": "battery",
+      "name": "Battery",
+      "summary": "Stores electrical energy for the motors, sensors and payload. Electrical energy is measured in watt-hours.",
+      "source": {
+        "title": "Lithium-Ion Battery Recycling",
+        "publisher": "U.S. EPA",
+        "url": "https://www.epa.gov/hw/lithium-ion-battery-recycling",
+        "locator": "Background on Lithium Batteries; recycling and reuse sections"
+      },
+      "materials": "Lithium-ion cells include an anode, cathode, separator, and electrolyte. Chemistry varies by cell. The X500 almost-ready-to-fly kit does not list a battery.",
+      "pathway": "battery",
+      "lesson": "propulsion"
+    },
+    {
+      "id": "flight-controller",
+      "name": "Flight controller",
+      "summary": "Reads sensors and computes commands for motors or control surfaces. Firmware and the controller board are separate things.",
+      "source": {
+        "title": "PX4 Architectural Overview",
+        "publisher": "PX4",
+        "url": "https://docs.px4.io/main/en/concept/architecture",
+        "locator": "Flight stack, middleware and hardware"
+      },
+      "materials": "A typical board carries microcontrollers and motion sensors. Check a board schematic or bill of materials for a specific chip.",
+      "pathway": "electronics",
+      "lesson": "electronics"
+    },
+    {
+      "id": "gnss",
+      "name": "GNSS receiver",
+      "summary": "Receives satellite radio signals and calculates position and time when conditions allow. GPS is one satellite navigation system.",
+      "source": {
+        "title": "Global Positioning System",
+        "publisher": "GPS.gov",
+        "url": "https://www.gps.gov/gps",
+        "locator": "User segment and satellite signals"
+      },
+      "materials": "A representative module has an antenna and receiver electronics. Neither their supplier nor precision can be inferred from this diagram.",
+      "pathway": "radio-gnss",
+      "lesson": "operations"
+    },
+    {
+      "id": "radio",
+      "name": "Radio and antennas",
+      "summary": "Carry commands or telemetry between the aircraft and ground system. A separate link may transmit payload data.",
+      "source": {
+        "title": "Pixhawk Wiring Quick Start",
+        "publisher": "PX4",
+        "url": "https://docs.px4.io/main/en/assembly/quick_start_pixhawk",
+        "locator": "Power, RC, motors, and GPS connections"
+      },
+      "materials": "Representative hardware includes a radio circuit and antenna; actual bands and components depend on the installed system.",
+      "pathway": "radio-gnss",
+      "lesson": "operations"
+    },
+    {
+      "id": "payload",
+      "name": "Payload",
+      "summary": "Equipment carried to perform a task. It could be a camera, thermal sensor, sprayer or cargo enclosure.",
+      "source": {
+        "title": "Matrice 350 RTK Specifications",
+        "publisher": "DJI",
+        "url": "https://enterprise.dji.com/matrice-350-rtk/specs",
+        "locator": "Gimbal, supported payloads, and aircraft specifications"
+      },
+      "materials": "An imaging payload can combine a lens and detector. Materials vary with the wavelength and detector technology.",
+      "pathway": "optics",
+      "lesson": "payloads"
+    },
+    {
+      "id": "landing-gear",
+      "name": "Landing gear",
+      "summary": "Supports the aircraft on the ground and can keep propellers or payloads clear.",
+      "source": {
+        "title": "X500 V2 Kits",
+        "publisher": "Holybro",
+        "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+        "locator": "SKU 30125 · Specifications and Package Includes"
+      },
+      "materials": "The X500 kit lists a landing structure. Use the aircraft’s documentation for material and assembly details.",
+      "pathway": "composites",
+      "lesson": "aircraft-anatomy"
+    },
+    {
+      "id": "wing",
+      "name": "Wing",
+      "summary": "Generates lift during forward flight. A VTOL aircraft may use a wing in cruise and separate rotors for lift during takeoff.",
+      "source": {
+        "title": "Carbon Fiber Composites Value Chain",
+        "publisher": "U.S. Department of Energy",
+        "url": "https://www.energy.gov/documents/a3-resource-efficiency-and-supply-chain-2016compliantpdf",
+        "locator": "Carbon Fiber Composites Value Chain figure"
+      },
+      "materials": "Composite materials are one common construction pathway. The model must have its own source before a specific material is assigned.",
+      "pathway": "composites",
+      "lesson": "flight"
+    }
+  ],
+  "materials": [
+    {
+      "id": "lithium",
+      "name": "Lithium",
+      "summary": "Used in lithium-ion cell chemistry. Country production measures an upstream commodity rather than the origin of a particular cell.",
+      "source": {
+        "title": "Mineral Commodity Summaries 2026",
+        "publisher": "USGS",
+        "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf",
+        "locator": "Graphite (Natural), Lithium, Rare Earths chapters"
+      },
+      "pathway": "battery"
+    },
+    {
+      "id": "graphite",
+      "name": "Graphite",
+      "summary": "Used as an anode material in many lithium-ion chemistries. Natural and synthetic graphite have different production routes.",
+      "source": {
+        "title": "Mineral Commodity Summaries 2026",
+        "publisher": "USGS",
+        "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf",
+        "locator": "Graphite (Natural), Lithium, Rare Earths chapters"
+      },
+      "pathway": "battery"
+    },
+    {
+      "id": "rare-earths",
+      "name": "Rare earths",
+      "summary": "Neodymium-bearing alloys are used in many permanent magnets. Processing and magnet production are distinct from mining.",
+      "source": {
+        "title": "Neodymium Magnets Supply Chain Deep Dive Assessment",
+        "publisher": "U.S. Department of Energy",
+        "url": "https://www.energy.gov/sites/default/files/2022-02/Neodymium%20Magnets%20Supply%20Chain%20Report%20-%20Final_0.pdf",
+        "locator": "Supply Chain Mapping and stages of NdFeB magnet production"
+      },
+      "pathway": "motors"
+    },
+    {
+      "id": "carbon-fiber",
+      "name": "Carbon fiber",
+      "summary": "A reinforcing fiber that can be combined with a resin to make structural composites.",
+      "source": {
+        "title": "Carbon Fiber Composites Value Chain",
+        "publisher": "U.S. Department of Energy",
+        "url": "https://www.energy.gov/documents/a3-resource-efficiency-and-supply-chain-2016compliantpdf",
+        "locator": "Carbon Fiber Composites Value Chain figure"
+      },
+      "pathway": "composites"
+    },
+    {
+      "id": "silicon",
+      "name": "Silicon",
+      "summary": "Semiconductor-grade wafers go through fabrication, packaging and testing before integration into electronics.",
+      "source": {
+        "title": "Semiconductor Supply Chain Deep Dive Assessment",
+        "publisher": "U.S. Department of Energy",
+        "url": "https://www.energy.gov/sites/default/files/2024-12/Semiconductor%2520Supply%2520Chain%2520Report%2520-%2520Final%5B1%5D.pdf",
+        "locator": "Figure 9 and §2.2, conventional semiconductor supply chain segments"
+      },
+      "pathway": "electronics"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "battery",
+      "name": "Batteries and packs",
+      "summary": "Follow representative lithium-ion cell inputs into a pack and aircraft. Chemistry and supplier are separate claims.",
+      "source": {
+        "title": "Lithium-Ion Battery Recycling",
+        "publisher": "U.S. EPA",
+        "url": "https://www.epa.gov/hw/lithium-ion-battery-recycling",
+        "locator": "Background on Lithium Batteries; recycling and reuse sections"
+      },
+      "mode": "representative",
+      "nodes": [
+        {
+          "id": "lithium",
+          "name": "Lithium compounds",
+          "stage": "Materials"
+        },
+        {
+          "id": "graphite",
+          "name": "Graphite anode materials",
+          "stage": "Materials"
+        },
+        {
+          "id": "cathode",
+          "name": "Cathode material",
+          "stage": "Processing"
+        },
+        {
+          "id": "anode",
+          "name": "Anode material",
+          "stage": "Processing"
+        },
+        {
+          "id": "cell",
+          "name": "Cell manufacturing",
+          "stage": "Components"
+        },
+        {
+          "id": "pack",
+          "name": "Pack assembly",
+          "stage": "Assembly"
+        },
+        {
+          "id": "aircraft",
+          "name": "Electric drone",
+          "stage": "Aircraft"
+        }
+      ],
+      "inputs": [
+        {
+          "target": "cathode",
+          "alternatives": [
+            "lithium"
+          ],
+          "source": {
+            "title": "Mineral Commodity Summaries 2026",
+            "publisher": "USGS",
+            "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf",
+            "locator": "Graphite (Natural), Lithium, Rare Earths chapters"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "anode",
+          "alternatives": [
+            "graphite"
+          ],
+          "source": {
+            "title": "Mineral Commodity Summaries 2026",
+            "publisher": "USGS",
+            "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf",
+            "locator": "Graphite (Natural), Lithium, Rare Earths chapters"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "cell",
+          "alternatives": [
+            "cathode"
+          ],
+          "source": {
+            "title": "Lithium-Ion Battery Recycling",
+            "publisher": "U.S. EPA",
+            "url": "https://www.epa.gov/hw/lithium-ion-battery-recycling",
+            "locator": "Background on Lithium Batteries; recycling and reuse sections"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "cell",
+          "alternatives": [
+            "anode"
+          ],
+          "source": {
+            "title": "Lithium-Ion Battery Recycling",
+            "publisher": "U.S. EPA",
+            "url": "https://www.epa.gov/hw/lithium-ion-battery-recycling",
+            "locator": "Background on Lithium Batteries; recycling and reuse sections"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "pack",
+          "alternatives": [
+            "cell"
+          ],
+          "source": {
+            "title": "Lithium-Ion Battery Recycling",
+            "publisher": "U.S. EPA",
+            "url": "https://www.epa.gov/hw/lithium-ion-battery-recycling",
+            "locator": "Background on Lithium Batteries; recycling and reuse sections"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "aircraft",
+          "alternatives": [
+            "pack"
+          ],
+          "source": {
+            "title": "Lithium-Ion Battery Recycling",
+            "publisher": "U.S. EPA",
+            "url": "https://www.epa.gov/hw/lithium-ion-battery-recycling",
+            "locator": "Background on Lithium Batteries; recycling and reuse sections"
+          },
+          "evidenceType": "representative"
+        }
+      ]
+    },
+    {
+      "id": "motors",
+      "name": "Motors and magnets",
+      "summary": "Follow a representative rare-earth permanent-magnet route. The X500 motor’s upstream supplier and chemistry are undisclosed.",
+      "source": {
+        "title": "Neodymium Magnets Supply Chain Deep Dive Assessment",
+        "publisher": "U.S. Department of Energy",
+        "url": "https://www.energy.gov/sites/default/files/2022-02/Neodymium%20Magnets%20Supply%20Chain%20Report%20-%20Final_0.pdf",
+        "locator": "Supply Chain Mapping and stages of NdFeB magnet production"
+      },
+      "mode": "representative",
+      "nodes": [
+        {
+          "id": "ore",
+          "name": "Rare earth ore",
+          "stage": "Extraction"
+        },
+        {
+          "id": "oxides",
+          "name": "Separated oxides",
+          "stage": "Refining"
+        },
+        {
+          "id": "metal",
+          "name": "Rare earth metal and alloy",
+          "stage": "Processing"
+        },
+        {
+          "id": "magnet",
+          "name": "Sintered NdFeB magnet",
+          "stage": "Components"
+        },
+        {
+          "id": "motor",
+          "name": "Permanent-magnet motor",
+          "stage": "Assembly"
+        },
+        {
+          "id": "drone",
+          "name": "Electric aircraft propulsion",
+          "stage": "Aircraft"
+        }
+      ],
+      "inputs": [
+        {
+          "target": "oxides",
+          "alternatives": [
+            "ore"
+          ],
+          "source": {
+            "title": "Neodymium Magnets Supply Chain Deep Dive Assessment",
+            "publisher": "U.S. Department of Energy",
+            "url": "https://www.energy.gov/sites/default/files/2022-02/Neodymium%20Magnets%20Supply%20Chain%20Report%20-%20Final_0.pdf",
+            "locator": "Supply Chain Mapping and stages of NdFeB magnet production"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "metal",
+          "alternatives": [
+            "oxides"
+          ],
+          "source": {
+            "title": "Neodymium Magnets Supply Chain Deep Dive Assessment",
+            "publisher": "U.S. Department of Energy",
+            "url": "https://www.energy.gov/sites/default/files/2022-02/Neodymium%20Magnets%20Supply%20Chain%20Report%20-%20Final_0.pdf",
+            "locator": "Supply Chain Mapping and stages of NdFeB magnet production"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "magnet",
+          "alternatives": [
+            "metal"
+          ],
+          "source": {
+            "title": "Neodymium Magnets Supply Chain Deep Dive Assessment",
+            "publisher": "U.S. Department of Energy",
+            "url": "https://www.energy.gov/sites/default/files/2022-02/Neodymium%20Magnets%20Supply%20Chain%20Report%20-%20Final_0.pdf",
+            "locator": "Supply Chain Mapping and stages of NdFeB magnet production"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "motor",
+          "alternatives": [
+            "magnet"
+          ],
+          "source": {
+            "title": "Neodymium Magnets Supply Chain Deep Dive Assessment",
+            "publisher": "U.S. Department of Energy",
+            "url": "https://www.energy.gov/sites/default/files/2022-02/Neodymium%20Magnets%20Supply%20Chain%20Report%20-%20Final_0.pdf",
+            "locator": "Supply Chain Mapping and stages of NdFeB magnet production"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "drone",
+          "alternatives": [
+            "motor"
+          ],
+          "source": {
+            "title": "X500 V2 Kits",
+            "publisher": "Holybro",
+            "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+            "locator": "SKU 30125 · Specifications and Package Includes"
+          },
+          "evidenceType": "representative"
+        }
+      ]
+    },
+    {
+      "id": "composites",
+      "name": "Composite airframes",
+      "summary": "A representative PAN-based carbon fiber route to a structural plate. The material is documented for the X500 frame; the upstream firms are undisclosed.",
+      "source": {
+        "title": "Carbon Fiber Composites Value Chain",
+        "publisher": "U.S. Department of Energy",
+        "url": "https://www.energy.gov/documents/a3-resource-efficiency-and-supply-chain-2016compliantpdf",
+        "locator": "Carbon Fiber Composites Value Chain figure"
+      },
+      "mode": "representative",
+      "nodes": [
+        {
+          "id": "feedstock",
+          "name": "Petrochemical feedstock",
+          "stage": "Extraction"
+        },
+        {
+          "id": "pan",
+          "name": "PAN precursor",
+          "stage": "Processing"
+        },
+        {
+          "id": "fiber",
+          "name": "Carbon fiber",
+          "stage": "Materials"
+        },
+        {
+          "id": "laminate",
+          "name": "Composite laminate",
+          "stage": "Components"
+        },
+        {
+          "id": "frame",
+          "name": "Frame plates",
+          "stage": "Assembly"
+        },
+        {
+          "id": "aircraft",
+          "name": "Drone airframe",
+          "stage": "Aircraft"
+        }
+      ],
+      "inputs": [
+        {
+          "target": "pan",
+          "alternatives": [
+            "feedstock"
+          ],
+          "source": {
+            "title": "Carbon Fiber Composites Value Chain",
+            "publisher": "U.S. Department of Energy",
+            "url": "https://www.energy.gov/documents/a3-resource-efficiency-and-supply-chain-2016compliantpdf",
+            "locator": "Carbon Fiber Composites Value Chain figure"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "fiber",
+          "alternatives": [
+            "pan"
+          ],
+          "source": {
+            "title": "Carbon Fiber Composites Value Chain",
+            "publisher": "U.S. Department of Energy",
+            "url": "https://www.energy.gov/documents/a3-resource-efficiency-and-supply-chain-2016compliantpdf",
+            "locator": "Carbon Fiber Composites Value Chain figure"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "laminate",
+          "alternatives": [
+            "fiber"
+          ],
+          "source": {
+            "title": "Carbon Fiber Composites Value Chain",
+            "publisher": "U.S. Department of Energy",
+            "url": "https://www.energy.gov/documents/a3-resource-efficiency-and-supply-chain-2016compliantpdf",
+            "locator": "Carbon Fiber Composites Value Chain figure"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "frame",
+          "alternatives": [
+            "laminate"
+          ],
+          "source": {
+            "title": "Carbon Fiber Composites Value Chain",
+            "publisher": "U.S. Department of Energy",
+            "url": "https://www.energy.gov/documents/a3-resource-efficiency-and-supply-chain-2016compliantpdf",
+            "locator": "Carbon Fiber Composites Value Chain figure"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "aircraft",
+          "alternatives": [
+            "frame"
+          ],
+          "source": {
+            "title": "X500 V2 Kits",
+            "publisher": "Holybro",
+            "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+            "locator": "SKU 30125 · Specifications and Package Includes"
+          },
+          "evidenceType": "representative"
+        }
+      ]
+    },
+    {
+      "id": "electronics",
+      "name": "Control and power electronics",
+      "summary": "Follow representative semiconductor production into an assembled drone board.",
+      "source": {
+        "title": "Semiconductor Supply Chain Deep Dive Assessment",
+        "publisher": "U.S. Department of Energy",
+        "url": "https://www.energy.gov/sites/default/files/2024-12/Semiconductor%2520Supply%2520Chain%2520Report%2520-%2520Final%5B1%5D.pdf",
+        "locator": "Figure 9 and §2.2, conventional semiconductor supply chain segments"
+      },
+      "mode": "representative",
+      "nodes": [
+        {
+          "id": "silicon",
+          "name": "Silicon feedstock",
+          "stage": "Materials"
+        },
+        {
+          "id": "wafer",
+          "name": "Prepared wafer",
+          "stage": "Processing"
+        },
+        {
+          "id": "fab",
+          "name": "Wafer fabrication",
+          "stage": "Components"
+        },
+        {
+          "id": "package",
+          "name": "Chip packaging and test",
+          "stage": "Components"
+        },
+        {
+          "id": "board",
+          "name": "Controller or ESC board",
+          "stage": "Assembly"
+        },
+        {
+          "id": "aircraft",
+          "name": "Drone control systems",
+          "stage": "Aircraft"
+        }
+      ],
+      "inputs": [
+        {
+          "target": "wafer",
+          "alternatives": [
+            "silicon"
+          ],
+          "source": {
+            "title": "Semiconductor Supply Chain Deep Dive Assessment",
+            "publisher": "U.S. Department of Energy",
+            "url": "https://www.energy.gov/sites/default/files/2024-12/Semiconductor%2520Supply%2520Chain%2520Report%2520-%2520Final%5B1%5D.pdf",
+            "locator": "Figure 9 and §2.2, conventional semiconductor supply chain segments"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "fab",
+          "alternatives": [
+            "wafer"
+          ],
+          "source": {
+            "title": "Semiconductor Supply Chain Deep Dive Assessment",
+            "publisher": "U.S. Department of Energy",
+            "url": "https://www.energy.gov/sites/default/files/2024-12/Semiconductor%2520Supply%2520Chain%2520Report%2520-%2520Final%5B1%5D.pdf",
+            "locator": "Figure 9 and §2.2, conventional semiconductor supply chain segments"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "package",
+          "alternatives": [
+            "fab"
+          ],
+          "source": {
+            "title": "Semiconductor Supply Chain Deep Dive Assessment",
+            "publisher": "U.S. Department of Energy",
+            "url": "https://www.energy.gov/sites/default/files/2024-12/Semiconductor%2520Supply%2520Chain%2520Report%2520-%2520Final%5B1%5D.pdf",
+            "locator": "Figure 9 and §2.2, conventional semiconductor supply chain segments"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "board",
+          "alternatives": [
+            "package"
+          ],
+          "source": {
+            "title": "Semiconductor Supply Chain Deep Dive Assessment",
+            "publisher": "U.S. Department of Energy",
+            "url": "https://www.energy.gov/sites/default/files/2024-12/Semiconductor%2520Supply%2520Chain%2520Report%2520-%2520Final%5B1%5D.pdf",
+            "locator": "Figure 9 and §2.2, conventional semiconductor supply chain segments"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "aircraft",
+          "alternatives": [
+            "board"
+          ],
+          "source": {
+            "title": "Pixhawk Wiring Quick Start",
+            "publisher": "PX4",
+            "url": "https://docs.px4.io/main/en/assembly/quick_start_pixhawk",
+            "locator": "Power, RC, motors, and GPS connections"
+          },
+          "evidenceType": "representative"
+        }
+      ]
+    },
+    {
+      "id": "optics",
+      "name": "Optical and thermal payloads",
+      "summary": "Illustrative inputs to an imaging payload. Lens and detector sourcing varies with the wavelength and design.",
+      "source": {
+        "title": "Matrice 350 RTK Specifications",
+        "publisher": "DJI",
+        "url": "https://enterprise.dji.com/matrice-350-rtk/specs",
+        "locator": "Gimbal, supported payloads, and aircraft specifications"
+      },
+      "mode": "representative",
+      "nodes": [
+        {
+          "id": "optics",
+          "name": "Lens and optics",
+          "stage": "Components"
+        },
+        {
+          "id": "detector",
+          "name": "Detector",
+          "stage": "Components"
+        },
+        {
+          "id": "electronics",
+          "name": "Readout and control electronics",
+          "stage": "Components"
+        },
+        {
+          "id": "camera",
+          "name": "Imaging module",
+          "stage": "Assembly"
+        },
+        {
+          "id": "gimbal",
+          "name": "Aircraft payload integration",
+          "stage": "Aircraft"
+        }
+      ],
+      "inputs": [
+        {
+          "target": "camera",
+          "alternatives": [
+            "optics"
+          ],
+          "source": {
+            "title": "Barnes Engineering Company Research and Development",
+            "publisher": "NASA Technical Reports Server",
+            "url": "https://ntrs.nasa.gov/api/citations/19730023602/downloads/19730023602.pdf",
+            "locator": "Infrared detector and optical system discussion"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "camera",
+          "alternatives": [
+            "detector"
+          ],
+          "source": {
+            "title": "Barnes Engineering Company Research and Development",
+            "publisher": "NASA Technical Reports Server",
+            "url": "https://ntrs.nasa.gov/api/citations/19730023602/downloads/19730023602.pdf",
+            "locator": "Infrared detector and optical system discussion"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "camera",
+          "alternatives": [
+            "electronics"
+          ],
+          "source": {
+            "title": "Barnes Engineering Company Research and Development",
+            "publisher": "NASA Technical Reports Server",
+            "url": "https://ntrs.nasa.gov/api/citations/19730023602/downloads/19730023602.pdf",
+            "locator": "Infrared detector and optical system discussion"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "gimbal",
+          "alternatives": [
+            "camera"
+          ],
+          "source": {
+            "title": "Matrice 350 RTK Specifications",
+            "publisher": "DJI",
+            "url": "https://enterprise.dji.com/matrice-350-rtk/specs",
+            "locator": "Gimbal, supported payloads, and aircraft specifications"
+          },
+          "evidenceType": "representative"
+        }
+      ]
+    },
+    {
+      "id": "radio-gnss",
+      "name": "Radio and GNSS hardware",
+      "summary": "Trace representative semiconductor and antenna inputs into aircraft navigation. This route illustrates the receiver, alongside the aircraft’s separate command radio.",
+      "source": {
+        "title": "Global Positioning System",
+        "publisher": "GPS.gov",
+        "url": "https://www.gps.gov/gps",
+        "locator": "User segment and satellite signals"
+      },
+      "mode": "representative",
+      "nodes": [
+        {
+          "id": "wafer",
+          "name": "Semiconductor wafers",
+          "stage": "Materials"
+        },
+        {
+          "id": "chip",
+          "name": "Receiver electronics",
+          "stage": "Components"
+        },
+        {
+          "id": "antenna",
+          "name": "GNSS antenna",
+          "stage": "Components"
+        },
+        {
+          "id": "receiver",
+          "name": "Navigation receiver",
+          "stage": "Assembly"
+        },
+        {
+          "id": "aircraft",
+          "name": "Aircraft navigation stack",
+          "stage": "Aircraft"
+        }
+      ],
+      "inputs": [
+        {
+          "target": "chip",
+          "alternatives": [
+            "wafer"
+          ],
+          "source": {
+            "title": "Semiconductor Supply Chain Deep Dive Assessment",
+            "publisher": "U.S. Department of Energy",
+            "url": "https://www.energy.gov/sites/default/files/2024-12/Semiconductor%2520Supply%2520Chain%2520Report%2520-%2520Final%5B1%5D.pdf",
+            "locator": "Figure 9 and §2.2, conventional semiconductor supply chain segments"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "receiver",
+          "alternatives": [
+            "chip"
+          ],
+          "source": {
+            "title": "Global Positioning System",
+            "publisher": "GPS.gov",
+            "url": "https://www.gps.gov/gps",
+            "locator": "User segment and satellite signals"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "receiver",
+          "alternatives": [
+            "antenna"
+          ],
+          "source": {
+            "title": "Global Positioning System",
+            "publisher": "GPS.gov",
+            "url": "https://www.gps.gov/gps",
+            "locator": "User segment and satellite signals"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "aircraft",
+          "alternatives": [
+            "receiver"
+          ],
+          "source": {
+            "title": "Pixhawk Wiring Quick Start",
+            "publisher": "PX4",
+            "url": "https://docs.px4.io/main/en/assembly/quick_start_pixhawk",
+            "locator": "Power, RC, motors, and GPS connections"
+          },
+          "evidenceType": "representative"
+        }
+      ]
+    },
+    {
+      "id": "skydio-battery",
+      "name": "Skydio X10 battery disruption",
+      "summary": "Explore a qualitative scenario from the company’s 2024 customer update. This simulation is separate from the case record and does not estimate fleet impact.",
+      "source": {
+        "title": "China’s sanctions on Skydio",
+        "publisher": "Skydio",
+        "url": "https://www.skydio.com/blog/chinas-sanctions-on-skydio",
+        "locator": "October 30 customer update; battery shipment and support measures"
+      },
+      "mode": "case-study",
+      "nodes": [
+        {
+          "id": "original",
+          "name": "Established battery supply",
+          "stage": "Supply"
+        },
+        {
+          "id": "alternate",
+          "name": "Replacement supply availability",
+          "stage": "Supply",
+          "unknown": true
+        },
+        {
+          "id": "batteries",
+          "name": "Battery allocation",
+          "stage": "Assembly"
+        },
+        {
+          "id": "deliveries",
+          "name": "Standard battery bundle",
+          "stage": "Distribution"
+        }
+      ],
+      "inputs": [
+        {
+          "target": "batteries",
+          "alternatives": [
+            "original",
+            "alternate"
+          ],
+          "source": {
+            "title": "China’s sanctions on Skydio",
+            "publisher": "Skydio",
+            "url": "https://www.skydio.com/blog/chinas-sanctions-on-skydio",
+            "locator": "October 30 customer update; battery shipment and support measures"
+          },
+          "evidenceType": "representative"
+        },
+        {
+          "target": "deliveries",
+          "alternatives": [
+            "batteries"
+          ],
+          "source": {
+            "title": "China’s sanctions on Skydio",
+            "publisher": "Skydio",
+            "url": "https://www.skydio.com/blog/chinas-sanctions-on-skydio",
+            "locator": "October 30 customer update; battery shipment and support measures"
+          },
+          "evidenceType": "documented"
+        }
+      ],
+      "event": "skydio-battery-2024"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "aircraft-anatomy",
+      "name": "01 · What a drone is made of",
+      "summary": "Start with the frame and work outward.",
+      "source": {
+        "title": "X500 V2 Kits",
+        "publisher": "Holybro",
+        "url": "https://holybro.com/collections/multicopter-kit/products/x500-v2-kits",
+        "locator": "SKU 30125 · Specifications and Package Includes"
+      },
+      "body": [
+        "An airframe holds propulsion, controls, energy storage, and the payload in place. In a kit, the items in the package and the items needed to fly can be different. The X500 V2 SKU 30125 is a useful example because its package contents are listed.",
+        "Open the teardown and choose the frame or a motor. Compare the part list with the source and look for what the kit does not include."
+      ],
+      "part": "frame"
+    },
+    {
+      "id": "flight",
+      "name": "02 · How a drone flies",
+      "summary": "Explore thrust, lift, and control.",
+      "source": {
+        "title": "Propeller Thrust",
+        "publisher": "NASA Glenn Research Center",
+        "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/propeller-thrust/",
+        "locator": "Propeller propulsion system and momentum model"
+      },
+      "body": [
+        "A propeller increases the momentum of the air passing through it. That produces thrust. A multirotor must produce enough upward force to balance its weight in hover.",
+        "Change the mass and thrust in the propulsion lab. Then compare a quadcopter with a fixed-wing entry. The useful performance conditions are different."
+      ],
+      "part": "propeller"
+    },
+    {
+      "id": "propulsion",
+      "name": "03 · Motors, batteries, and endurance",
+      "summary": "Connect electrical energy to flight time.",
+      "source": {
+        "title": "Lithium-Ion Battery Recycling",
+        "publisher": "U.S. EPA",
+        "url": "https://www.epa.gov/hw/lithium-ion-battery-recycling",
+        "locator": "Background on Lithium Batteries; recycling and reuse sections"
+      },
+      "body": [
+        "The battery stores electrical energy and the motors draw power from it. If average power were constant, usable watt-hours divided by watts would give the time in hours.",
+        "Test the effect of a higher reserve in the lab. Treat the result as a model under the stated load, because power changes with maneuvering, wind and payload."
+      ],
+      "part": "battery"
+    },
+    {
+      "id": "electronics",
+      "name": "04 · Sensors and flight control",
+      "summary": "Follow the commands from a controller to the aircraft.",
+      "source": {
+        "title": "PX4 Architectural Overview",
+        "publisher": "PX4",
+        "url": "https://docs.px4.io/main/en/concept/architecture",
+        "locator": "Flight stack, middleware and hardware"
+      },
+      "body": [
+        "The flight stack combines sensor information and estimates how the aircraft is moving. Controllers use that estimate to generate commands, and the mixer or allocator turns those into outputs.",
+        "A board, the firmware it runs, and its attached sensors are separate entries. Follow a controller part to the representative silicon pathway."
+      ],
+      "part": "flight-controller"
+    },
+    {
+      "id": "payloads",
+      "name": "05 · Cameras and other payloads",
+      "summary": "See how the mission changes the aircraft.",
+      "source": {
+        "title": "Matrice 350 RTK Specifications",
+        "publisher": "DJI",
+        "url": "https://enterprise.dji.com/matrice-350-rtk/specs",
+        "locator": "Gimbal, supported payloads, and aircraft specifications"
+      },
+      "body": [
+        "The payload is what the aircraft carries to do the job. A mapping camera needs different settings from a thermal camera. An aircraft may have specific mechanical and electrical interfaces for compatible payloads.",
+        "Open the survey lab. Increase side overlap and observe how narrower line spacing changes the idealized coverage rate."
+      ],
+      "part": "payload"
+    },
+    {
+      "id": "supply-chains",
+      "name": "06 · From material to assembly",
+      "summary": "Follow the stages behind a component.",
+      "source": {
+        "title": "Neodymium Magnets Supply Chain Deep Dive Assessment",
+        "publisher": "U.S. Department of Energy",
+        "url": "https://www.energy.gov/sites/default/files/2022-02/Neodymium%20Magnets%20Supply%20Chain%20Report%20-%20Final_0.pdf",
+        "locator": "Supply Chain Mapping and stages of NdFeB magnet production"
+      },
+      "body": [
+        "A rare earth mine, separation plant, metal producer, and magnet factory do different jobs. A map of production at one stage cannot tell you where every later stage happens.",
+        "Open the magnet chain and cut the separation step. Compare the modeled dependency with the actual claims linked from the X500 motor."
+      ],
+      "part": "motor"
+    },
+    {
+      "id": "operations",
+      "name": "07 · Aircraft, operators, and rules",
+      "summary": "Understand how an aircraft becomes a service.",
+      "source": {
+        "title": "Package Delivery by Drone (Part 135)",
+        "publisher": "FAA",
+        "url": "https://www.faa.gov/uas/advanced_operations/package_delivery_drone",
+        "locator": "Approved operators, aircraft and operations"
+      },
+      "body": [
+        "An aircraft model and the organization operating it are distinct. The FAA’s delivery page associates specific operators with approved operations and aircraft. Equipment declarations and flight permissions answer different questions.",
+        "Start with a delivery aircraft and follow the operator or regulator link. Check its jurisdiction and publication before generalizing to another mission."
+      ],
+      "part": "gnss"
+    },
+    {
+      "id": "repair-and-recycling",
+      "name": "08 · Repair, reuse, and recycling",
+      "summary": "Follow the aircraft after it is sold.",
+      "source": {
+        "title": "Lithium-Ion Battery Recycling",
+        "publisher": "U.S. EPA",
+        "url": "https://www.epa.gov/hw/lithium-ion-battery-recycling",
+        "locator": "Background on Lithium Batteries; recycling and reuse sections"
+      },
+      "body": [
+        "The aircraft, battery, and payload may enter different repair or recovery streams. Lithium-ion batteries contain materials that specialist processes can recover. Ask the manufacturer or local waste authority about appropriate disposal for a damaged pack.",
+        "Compare two aircraft and see which service relationships are documented. Check the atlas for public recycling facilities and the date on each status claim."
+      ],
+      "part": "battery"
+    }
+  ],
+  "bottlenecks": [
+    {
+      "id": "magnet-processing",
+      "name": "Rare earth separation and magnet capacity",
+      "summary": "Mining, separating oxides, and producing a qualified magnet require different capacity.",
+      "source": {
+        "title": "Neodymium Magnets Supply Chain Deep Dive Assessment",
+        "publisher": "U.S. Department of Energy",
+        "url": "https://www.energy.gov/sites/default/files/2022-02/Neodymium%20Magnets%20Supply%20Chain%20Report%20-%20Final_0.pdf",
+        "locator": "Supply Chain Mapping and stages of NdFeB magnet production"
+      },
+      "pathway": "motors",
+      "affects": "Permanent-magnet motors",
+      "mitigation": "Qualify alternate production routes and distinguish the constraints at each stage."
+    },
+    {
+      "id": "qualified-packs",
+      "name": "Qualified battery supply",
+      "summary": "A compatible battery pack is an aircraft-specific constraint even when individual cells remain available.",
+      "source": {
+        "title": "China’s sanctions on Skydio",
+        "publisher": "Skydio",
+        "url": "https://www.skydio.com/blog/chinas-sanctions-on-skydio",
+        "locator": "October 30 customer update; battery shipment and support measures"
+      },
+      "pathway": "battery",
+      "affects": "Aircraft delivery and spare packs",
+      "mitigation": "Qualify a replacement source and communicate allocation and support changes."
+    },
+    {
+      "id": "chip-packaging",
+      "name": "Semiconductor packaging and testing",
+      "summary": "Fabricated wafers still need to be converted into tested, packaged components.",
+      "source": {
+        "title": "Semiconductor Supply Chain Deep Dive Assessment",
+        "publisher": "U.S. Department of Energy",
+        "url": "https://www.energy.gov/sites/default/files/2024-12/Semiconductor%2520Supply%2520Chain%2520Report%2520-%2520Final%5B1%5D.pdf",
+        "locator": "Figure 9 and §2.2, conventional semiconductor supply chain segments"
+      },
+      "pathway": "electronics",
+      "affects": "Control and power electronics",
+      "mitigation": "Assess fabrication and packaging exposure separately when qualifying alternative parts."
+    }
+  ],
+  "regulations": [
+    {
+      "id": "us-remote-id",
+      "name": "U.S. Remote ID",
+      "summary": "FAA describes the identification equipment and broadcast requirements for applicable aircraft.",
+      "source": {
+        "title": "Remote Identification of Drones",
+        "publisher": "FAA",
+        "url": "https://www.faa.gov/uas/getting_started/remote_id",
+        "locator": "Overview and paths to compliance"
+      },
+      "jurisdiction": "United States",
+      "axis": "Equipment"
+    },
+    {
+      "id": "us-part-107",
+      "name": "U.S. small UAS operations",
+      "summary": "FAA’s commercial operator guidance describes Part 107 requirements and separate waiver processes.",
+      "source": {
+        "title": "Commercial Operators",
+        "publisher": "FAA",
+        "url": "https://www.faa.gov/uas/commercial_operators",
+        "locator": "Certificated remote pilots and operating requirements"
+      },
+      "jurisdiction": "United States",
+      "axis": "Operations"
+    },
+    {
+      "id": "eu-open-category",
+      "name": "EU open category",
+      "summary": "EASA describes operation subcategories and the aircraft class labels used in the open category.",
+      "source": {
+        "title": "Open Category — Low Risk — Civil Drones",
+        "publisher": "EASA",
+        "url": "https://www.easa.europa.eu/en/domains/drones-air-mobility/operating-drone/open-category-low-risk-civil-drones",
+        "locator": "Drone class labels and categories of operation"
+      },
+      "jurisdiction": "European Union",
+      "axis": "Operations"
+    },
+    {
+      "id": "eu-class-identification",
+      "name": "EU class identification labels",
+      "summary": "Product class marking and the declaration of conformity are separate from an operator’s authority to fly a mission.",
+      "source": {
+        "title": "Placing a drone on the market with class identification label",
+        "publisher": "EASA",
+        "url": "https://www.easa.europa.eu/en/document-library/general-publications/placing-drone-market-class-identification-label",
+        "locator": "Product class label and declaration guidance"
+      },
+      "jurisdiction": "European Union",
+      "axis": "Equipment"
+    },
+    {
+      "id": "us-blue-uas",
+      "name": "Blue UAS procurement list",
+      "summary": "The public list concerns vetted systems in a U.S. Department of Defense procurement context. Its scope differs from civil flight rules.",
+      "source": {
+        "title": "DCMA accelerates Blue List process",
+        "publisher": "Defense Contract Management Agency",
+        "url": "https://www.dcma.mil/News/Article/4533954/dcma-accelerates-blue-list-process/",
+        "locator": "Blue List scope and procurement screening"
+      },
+      "jurisdiction": "United States",
+      "axis": "Procurement"
+    }
+  ],
+  "indicators": [
+    {
+      "id": "us-active-fleet-2025",
+      "name": "U.S. active nonrecreational fleet",
+      "summary": "FAA's historical base estimate adjusts for registration expirations and cancellations.",
+      "source": {
+        "title": "FAA Aerospace Forecast Fiscal Years 2026–2046",
+        "publisher": "FAA",
+        "url": "https://www.faa.gov/data_research/aviation/aerospace_forecasts/FY_2026-2046_Full_Forecast_Document_Tables.pdf",
+        "locator": "UAS chapter, Nonrecreational Active Fleet table, 2025 historical base and high columns"
+      },
+      "kind": "fleet",
+      "geography": "United States",
+      "period": "2025",
+      "segment": "Nonrecreational small UAS",
+      "value": 424516,
+      "unit": "aircraft",
+      "estimate": true
+    },
+    {
+      "id": "us-cumulative-registrations-2025",
+      "name": "U.S. cumulative nonrecreational registrations",
+      "summary": "FAA reports a cumulative new-registration count in the high column of the same table.",
+      "source": {
+        "title": "FAA Aerospace Forecast Fiscal Years 2026–2046",
+        "publisher": "FAA",
+        "url": "https://www.faa.gov/data_research/aviation/aerospace_forecasts/FY_2026-2046_Full_Forecast_Document_Tables.pdf",
+        "locator": "UAS chapter, Nonrecreational Active Fleet table, 2025 historical base and high columns"
+      },
+      "kind": "registration",
+      "geography": "United States",
+      "period": "2025",
+      "segment": "Nonrecreational small UAS",
+      "value": 1074451,
+      "unit": "registrations"
+    },
+    {
+      "id": "japan-dips-registration-records-2025",
+      "name": "Japan’s DIPS registration dataset",
+      "summary": "Japan’s transport ministry reports this many records in its nationwide drone registration data as of November 2025. The count describes records in the dataset.",
+      "source": {
+        "title": "ProjectLINKS drone flight data, fiscal 2025",
+        "publisher": "Japan Ministry of Land, Infrastructure, Transport and Tourism",
+        "url": "https://www.mlit.go.jp/links/use-cases/4455.html",
+        "locator": "DIPS 2.0 aircraft registration dataset; scope, snapshot date, and record count"
+      },
+      "kind": "registration",
+      "geography": "Japan",
+      "period": "November 2025",
+      "segment": "National drone registration dataset",
+      "value": 521585,
+      "unit": "registration records"
+    },
+    {
+      "id": "wing-delivery-milestone-2024",
+      "name": "Wing commercial delivery milestone",
+      "summary": "Wing reported completing more than this many commercial deliveries across three continents by its August 2024 update.",
+      "source": {
+        "title": "Bringing the Wing experience to the world’s largest airshow",
+        "publisher": "Wing",
+        "url": "https://wing.com/news/eaa-2024",
+        "locator": "August 9, 2024 update; commercial deliveries across three continents",
+        "published": "2024-08-09"
+      },
+      "kind": "deployment",
+      "geography": "Three continents",
+      "period": "By August 9, 2024",
+      "segment": "Wing commercial delivery operations",
+      "value": 400000,
+      "unit": "deliveries (reported minimum)"
+    }
+  ]
+}

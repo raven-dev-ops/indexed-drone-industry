@@ -1,0 +1,26 @@
+name: Site bug
+description: Report a reproducible problem with the website or its downloads.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: For a security issue, follow the repository's Security policy and report it privately.
+  - type: input
+    id: page
+    attributes:
+      label: Page URL and environment
+      description: Include the browser, operating system, and device where relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual results
+    validations:
+      required: true
