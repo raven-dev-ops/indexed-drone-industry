@@ -1088,7 +1088,7 @@
     "segment": "Subsidized agricultural spray drones",
     "value": 78.54,
     "unit": "%",
-    "method": "Southwest Securities compiled published Chinese agricultural equipment subsidy purchase records. Coverage follows the analyst’s compilation of subsidy data.",
+    "method": "Southwest Securities reports a vendor breakdown for the subsidized purchase cohort. The slide credits DJI and the publication 无人机机场. It provides limited detail on how the sample was assembled.",
     "source": {
       "title": "Agricultural drones and the low-altitude economy",
       "publisher": "Southwest Securities",
@@ -1113,7 +1113,7 @@
     "segment": "Subsidized agricultural spray drones",
     "value": 17.95,
     "unit": "%",
-    "method": "Southwest Securities compiled published Chinese agricultural equipment subsidy purchase records. Coverage follows the analyst’s compilation of subsidy data.",
+    "method": "Southwest Securities reports a vendor breakdown for the subsidized purchase cohort. The slide credits DJI and the publication 无人机机场. It provides limited detail on how the sample was assembled.",
     "source": {
       "title": "Agricultural drones and the low-altitude economy",
       "publisher": "Southwest Securities",
@@ -1126,28 +1126,6 @@
     "subject": "XAG",
     "basis": "unit-sales",
     "denominator": "All subsidized agricultural drone purchase units in the analyst’s China compilation for 2021–2023. The table gives no absolute total.",
-    "estimate": true
-  },
-  {
-    "id": "china-swsecurities-subsidized-sales-2024-to-sep-2025",
-    "name": "Published subsidized spray drone purchases",
-    "summary": "The report gives a combined count for the 21 months in its discussion of the machinery subsidy program.",
-    "kind": "sales",
-    "geography": "China",
-    "period": "2024-01 to 2025-09",
-    "segment": "Subsidized agricultural spray drones",
-    "value": 101931,
-    "unit": "aircraft",
-    "method": "Southwest Securities compiled published Chinese agricultural equipment subsidy purchase records. Coverage follows the analyst’s compilation of subsidy data. The source gives the combined count without a separate annual count.",
-    "source": {
-      "title": "Agricultural drones and the low-altitude economy",
-      "publisher": "Southwest Securities",
-      "url": "https://pdf.dfcfw.com/pdf/H301_AP202512231806561419_1.pdf",
-      "locator": "PDF p. 12 (printed p. 11), first bullet on the equipment subsidy program",
-      "accessed": "2026-11-08",
-      "rights": "Citation only. Selected numerical facts summarized.",
-      "published": "2025-12-23"
-    },
     "estimate": true
   },
   {
