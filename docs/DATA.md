@@ -9,10 +9,15 @@ The source of truth is the JSON in `data/`. [The schema](../src/lib/schema.ts) c
 | `editorial.json` | Parts, materials, supply pathways, lessons, bottlenecks, regulatory records, and baseline adoption indicators |
 | `market.json` | Aircraft shipments and sales, market shares, and supporting adoption evidence |
 | `observations.json` | Normalized country indicators from the USGS and Eurostat |
+| `trace.json` | Variant-specific component evidence and pathway links to aircraft, facilities, and history |
+| `replay-cases.json` | Historical disruption models, kept separate from observed effects |
+| `learning.json` | Tool activities, knowledge checks, and seven segment journeys |
 
 Records carry a publisher, direct URL, locator, access date, and reuse terms. A specification can cite a more specific source. Preserve the source's reported units, variant, test conditions and date. Treat unknown, withheld, and inapplicable values separately from zero. Keep conflicting observations and older variants distinguishable.
 
 Supply pathways label relationships as documented, representative, or unknown. A representative chain explains how a component can be made. A documented supplier relationship requires evidence specific to the relevant product or agreement. The interruption tool models effects on the selected graph and labels branches with insufficient evidence as indeterminate. The history records cite observed effects separately. Facility points reflect the recorded precision and status at the source date.
+
+For new component claims, assign a stable source ID and record the exact locator, date checked, published or observed date when known, and reuse terms. A documented component identity can have unknown material evidence. Facility location observations and later status reviews keep separate citations.
 
 Original educational anatomy layouts live in `models/airframes.mjs`. The build generates GLB models, PNG posters and hotspot data. Model-specific schematics follow documented configurations within their stated fidelity. Representative geometry applies to an aircraft class. OEM material composition, part suppliers, or internal layouts often remain undisclosed.
 
@@ -26,6 +31,7 @@ node scripts/import-observations.mjs
 The first command checks the committed snapshot against the pinned series and periods. If the source changes, use the second command to refresh the JSON, then review its diff before merging. Keep the retrieval date, dataset versions, and filters current when changing the snapshot. Normal builds read the committed file and work without retrieving these sources.
 
 - USGS figures use the 2026 release for 2025 lithium, natural graphite and rare-earth mine production and reserves. Commodity-specific mass bases are recorded in the unit. Only reported countries or territories are mapped. Withheld and unavailable values are omitted, and the USGS zero marker is recorded as zero.
+- Copper refinery production and alumina refinery production use distinct 2025 series from the same USGS release. These series describe processing in a country. Each layer keeps its reported unit and coverage.
 - Electricity figures use Eurostat `nrg_pc_205`, second half of 2025, non-household band IC (500–1,999 MWh annual consumption), in EUR/kWh excluding VAT and other recoverable taxes and levies.
 - Manufacturing hourly labour costs use Eurostat `lc_lci_lev`, 2025, NACE Rev. 2 section C, in EUR/hour. The series includes compensation plus taxes minus subsidies. Eurostat layers cover reporting EU and EFTA countries, preserve published data flags, and omit unavailable and confidential values.
 
@@ -49,6 +55,8 @@ Keep the source's geography, segment, period, and method. `shipment` counts airc
 | `/data/v1/SHA256SUMS.txt` | SHA-256 digests for the release artifacts |
 
 Use the JSON for nested fields and relationships. Use release tags and the checksum file to identify the exact data you analyzed. See [release instructions](RELEASE.md) for snapshot versioning.
+
+Schema 1.2.0 adds component claims, pathway contexts, component comparisons, measured bench setups, guided learning, and evidence-depth counts to `index.json`. The download paths and CSV headers stay compatible with schema 1.1.
 
 ## Industry source refreshes
 

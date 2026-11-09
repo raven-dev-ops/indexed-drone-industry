@@ -1,0 +1,51 @@
+.lab-bench-controls {
+  margin-block: 1rem;
+}
+
+.lab-bench-controls label {
+  min-width: 0;
+}
+
+.lab-bench-controls select {
+  width: 100%;
+}
+
+.survey-preview {
+  margin: 1rem 0;
+  padding: 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+}
+
+.survey-preview svg {
+  display: block;
+  width: 100%;
+  max-width: 30rem;
+  margin-inline: auto;
+  background: var(--paper);
+  border-radius: 0.3rem;
+}
+
+.survey-footprint {
+  fill: var(--teal);
+  fill-opacity: 0.1;
+  stroke: var(--teal);
+  stroke-opacity: 0.62;
+  stroke-width: 0.8;
+}
+
+.survey-track {
+  stroke: var(--ink);
+  stroke-width: 1.4;
+  stroke-dasharray: 4 3;
+}
+
+.survey-capture {
+  fill: var(--ink);
+}
+
+.survey-preview figcaption {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin-top: 0.45rem;
+}

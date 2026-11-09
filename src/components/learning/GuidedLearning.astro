@@ -1,0 +1,164 @@
+---
+import { guidedLessons } from '../../lib/learning';
+import { page } from '../../lib/navigation';
+
+interface Props { lessonId?: string }
+const { lessonId } = Astro.props;
+const position = guidedLessons.findIndex(lesson => lesson.id === lessonId);
+const lesson = guidedLessons[position];
+const next = lesson && guidedLessons[position + 1];
+if (lessonId && !lesson) throw new Error(`Missing guided learning activity for ${lessonId}.`);
+---
+
+<guided-learning data-lesson-ids={guidedLessons.map(item => item.id).join(' ')}>
+  {lesson ? (
+    <section class="section-block panel" aria-labelledby="guided-practice-title">
+      <span class="eyebrow">Guided practice · {position + 1} of {guidedLessons.length}</span>
+      <h2 id="guided-practice-title">Try it in the index</h2>
+      <p>{lesson.activity.task}</p>
+      <div class="actions">
+        <a class="button secondary small" href={page(lesson.activity.tool.section, lesson.activity.tool.id)}>{lesson.activity.tool.label} →</a>
+      </div>
+      <form data-check data-lesson={lesson.id} data-answer={lesson.activity.answer} data-explanation={lesson.activity.explanation} hidden>
+        <fieldset>
+          <legend>{lesson.activity.question}</legend>
+          {lesson.activity.options.map((option, index) => (
+            <label class="check-option"><input type="radio" name="answer" value={index} required />{option}</label>
+          ))}
+        </fieldset>
+        <button class="button small" type="submit">Check answer</button>
+        <p class="check-feedback" data-feedback role="status"></p>
+      </form>
+      <noscript>
+        <details><summary>Read the answer</summary><p>{lesson.activity.question} {lesson.activity.explanation}</p></details>
+      </noscript>
+      <div class="guided-next">
+        <p data-progress aria-live="polite" hidden></p>
+        {next ? <a href={page('learn', next.id)}>Next lesson · {next.name} →</a> : <a href={page('journeys')}>Next step · Explore a segment journey →</a>}
+      </div>
+    </section>
+  ) : (
+    <section aria-labelledby="guided-learning-title">
+      <div class="section-head">
+        <div>
+          <h2 id="guided-learning-title">Start with the aircraft</h2>
+          <p>Try each tool, answer a quick question, then follow the next lesson. Progress is saved in this browser when storage is available.</p>
+          <p data-progress aria-live="polite" hidden></p>
+        </div>
+        <a class="button secondary small" href={page('journeys')}>Browse the seven segment journeys →</a>
+      </div>
+      <ol class="grid lesson-list">
+        {guidedLessons.map(item => (
+          <li class="card">
+            <span class="tag neutral" data-completed={item.id} hidden>Completed</span>
+            <h3><a href={page('learn', item.id)}>{item.name}</a></h3>
+            <p>{item.summary}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+  )}
+</guided-learning>
+
+<script>
+  const progressKey = 'indexed-drone-industry:guided-learning:v1';
+
+  class GuidedLearning extends HTMLElement {
+    private completed = new Set<string>();
+    private ids = new Set<string>();
+    private persistent = true;
+    private form: HTMLFormElement | null = null;
+
+    connectedCallback() {
+      this.ids = new Set(this.dataset.lessonIds?.split(' '));
+      this.form = this.querySelector<HTMLFormElement>('[data-check]');
+      if (this.form) {
+        this.form.hidden = false;
+        this.form.addEventListener('submit', this.checkAnswer);
+      }
+      this.syncProgress();
+      window.addEventListener('storage', this.storageChanged);
+    }
+
+    disconnectedCallback() {
+      this.form?.removeEventListener('submit', this.checkAnswer);
+      window.removeEventListener('storage', this.storageChanged);
+    }
+
+    private readProgress(): string[] {
+      let raw: string | null;
+      try {
+        raw = localStorage.getItem(progressKey);
+      } catch {
+        this.persistent = false;
+        return [];
+      }
+      try {
+        const value: unknown = JSON.parse(raw ?? '[]');
+        return Array.isArray(value) ? value.filter((id): id is string => typeof id === 'string' && this.ids.has(id)) : [];
+      } catch {
+        return [];
+      }
+    }
+
+    private storageChanged = (event: StorageEvent) => {
+      if (event.key === progressKey || event.key === null) this.syncProgress();
+    };
+
+    private syncProgress() {
+      const saved = this.readProgress();
+      if (this.persistent) this.completed = new Set(saved);
+      this.updateProgress();
+    }
+
+    private updateProgress() {
+      for (const status of this.querySelectorAll<HTMLElement>('[data-progress]')) {
+        status.hidden = false;
+        status.textContent = `${this.completed.size} of ${this.ids.size} lessons completed.` +
+          (this.persistent ? '' : ' Progress is available on this page only.');
+      }
+      for (const badge of this.querySelectorAll<HTMLElement>('[data-completed]')) {
+        badge.hidden = !this.completed.has(badge.dataset.completed ?? '');
+      }
+    }
+
+    private checkAnswer = (event: SubmitEvent) => {
+      event.preventDefault();
+      const form = this.form;
+      const feedback = form?.querySelector<HTMLElement>('[data-feedback]');
+      const lesson = form?.dataset.lesson;
+      if (!form || !feedback || !lesson) return;
+
+      if (new FormData(form).get('answer') !== form.dataset.answer) {
+        feedback.textContent = 'Try again. Revisit the tool and check what the evidence supports.';
+        return;
+      }
+      const saved = this.readProgress();
+      this.completed = new Set([...this.completed, ...saved, lesson]);
+      try {
+        localStorage.setItem(progressKey, JSON.stringify([...this.completed]));
+        this.persistent = true;
+      } catch {
+        this.persistent = false;
+      }
+      feedback.textContent = `Correct. ${form.dataset.explanation}`;
+      this.updateProgress();
+    };
+  }
+
+  if (!customElements.get('guided-learning')) customElements.define('guided-learning', GuidedLearning);
+</script>
+
+<style>
+  guided-learning { display: block; }
+  [hidden] { display: none; }
+  .lesson-list { padding-left: 0; list-style: none; }
+  form { margin-top: 1.5rem; }
+  fieldset { border: 0; padding: 0; margin: 0 0 1rem; min-width: 0; }
+  legend { font-weight: 700; margin-bottom: .5rem; }
+  .check-option { display: flex; align-items: flex-start; gap: .6rem; margin: .65rem 0; }
+  .check-option input { flex: none; min-height: 0; margin: .25rem 0 0; }
+  .check-feedback { margin-top: .75rem; }
+  .check-feedback:empty { margin: 0; }
+  .guided-next { margin-top: 1.25rem; }
+</style>

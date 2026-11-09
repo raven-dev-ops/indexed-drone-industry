@@ -2,12 +2,15 @@
 import Site from '../../layouts/Site.astro';
 import Anatomy from '../../components/Anatomy';
 import Supply from '../../components/Supply';
+import SupplyScope from '../../components/SupplyScope';
 import PartExplainer from '../../components/PartExplainer';
 import Evidence from '../../components/Evidence.astro';
-import { collections, facilities, lookupModel, parts, relationships, type RecordEntry, type Section } from '../../lib/data';
+import GuidedLearning from '../../components/learning/GuidedLearning.astro';
+import { collections, componentClaims, lookupModel, parts, pathwayContexts, relationships, type RecordEntry, type Section } from '../../lib/data';
 import { forms, metrics, segments } from '../../lib/schema';
 import { marketMeasure, marketValue } from '../../lib/market';
 import { labels, page } from '../../lib/navigation';
+import { supplyPaths } from '../../lib/supply-links';
 export function getStaticPaths() {
   return Object.entries(collections).flatMap(([section,rows]) => rows.map(row => ({ params:{section,id:row.id}, props:{row} })));
 }
@@ -17,12 +20,28 @@ const section = Astro.params.section as Section;
 const model = 'maker' in row ? lookupModel(row) : undefined;
 const linkedParts = model?.parts.flatMap(id => parts.filter(part => part.id === id).map(part => ({
   id, name:part.name, href:page('parts',id), note:part.summary,
+  component: componentClaims.find(claim => claim.aircraft === row.id && claim.part === id),
+  supply: supplyPaths.filter(path => path.aircraft.some(link => link.id === row.id && link.partHref === page('parts', id)))
+    .map(path => ({ name: path.name, href: `${path.href}?aircraft=${row.id}` })),
 }))) ?? [];
 const linkedOrganizations = 'organizationId' in row && row.organizationId ? collections.organizations.filter(org => org.id === row.organizationId) : [];
 const connected = relationships.filter(edge => [edge.from,edge.to].some(endpoint => endpoint.section === section && endpoint.id === row.id));
-const atlasLayer: Record<string,string> = { motors:'rare-earths-production', battery:'lithium-production', 'rare-earths':'rare-earths-production', lithium:'lithium-production', graphite:'graphite-production', 'skydio-battery':'lithium-production' };
-const atlas = `${page('atlas')}${atlasLayer[row.id] ? `?layer=${atlasLayer[row.id]}` : ''}`;
-const mountainPass = facilities.find(item => item.id === 'mountain-pass-rare-earth');
+const context = section === 'supply' ? pathwayContexts.find(item => item.id === row.id) : undefined;
+const atlasLayer: Record<string,string> = { 'rare-earths':'rare-earths-production', lithium:'lithium-production', graphite:'graphite-production' };
+const layer = context?.atlasLayer ?? atlasLayer[row.id];
+const atlas = `${page('atlas')}${layer ? `?layer=${layer}` : ''}`;
+const relatedNodes = Object.fromEntries(Object.entries(context?.nodes ?? {}).map(([node, endpoints]) => [node, endpoints.map(endpoint => ({
+  name: collections[endpoint.section].find(item => item.id === endpoint.id)!.name,
+  href: page(endpoint.section, endpoint.id),
+}))]));
+const observedCase = 'nodes' in row && row.event ? collections.history.find(event => event.id === row.event) : undefined;
+const relatedCases = (context?.events ?? []).flatMap(id => collections.history.filter(event => event.id === id && event.id !== observedCase?.id));
+const industrialRoutes = (context?.relationships ?? []).map(id => relationships.find(edge => edge.id === id)!);
+const aircraftPathways = section === 'aircraft' ? supplyPaths.filter(path => path.aircraft.some(link => link.id === row.id)) : [];
+const supplyReferences = ['parts', 'materials', 'facilities', 'organizations'].includes(section)
+  ? pathwayContexts.flatMap(path => Object.entries(path.nodes).filter(([, endpoints]) => endpoints.some(endpoint => endpoint.section === section && endpoint.id === row.id))
+    .map(([node]) => ({ node, scenario: collections.supply.find(item => item.id === path.id)! })))
+  : [];
 const badges = 'maker' in row ? [segments[row.segment],forms[row.form]] : 'mode' in row ? [row.mode === 'representative' ? 'Representative pathway' : 'Historical scenario'] : 'type' in row ? [row.type,row.date] : 'activity' in row ? [row.activity, row.country] : 'axis' in row ? [row.jurisdiction,row.axis] : 'role' in row ? [row.role] : [];
 ---
 <Site title={row.name} description={row.summary} section={section}>
@@ -36,10 +55,18 @@ const badges = 'maker' in row ? [segments[row.segment],forms[row.form]] : 'mode'
   {'maker' in row && <>
     {model && <section aria-labelledby="aircraft-anatomy">
       <div class="section-head"><div><span class="eyebrow">Aircraft anatomy</span><h2 id="aircraft-anatomy">Explore the parts</h2></div><a class="button secondary small" href={`${page('compare')}?a=${row.id}`}>Compare this aircraft</a></div>
-      <Anatomy model={model.id} label={model.label} representative={model.representative} parts={linkedParts} client:visible />
+      <Anatomy model={model.id} label={model.label} representative={model.representative} fidelity={model.fidelity} parts={linkedParts} client:visible />
       {model.fidelity === 'exterior-schematic' && <p class="note">The exterior arrangement follows the cited aircraft. Part geometry is simplified and undisclosed internals are illustrative.</p>}
-      {model.fidelity === 'documented-assembly' && <p class="note">The kit layout follows the documented assembly. Battery, GNSS and flight controller are separate from the indexed SKU.</p>}
+      {model.id === 'holybro-x500-v2' && <p class="note">The kit layout follows the documented assembly. Battery, GNSS, flight controller, and power module are separate from SKU 30125.</p>}
+      {model.id === 'crazyflie-2-1-plus' && <p class="note">The structural board, battery holder, and four motor assemblies follow the documented kit. The onboard controllers separate in the exploded view so they can be inspected.</p>}
       {model.source && <Evidence source={model.source} />}
+    </section>}
+    {aircraftPathways.length > 0 && <section class="section-block panel">
+      <h2>Trace this aircraft</h2>
+      <ul>{aircraftPathways.map(path => {
+        const link = path.aircraft.find(item => item.id === row.id)!;
+        return <li><a href={`${path.href}?aircraft=${row.id}`}>{path.name}</a> <small>· {link.part} · {link.evidenceType} component context</small></li>;
+      })}</ul>
     </section>}
     <section class="section-block" aria-labelledby="specs-title"><div class="section-head"><h2 id="specs-title">Published specifications</h2><a href={`${page('compare')}?a=${row.id}`}>Compare aircraft →</a></div>
       {row.specs.length ? <div class="table-wrap"><table><thead><tr><th scope="col">Metric</th><th scope="col">Reported value</th><th scope="col">Conditions</th><th scope="col">Evidence</th></tr></thead>
@@ -53,24 +80,53 @@ const badges = 'maker' in row ? [segments[row.segment],forms[row.form]] : 'mode'
     <section class="panel"><h2>Keep exploring</h2><p>Use a lab to change a flight or camera input, or follow this part into a representative supply chain.</p><div class="actions">{row.pathway && <a class="button small" href={page('supply',row.pathway)}>Trace its supply chain →</a>}{row.lesson && <a class="button secondary small" href={page('learn',row.lesson)}>Read the lesson</a>}<a href={page('labs')}>Try the labs</a></div></section>
   </div>}
   {'materials' in row && <PartExplainer part={row.id} client:visible />}
+  {supplyReferences.length > 0 && <section class="section-block panel">
+    <h2>Explore this record in supply chains</h2>
+    <ul>{supplyReferences.map(({node, scenario}) => <li><a href={`${page('supply', scenario.id)}#${node}`}>{scenario.name} · {scenario.nodes.find(item => item.id === node)?.name}</a></li>)}</ul>
+  </section>}
 
   {'pathway' in row && !('materials' in row) && <section class="panel">
-    {'affects' in row && <><h2>Who depends on it?</h2><p>{row.affects}</p><h3>What could ease the constraint?</h3><p>{row.mitigation}</p></>}
+    {'affects' in row && <><h2>Who depends on it?</h2><p>{row.affects}</p>
+      {row.parts?.length && <p><strong>Parts</strong> {row.parts.map(id => <a class="tag neutral" href={page('parts', id)}>{parts.find(part => part.id === id)?.name}</a>)}</p>}
+      {row.segments?.length && <p><strong>Mission examples</strong> {row.segments.map(id => <a class="tag neutral" href={page('journeys', id)}>{segments[id]}</a>)}</p>}
+      <h3>What could ease the constraint?</h3><p>{row.mitigation}</p></>}
     <div class="actions"><a class="button small" href={page('supply',row.pathway)}>Explore the pathway</a><a href={atlas}>Open the world atlas →</a></div>
   </section>}
 
   {'nodes' in row && <>
-    <Supply scenario={row} client:load />
+    {Boolean(context?.aircraft.length) && <SupplyScope paths={supplyPaths.filter(path => path.id === row.id)} detail client:load />}
+    <Supply scenario={row} related={relatedNodes} client:load />
+    {industrialRoutes.length > 0 && <section class="section-block panel">
+      <h2>Documented industrial routes</h2>
+      <p class="note">These records trace named links between facilities. Their connection to an aircraft is only documented where a product-specific source identifies it.</p>
+      <ul>{industrialRoutes.map(edge => <li>
+        <a href={page(edge.from.section, edge.from.id)}>{collections[edge.from.section].find(item => item.id === edge.from.id)?.name}</a>
+        {' '}{edge.relation.toLowerCase()}{' '}
+        <a href={page(edge.to.section, edge.to.id)}>{collections[edge.to.section].find(item => item.id === edge.to.id)?.name}</a>
+        <Evidence source={edge.source} compact />
+      </li>)}</ul>
+    </section>}
+    {observedCase && <section class="section-block panel">
+      <span class="eyebrow">Historical record</span>
+      <h2>What was observed</h2>
+      <p>{observedCase.summary}</p>
+      <ol class="timeline">{observedCase.effects.map(effect => <li><p>{effect.text}</p><Evidence source={effect.source} compact /></li>)}</ol>
+      <a href={page('history',observedCase.id)}>Read the dated case and evidence →</a>
+    </section>}
     <section class="section-block panel"><h2>Take the next step</h2><div class="actions"><a class="button small" href={atlas}>Open the world atlas →</a>
-      {row.id === 'motors' && mountainPass && <a href={page('facilities',mountainPass.id)}>See a documented rare earth facility</a>}
-      {row.event && collections.history.some(event => event.id === row.event) && <a href={page('history',row.event)}>Read the documented case</a>}
-      {row.id === 'motors' && <a href={page('history','skydio-battery-2024')}>Explore a documented battery disruption</a>}
+      <a href={page('supply')}>Explore all supply pathways</a>
     </div></section>
+    {relatedCases.length > 0 && <section class="section-block panel">
+      <h2>Related documented disruptions</h2>
+      <p class="note">These events show upstream or industry context. An aircraft-specific consequence is identified in the dated case where documented.</p>
+      <ul>{relatedCases.map(event => <li><a href={page('history', event.id)}>{event.name}</a> <small>· {event.date}</small></li>)}</ul>
+    </section>}
   </>}
 
   {'activity' in row && <section class="panel">
-    <h2>Facility record</h2><dl><dt>Reported status</dt><dd>{row.status}</dd><dt>Location precision</dt><dd>{row.precision}</dd><dt>Map coordinates</dt><dd>{row.lat.toFixed(row.precision === 'site' ? 4 : 2)}, {row.lon.toFixed(row.precision === 'site' ? 4 : 2)}</dd></dl>
-    <a href={page('atlas')}>Return to the atlas →</a>
+    <h2>Facility record</h2><dl><dt>Reported status</dt><dd>{row.status}</dd><dt>Observation date</dt><dd>{row.observed ?? 'Unknown'}</dd>{row.statusReviewed && <><dt>Status reviewed</dt><dd>{row.statusReviewed}</dd></>}<dt>Location precision</dt><dd>{row.precision}</dd><dt>Map coordinates</dt><dd>{row.lat.toFixed(row.precision === 'site' ? 4 : 2)}, {row.lon.toFixed(row.precision === 'site' ? 4 : 2)}</dd></dl>
+    {row.statusSource && <p><Evidence source={row.statusSource} /></p>}
+    <a href={`${page('atlas')}?facility=${row.id}`}>Find this facility in the atlas →</a>
   </section>}
 
   {'effects' in row && <section class="panel">
@@ -82,6 +138,7 @@ const badges = 'maker' in row ? [segments[row.segment],forms[row.form]] : 'mode'
   {'body' in row && <article class="prose">{row.body.map(paragraph => <p>{paragraph}</p>)}
     <div class="actions">{row.part && <a class="button small" href={page('parts',row.part)}>Explore the part</a>}<a href={page('labs')}>Try a lab</a><a href={page('learn')}>All lessons</a></div>
   </article>}
+  {section === 'learn' && <GuidedLearning lessonId={row.id} />}
 
   {'kind' in row && <section class="panel">
     <h2>{marketValue(row)}</h2>

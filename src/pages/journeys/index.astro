@@ -1,0 +1,26 @@
+---
+import Site from '../../layouts/Site.astro';
+import { segmentJourneys } from '../../lib/learning';
+import { page } from '../../lib/navigation';
+import { segments } from '../../lib/schema';
+
+const description = 'Follow an aircraft, a component, an industrial pathway and a documented case in each drone segment.';
+---
+
+<Site title="Segment journeys" description={description} section="journeys">
+  <div class="crumb"><a href={page('learn')}>Learning paths</a><span aria-hidden="true">/</span><span>Segment journeys</span></div>
+  <header class="pagehead">
+    <span class="eyebrow">Explore by mission</span>
+    <h1>Segment journeys</h1>
+    <p class="lede">{description}</p>
+  </header>
+  <div class="grid">
+    {segmentJourneys.map(journey => (
+      <article class="card">
+        <h2><a href={page('journeys', journey.segment)}>{segments[journey.segment]}</a></h2>
+        <p class="fact-source">{journey.model.name}</p>
+        <p>{journey.summary}</p>
+      </article>
+    ))}
+  </div>
+</Site>

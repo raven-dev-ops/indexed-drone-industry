@@ -1,11 +1,13 @@
 ---
 import Evidence from './Evidence.astro';
-import { marketMeasure, marketValue } from '../lib/market';
+import { comparableMarketShares, marketMeasure, marketValue } from '../lib/market';
 import { page, path } from '../lib/navigation';
 import type { MarketIndicator } from '../lib/schema';
 interface Props { entries: MarketIndicator[] }
 const { entries } = Astro.props;
-const options = (key: 'geography' | 'segment') => [...new Set(entries.map(row => row[key]))].sort((a, b) => a.localeCompare(b, 'en'));
+const options = (key: 'geography' | 'segment' | 'period') => [...new Set(entries.map(row => row[key]))].sort((a, b) => a.localeCompare(b, 'en'));
+const measures = [...new Set(entries.map(marketMeasure))].sort();
+const cohorts = comparableMarketShares(entries);
 const groups = [
   { id: 'volume', title: 'Aircraft shipments and unit sales', kinds: ['shipment', 'sales'], description: 'Shipments count aircraft sent to customers or channels. Sales count aircraft sold, as defined by the source. Company totals and survey totals keep their original scope.' },
   { id: 'shares', title: 'Market shares', kinds: ['share'], description: 'Compare figures within the same geography, segment, period, and measurement basis. Revenue and unit shares answer different questions.' },
@@ -16,10 +18,34 @@ const groups = [
   <div class="controls market-controls" role="group" aria-label="Filter market data">
     <label>Geography<select data-market-geography><option value="">All geographies</option>{options('geography').map(value => <option>{value}</option>)}</select></label>
     <label>Segment<select data-market-segment><option value="">All segments</option>{options('segment').map(value => <option>{value}</option>)}</select></label>
+    <label>Period<select data-market-period><option value="">All periods</option>{options('period').map(value => <option>{value}</option>)}</select></label>
+    <label>Measure<select data-market-measure><option value="">All measures</option>{measures.map(value => <option>{value}</option>)}</select></label>
     <p class="label" data-market-count role="status">{entries.length} records</p>
     <a href={path('data/v1/market.csv')} download>Download market CSV ↓</a>
   </div>
   <p class="note" data-market-empty hidden>No published records match these filters.</p>
+  <section class="section-block market-group" aria-labelledby="market-chart-title">
+    <h2 id="market-chart-title">Comparable share charts</h2>
+    <p class="lede">Each chart compares published figures with the same period, geography, segment, method, and denominator. Omitted vendors and origins may account for part of the total.</p>
+    <p class="note" data-market-no-chart hidden={cohorts.length > 0}>No published comparable shares match these filters. Individual observations remain in the tables.</p>
+    {cohorts.map((rows, index) => {
+      const first = rows[0];
+      const measure = marketMeasure(first);
+      return <details class="panel share-cohort" data-market-chart data-geography={first.geography}
+        data-segment={first.segment} data-period={first.period} data-measure={measure} open={index === 0}>
+        <summary><strong>{first.geography} · {first.segment}</strong><small>{first.period} · {measure}{first.estimate ? ' · Estimate' : ''}</small></summary>
+        <p class="note"><strong>Denominator:</strong> {first.denominator}</p>
+        <ul class="share-bars" aria-label={`${measure} by subject`}>
+          {rows.map(row => <li>
+            <a href={page('market', row.id)}>{row.subject}</a>
+            <span class="share-track" aria-hidden="true"><span style={`width:${row.value}%`}></span></span>
+            <strong>{marketValue(row)}</strong>
+          </li>)}
+        </ul>
+        <Evidence source={first.source} compact />
+      </details>;
+    })}
+  </section>
   {groups.map(group => <section class="section-block market-group" aria-labelledby={`market-${group.id}`} data-market-group>
     <h2 id={`market-${group.id}`}>{group.title}</h2>
     <p class="lede">{group.description}</p>
@@ -27,7 +53,7 @@ const groups = [
       <table aria-labelledby={`market-${group.id}`}>
         <thead><tr><th scope="col">Observation</th><th scope="col">Geography, segment, period</th><th scope="col">Reported value</th><th scope="col">Scope and source</th></tr></thead>
         <tbody>{entries.filter(row => group.kinds.includes(row.kind)).map(row =>
-          <tr data-market-row data-geography={row.geography} data-segment={row.segment}>
+          <tr data-market-row data-geography={row.geography} data-segment={row.segment} data-period={row.period} data-measure={marketMeasure(row)}>
             <th scope="row"><a href={page('market', row.id)}>{row.name}</a></th>
             <td>{row.geography}<small>{row.segment} · {row.period}</small></td>
             <td><strong>{marketValue(row)}</strong><small>{marketMeasure(row)}{row.estimate ? ' · Estimate' : ''}</small></td>
@@ -37,12 +63,20 @@ const groups = [
       </table>
     </div>
   </section>)}
-  <p class="note">Coverage varies by segment and geography. The page lists figures with public source evidence; an empty result means no matching record is published here.</p>
+  <p class="note">Current U.S. vendor-level unit sales for consumer, enterprise, and public-safety drones remain a coverage gap. U.S. spray-drone estimates group unit sales by country of origin. Registration and fleet figures describe adoption. An empty result means this index has no matching record.</p>
 </div>
 
 <style>
   .market-controls { align-items: end; }
   .market-controls [role='status'] { margin: 0; }
+  .share-cohort { margin-top: .8rem; }
+  .share-cohort summary { cursor: pointer; }
+  .share-cohort summary small { margin-inline-start: .8rem; }
+  .share-bars { margin: 1rem 0; padding: 0; list-style: none; }
+  .share-bars li { display: grid; grid-template-columns: minmax(7rem, 1fr) minmax(2rem, 3fr) auto; align-items: center; gap: .6rem; margin-block: .45rem; }
+  .share-track { display: block; height: .65rem; background: #d3e4df; border-radius: .4rem; overflow: hidden; }
+  .share-track span { display: block; height: 100%; background: #146b61; }
+  .share-bars strong { white-space: nowrap; }
   .market-table { margin-top: 1rem; }
   .market-table:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
   .market-table table { min-width: 42rem; }
@@ -53,22 +87,26 @@ const groups = [
 
 <script>
   for (const market of document.querySelectorAll<HTMLElement>('[data-market]')) {
-    const geography = market.querySelector<HTMLSelectElement>('[data-market-geography]');
-    const segment = market.querySelector<HTMLSelectElement>('[data-market-segment]');
+    const keys = ['geography', 'segment', 'period', 'measure'];
+    const controls = keys.map(key => ({
+      key, select: market.querySelector<HTMLSelectElement>(`[data-market-${key}]`),
+    }));
     const count = market.querySelector<HTMLElement>('[data-market-count]');
     const empty = market.querySelector<HTMLElement>('[data-market-empty]');
+    const noChart = market.querySelector<HTMLElement>('[data-market-no-chart]');
+    const charts = [...market.querySelectorAll<HTMLDetailsElement>('[data-market-chart]')];
     const groups = [...market.querySelectorAll<HTMLElement>('[data-market-group]')].map(group => ({
       group,
       rows: [...group.querySelectorAll<HTMLElement>('[data-market-row]')],
     }));
+    function matchesFilters(element: HTMLElement) {
+      return controls.every(({ key, select }) => !select?.value || element.dataset[key] === select.value);
+    }
     function filter() {
       let total = 0;
       for (const {group, rows} of groups) {
         const matches = rows.filter(row => {
-          row.hidden = Boolean(
-            (geography?.value && row.dataset.geography !== geography.value) ||
-            (segment?.value && row.dataset.segment !== segment.value),
-          );
+          row.hidden = !matchesFilters(row);
           return !row.hidden;
         }).length;
         group.hidden = matches === 0;
@@ -76,9 +114,14 @@ const groups = [
       }
       if (count) count.textContent = `${total} ${total === 1 ? 'record' : 'records'}`;
       if (empty) empty.hidden = total > 0;
+      const visibleCharts = charts.filter(chart => {
+        chart.hidden = !matchesFilters(chart);
+        return !chart.hidden;
+      });
+      if (noChart) noChart.hidden = visibleCharts.length > 0;
+      if (visibleCharts.length === 1) visibleCharts[0].open = true;
     }
-    geography?.addEventListener('change', filter);
-    segment?.addEventListener('change', filter);
+    for (const { select } of controls) select?.addEventListener('change', filter);
     filter();
   }
 </script>

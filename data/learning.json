@@ -1,0 +1,182 @@
+{
+  "lessons": [
+    {
+      "id": "aircraft-anatomy",
+      "task": "Open the X500 V2 teardown. Select the airframe, then read the indexed variant and its package contents.",
+      "tool": { "section": "aircraft", "id": "holybro-x500-v2", "label": "Open the X500 V2 teardown" },
+      "question": "Which items must you supply separately for the indexed X500 V2 ARF kit?",
+      "options": ["The frame and motors", "The flight controller and battery", "The motors and propellers"],
+      "answer": 1,
+      "explanation": "SKU 30125 lists the airframe, motors, ESCs and propellers. The flight controller and battery are separate from that kit."
+    },
+    {
+      "id": "flight",
+      "task": "In the propulsion lab, leave the number of rotors and thrust unchanged. Increase the aircraft mass from 1.5 kg to 2 kg and watch the thrust-to-weight result.",
+      "tool": { "section": "labs", "label": "Open the propulsion lab" },
+      "question": "What happens to thrust-to-weight when mass increases at the same thrust?",
+      "options": ["It rises", "It stays the same", "It falls"],
+      "answer": 2,
+      "explanation": "Weight increases while total thrust stays fixed. The same rotors have less thrust relative to the aircraft’s weight."
+    },
+    {
+      "id": "propulsion",
+      "task": "In the propulsion lab, raise Battery reserve from 20% to 40%. Keep battery energy, power and thrust fixed.",
+      "tool": { "section": "labs", "label": "Change the battery reserve" },
+      "question": "What happens to the estimated time at the entered power?",
+      "options": ["It decreases", "It increases", "It stays the same"],
+      "answer": 0,
+      "explanation": "A larger reserve leaves fewer usable watt-hours at the same power draw. The time shown is an educational estimate."
+    },
+    {
+      "id": "electronics",
+      "task": "Open the electronics pathway and follow the chain from wafer fabrication through packaging and testing to a controller or ESC board.",
+      "tool": { "section": "supply", "id": "electronics", "label": "Trace the electronics pathway" },
+      "question": "What does the representative electronics pathway establish about a specific drone?",
+      "options": ["Its controller came from a named fabrication plant", "Its board uses only components from one country", "It shows how stages can connect. The supplier needs separate evidence."],
+      "answer": 2,
+      "explanation": "The pathway explains the process. A claim about who supplied a specific aircraft needs separate evidence."
+    },
+    {
+      "id": "payloads",
+      "task": "In the survey lab, increase Side overlap while keeping altitude, camera angle and speed fixed. Look at the distance between adjacent flight lines.",
+      "tool": { "section": "labs", "label": "Open the survey coverage lab" },
+      "question": "How does more side overlap change the spacing between flight lines?",
+      "options": ["It makes the lines closer together", "It moves the lines farther apart", "It changes only the spacing along each line"],
+      "answer": 0,
+      "explanation": "More side overlap makes adjacent camera footprints share a larger area. The aircraft must fly lines closer together."
+    },
+    {
+      "id": "supply-chains",
+      "task": "Open the motor and magnet pathway. Cut Separated oxides and follow the model’s downstream changes to the magnet and motor steps.",
+      "tool": { "section": "supply", "id": "motors", "label": "Simulate a cut in the magnet chain" },
+      "question": "What can you conclude from this simulation?",
+      "options": ["It identifies a specific drone maker’s supplier", "It shows dependencies in the selected pathway", "It predicts the next price of a finished drone"],
+      "answer": 1,
+      "explanation": "The simulation follows the pathway’s stated dependencies. Supplier identity and prices require additional evidence."
+    },
+    {
+      "id": "operations",
+      "task": "Open the Matternet M2 profile. Follow its related records to find the operator associated with the WakeMed medical deliveries.",
+      "tool": { "section": "aircraft", "id": "matternet-m2", "label": "Inspect the M2 operator links" },
+      "question": "Who operated the M2 in the documented WakeMed delivery relationship?",
+      "options": ["WakeMed", "The FAA", "UPS Flight Forward"],
+      "answer": 2,
+      "explanation": "UPS Flight Forward operated the aircraft. WakeMed hosted the medical delivery service and Matternet made the M2."
+    },
+    {
+      "id": "repair-and-recycling",
+      "task": "Open the Redwood Tahoe Campus facility record. Read its activity, status, and location precision, then follow the source for the recovery process.",
+      "tool": { "section": "facilities", "id": "redwood-tahoe-campus", "label": "Inspect the recycling facility" },
+      "question": "What does the facility record establish about a particular drone battery?",
+      "options": ["It confirms where every drone battery is recycled", "It confirms a documented recycling operation. Tracing a particular pack requires more evidence.", "It guarantees that the facility accepts any pack directly from the public"],
+      "answer": 1,
+      "explanation": "The record documents recovery infrastructure. The destination of a particular pack and any consumer drop-off rules require separate evidence."
+    }
+  ],
+  "journeys": [
+    {
+      "segment": "camera",
+      "aircraft": "dji-mini-4-pro",
+      "summary": "Follow the standard battery from a folding camera drone’s weight and flight-time specifications to the stages behind a rechargeable pack.",
+      "part": "battery",
+      "partContext": "Compare the takeoff-weight and flight-time conditions for the standard battery. DJI lists the Battery Plus separately.",
+      "pathway": "battery",
+      "material": "lithium",
+      "atlasLayer": "lithium-production",
+      "atlasContext": "Compare lithium production across countries. The layer measures mine output, while the Mini 4 Pro cell and pack suppliers remain undisclosed in the cited evidence.",
+      "event": "gopro-karma-recall-2016",
+      "eventScope": "Related aircraft case",
+      "eventContext": "GoPro’s Karma recall is a documented response to aircraft power loss in this segment. The case concerns a different aircraft."
+    },
+    {
+      "segment": "fpv",
+      "aircraft": "geprc-mark5-dc-hd-o3",
+      "summary": "Trace the speed controller of a freestyle FPV quad from a published parts list through the electronics supply chain.",
+      "part": "esc",
+      "partContext": "GEPRC names the ESC in the MARK5 DC HD O3 specifications and records a hardware revision in its changelog.",
+      "partSource": { "title": "MARK5 DC HD O3 FPV", "publisher": "GEPRC", "url": "https://geprc.com/product/geprc-mark5-dc-hd-o3-fpv/", "locator": "Changelog and Specifications → ESC", "accessed": "2026-11-08", "rights": "Citation only" },
+      "pathway": "electronics",
+      "material": "silicon",
+      "atlasLayer": "electricity",
+      "atlasContext": "Explore electricity prices by country as manufacturing context. Identifying the ESC’s chip fabrication site would require supplier evidence.",
+      "event": "naka-chip-fire-2021",
+      "eventScope": "Upstream case",
+      "eventContext": "The Renesas Naka fire illustrates a disruption at wafer fabrication. The documented effects concern Renesas production."
+    },
+    {
+      "segment": "enterprise",
+      "aircraft": "freefly-astro",
+      "summary": "Start with a survey quadcopter’s payload-dependent endurance and trace its onboard control hardware through a representative chip pathway.",
+      "part": "flight-controller",
+      "partContext": "Freefly identifies a customized Skynode as Astro’s onboard platform. The generic flight-controller record explains the control role.",
+      "partSource": { "title": "Astro commercial drone", "publisher": "Freefly Systems", "url": "https://freeflysystems.com/astro", "locator": "Skynode, Mission Control, & the Suite", "accessed": "2026-11-08", "rights": "Citation only" },
+      "pathway": "electronics",
+      "material": "silicon",
+      "atlasLayer": "electricity",
+      "atlasContext": "Compare reported electricity prices for industrial context. Freefly’s published assembly location appears separately below.",
+      "relationship": "astro-woodinville-assembly",
+      "event": "chip-shortage-2022-rfi",
+      "eventScope": "Upstream case",
+      "eventContext": "The Commerce Department’s chip-inventory survey illustrates a broader electronics constraint. It measured inventories for selected types of semiconductors."
+    },
+    {
+      "segment": "agriculture",
+      "aircraft": "dji-agras-t50",
+      "summary": "Read the T50’s spraying payload and takeoff limits, then follow the battery materials that support powered agricultural flight.",
+      "part": "battery",
+      "partContext": "DJI’s aircraft weight specification includes the battery. Keep that condition separate from the spraying payload and maximum takeoff weight.",
+      "pathway": "battery",
+      "material": "lithium",
+      "atlasLayer": "lithium-production",
+      "atlasContext": "Compare reported lithium production. The upstream origin of the T50 pack remains undisclosed in the cited evidence.",
+      "event": "lithium-price-surge-2022",
+      "eventScope": "Upstream case",
+      "eventContext": "The IEA documented the surge at the lithium market level. Any impact on the T50 or agricultural drone prices remains unknown."
+    },
+    {
+      "segment": "delivery",
+      "aircraft": "matternet-m2",
+      "summary": "Follow a delivery aircraft from its swappable battery through an illustrative supply chain to a documented medical operation.",
+      "part": "battery",
+      "partContext": "Matternet describes a battery and payload swap by a human operator or a compatible station. Its material and supplier details remain separate questions.",
+      "partSource": { "title": "M2 Aircraft", "publisher": "Matternet", "url": "https://www.matternet.com/our-system-aircraft-m2", "locator": "Fast battery and payload swapping", "accessed": "2026-11-08", "rights": "Citation only" },
+      "pathway": "battery",
+      "material": "graphite",
+      "atlasLayer": "graphite-production",
+      "atlasContext": "Compare graphite production as upstream context, then open the WakeMed facility where a medical delivery operation was documented in 2019.",
+      "relationship": "matternet-m2-wakemed",
+      "event": "ups-matternet-wakemed-deployment-2019",
+      "eventScope": "Related operator case",
+      "eventContext": "The FAA records UPS Flight Forward’s first Part 135 drone delivery at WakeMed on September 27, 2019. Follow the case to distinguish the operator’s authority from the aircraft and the facility."
+    },
+    {
+      "segment": "public-safety",
+      "aircraft": "skydio-x10",
+      "summary": "Follow a public-safety quadcopter’s battery from its published configuration through the supply disruption Skydio disclosed to customers.",
+      "part": "battery",
+      "partContext": "The indexed X10 weight includes the battery. Skydio separately documented the supply interruption and changes to customer battery allocation.",
+      "pathway": "skydio-battery",
+      "material": "lithium",
+      "atlasLayer": "lithium-production",
+      "atlasContext": "Use the lithium layer as battery-industry context. The upstream origin of an X10 pack remains undisclosed in the cited evidence.",
+      "relationship": "skydio-x10-domestic-assembly",
+      "event": "skydio-battery-2024",
+      "eventScope": "Direct aircraft case",
+      "eventContext": "Read the reported supply loss, one-battery allocation, and subsequent customer support measures. The linked simulation models the sequence separately from the historical record."
+    },
+    {
+      "segment": "research",
+      "aircraft": "holybro-x500-v2",
+      "summary": "Start with a documented development kit. Follow the installed motors upstream and see how a representative magnet chain differs from a kit’s published bill of materials.",
+      "part": "motor",
+      "partContext": "Holybro lists the kit motors in the X500 V2 ARF package. The source identifies the motor model, and its magnet supplier remains undisclosed.",
+      "pathway": "motors",
+      "material": "rare-earths",
+      "atlasLayer": "rare-earths-production",
+      "atlasContext": "Compare national mine production. Use the atlas to distinguish this stage from downstream separation and magnet production.",
+      "event": "rare-earth-magnets-2025",
+      "eventScope": "Upstream case",
+      "eventContext": "The 2025 controls affected specified rare-earth materials and magnets. The history record follows affected exports and documented consequences in the automotive sector."
+    }
+  ]
+}

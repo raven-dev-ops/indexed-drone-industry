@@ -4,6 +4,7 @@ import { aircraft, coverage, events } from '../lib/data';
 import { page } from '../lib/navigation';
 const featured = aircraft.find(row => row.id === 'holybro-x500-v2');
 const incident = events.find(row => row.id === 'skydio-battery-2024');
+const magnetCase = events.find(row => row.id === 'rare-earth-magnets-2025');
 const tools = [
   ['aircraft', 'Aircraft & anatomy', 'Explore the aircraft and separate its components in 3D.'],
   ['compare', 'Compare aircraft', 'See the variants and test conditions behind the numbers.'],
@@ -19,7 +20,7 @@ const tools = [
       <span class="eyebrow">Open field guide · Uncrewed aircraft</span>
       <h1 id="hero-title">The drone industry, <em>part by part.</em></h1>
       <p>Take an aircraft apart. Follow its parts back to the materials, factories, and people that make flight possible.</p>
-      <div class="actions"><a class="button" href={featured ? page('aircraft', featured.id) : page('aircraft')}>Open the X500 teardown <span aria-hidden="true">↗</span></a><a class="button secondary" href={page('learn')}>Start learning</a></div>
+      <div class="actions"><a class="button" href={featured ? page('aircraft', featured.id) : page('aircraft')}>Open the X500 teardown <span aria-hidden="true">↗</span></a><a class="button secondary" href={page('learn')}>Start learning</a><a href={page('journeys')}>Browse by mission</a></div>
     </div>
     <figure class="hero-figure">
       <svg viewBox="0 0 600 425" role="img" aria-label="Illustrated quadcopter in exploded view with separated motors, frame, and battery">
@@ -52,6 +53,7 @@ const tools = [
   <section class="section-block panel" aria-labelledby="tour-title">
     <span class="eyebrow">A guided tour</span><h2 id="tour-title">From a motor to the material it depends on</h2>
     <p>Start with the documented X500 kit, explore a representative magnet route, then compare a modeled disruption with the historical record.</p>
-    <ol class="trail"><li><a href={page('aircraft','holybro-x500-v2')}>1. Aircraft teardown</a></li><li><a href={page('parts','motor')}>2. Motor evidence</a></li><li><a href={page('supply','motors')}>3. Magnet pathway</a></li><li><a href={`${page('atlas')}?layer=rare-earths-production`}>4. World atlas</a></li>{incident && <li><a href={page('history',incident.id)}>5. A documented disruption</a></li>}</ol>
+    <ol class="trail"><li><a href={page('aircraft','holybro-x500-v2')}>1. Aircraft teardown</a></li><li><a href={`${page('aircraft','holybro-x500-v2')}?part=motor#aircraft-anatomy`}>2. Motor evidence</a></li><li><a href={`${page('supply','motors')}?aircraft=holybro-x500-v2`}>3. Magnet pathway</a></li><li><a href={`${page('atlas')}?layer=rare-earths-production`}>4. World atlas</a></li>{magnetCase && <li><a href={page('history',magnetCase.id)}>5. A documented magnet disruption</a></li>}</ol>
+    {incident && <p><a href={`${page('supply', 'skydio-battery')}?aircraft=skydio-x10`}>Replay Skydio’s battery disruption →</a></p>}
   </section>
 </Site>

@@ -128,7 +128,7 @@
     "id": "crazyflie-2-1-plus",
     "label": "Bitcraze Crazyflie 2.1+",
     "representative": false,
-    "fidelity": "exterior-schematic",
+    "fidelity": "documented-assembly",
     "parts": [
       "frame",
       "flight-controller",
@@ -138,10 +138,10 @@
       "battery"
     ],
     "source": {
-      "title": "Crazyflie 2.1+",
+      "title": "Crazyflie 2.1+ datasheet, Rev. 1",
       "publisher": "Bitcraze",
-      "url": "https://www.bitcraze.io/products/crazyflie-2-1-plus/",
-      "locator": "Aircraft imagery, mechanics and radio"
+      "url": "https://www.bitcraze.io/documentation/hardware/crazyflie_2_1_plus/crazyflie_2_1_plus-datasheet.pdf",
+      "locator": "pp. 1–3, §§3–4 and 8–10, onboard electronics, mechanical drawing and kit contents"
     },
     "license": "CC-BY-4.0"
   },

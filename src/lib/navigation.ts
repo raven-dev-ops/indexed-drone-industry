@@ -7,6 +7,7 @@ export const labels: Record<string, string> = {
   history: 'History',
   supply: 'Supply chains',
   learn: 'Learning paths',
+  journeys: 'Segment journeys',
   bottlenecks: 'Bottlenecks',
   regulations: 'Regulations',
   market: 'Market',

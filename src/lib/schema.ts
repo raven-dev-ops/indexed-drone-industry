@@ -29,6 +29,7 @@ export const metrics = {
   ecosystem: 'Operating ecosystem',
 };
 export const evidence = z.object({
+  id: id.optional(),
   title: z.string().min(1),
   publisher: z.string().min(1),
   url: z.url({ protocol: /^https?$/ }),
@@ -118,6 +119,9 @@ export const facility = entry.extend({
   lon: z.number().min(-180).max(180),
   precision: z.enum(['site', 'city', 'region']),
   organizationId: id.optional(),
+  observed: date.optional(),
+  statusReviewed: date.optional(),
+  statusSource: evidence.optional(),
 });
 export const event = entry.extend({
   date,
@@ -133,17 +137,18 @@ export const event = entry.extend({
     .default([]),
   scenarioId: id.optional(),
 });
-const endpoint = z.object({
-  section: z.enum(['aircraft', 'organizations', 'facilities']),
+export const endpoint = z.object({
+  section: z.enum(['aircraft', 'organizations', 'facilities', 'history', 'regulations', 'parts', 'materials']),
   id,
 });
+export const evidenceType = z.enum(['documented', 'representative', 'unknown']);
 export const relationship = z.object({
   id,
   from: endpoint,
   to: endpoint,
   relation: z.string().min(1),
   summary: z.string().min(1),
-  evidenceType: z.enum(['documented', 'representative', 'unknown']),
+  evidenceType,
   source: evidence,
 });
 export const model = z.object({
@@ -160,6 +165,23 @@ export const part = entry.extend({
   pathway: id.optional(),
   lesson: id.optional(),
 });
+export const componentClaim = z.object({
+  aircraft: id,
+  part: id,
+  name: z.string().min(1),
+  materials: z.string().min(1),
+  materialBasis: evidenceType,
+  scope: z.string().min(1).optional(),
+  source: evidence.required({ id: true }),
+});
+export const pathwayContext = z.object({
+  id,
+  aircraft: z.array(z.object({ id, part: id, evidenceType, scope: z.string().min(1).optional() })),
+  nodes: z.record(id, z.array(endpoint)),
+  events: z.array(id).min(1),
+  relationships: z.array(id).optional(),
+  atlasLayer: id.optional(),
+});
 export const material = entry.extend({ pathway: id });
 export const lesson = entry.extend({
   body: z.array(z.string().min(1)).min(1),
@@ -169,6 +191,8 @@ export const bottleneck = entry.extend({
   pathway: id,
   affects: z.string(),
   mitigation: z.string(),
+  parts: z.array(id).optional(),
+  segments: z.array(aircraft.shape.segment).optional(),
 });
 export const regulation = entry.extend({
   jurisdiction: z.string().min(1),
@@ -234,6 +258,7 @@ export const scenario = entry.extend({
         stage: z.string(),
         source: evidence.optional(),
         unknown: z.boolean().optional(),
+      timing: z.string().min(1).optional(),
       }),
     )
     .min(1),
@@ -241,7 +266,7 @@ export const scenario = entry.extend({
     z.object({
       target: id,
       alternatives: z.array(id).min(1),
-      evidenceType: z.enum(['documented', 'representative', 'unknown']),
+      evidenceType,
       source: evidence,
       leadTimeDays: z.number().positive().optional(),
     }),

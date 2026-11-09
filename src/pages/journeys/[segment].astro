@@ -1,0 +1,85 @@
+---
+import Site from '../../layouts/Site.astro';
+import Evidence from '../../components/Evidence.astro';
+import { collections } from '../../lib/data';
+import { segmentJourneys } from '../../lib/learning';
+import { page } from '../../lib/navigation';
+import { segments } from '../../lib/schema';
+
+export function getStaticPaths() {
+  return segmentJourneys.map(journey => ({ params: { segment: journey.segment }, props: { journey } }));
+}
+
+interface Props { journey: typeof segmentJourneys[number] }
+const { journey } = Astro.props;
+const name = segments[journey.segment];
+const aircraftLink = page('aircraft', journey.model.id);
+const supplyLink = `${page('supply', journey.pathway.id)}?aircraft=${journey.model.id}`;
+const atlasLink = `${page('atlas')}?layer=${journey.atlasLayer}`;
+const related = journey.relatedRecord && collections[journey.relatedRecord.section].find(row => row.id === journey.relatedRecord?.id);
+---
+
+<Site title={`${name} journey`} description={journey.summary} section="journeys">
+  <div class="crumb"><a href={page('journeys')}>Segment journeys</a><span aria-hidden="true">/</span><span>{name}</span></div>
+  <header class="pagehead">
+    <span class="eyebrow">Aircraft to industry</span>
+    <h1>{name} journey</h1>
+    <p class="lede">{journey.summary}</p>
+  </header>
+
+  <ol class="journey-steps">
+    <li class="panel">
+      <span class="tag neutral">Documented aircraft</span>
+      <h2><a href={`${aircraftLink}#aircraft-anatomy`}>{journey.model.name}</a></h2>
+      <p>{journey.model.summary}</p>
+      <p class="fact-source">Indexed variant · {journey.model.variant}</p>
+      <Evidence source={journey.model.source} compact />
+    </li>
+    <li class="panel">
+      <span class="tag neutral">Documented component role</span>
+      <h2><a href={page('parts', journey.part.id)}>{journey.part.name}</a></h2>
+      <p>{journey.partContext}</p>
+      <Evidence source={journey.partSource ?? journey.model.source} compact />
+    </li>
+    <li class="panel">
+      <span class="tag neutral">{journey.pathway.mode === 'representative' ? 'Representative pathway' : 'Historical scenario'}</span>
+      <h2><a href={supplyLink}>{journey.pathway.name}</a></h2>
+      <p>Open the pathway and select a step to see the consequences modeled from its dependencies.</p>
+      <p>Material background <a href={page('materials', journey.material.id)}>{journey.material.name}</a></p>
+      <Evidence source={journey.pathway.source} compact />
+    </li>
+    <li class="panel">
+      <span class="tag neutral">Country-level context</span>
+      <h2><a href={atlasLink}>World atlas</a></h2>
+      <p>{journey.atlasContext}</p>
+      {journey.relationship && journey.relatedRecord && related && (
+        <div class="related-record">
+          <span class="tag neutral">{journey.relationship.evidenceType} relationship</span>
+          <h3><a href={page(journey.relatedRecord.section, related.id)}>{related.name}</a></h3>
+          <p>{journey.relationship.summary}</p>
+          <Evidence source={journey.relationship.source} compact />
+        </div>
+      )}
+    </li>
+    <li class="panel">
+      <span class="tag neutral">Documented history · {journey.eventScope}</span>
+      <h2><a href={page('history', journey.event.id)}>{journey.event.name}</a></h2>
+      <p>{journey.eventContext}</p>
+      <Evidence source={journey.event.source} compact />
+    </li>
+  </ol>
+
+  <div class="actions section-block">
+    <a class="button small" href={page('journeys')}>Choose another segment</a>
+    <a href={page('learn')}>Open the guided lessons →</a>
+  </div>
+</Site>
+
+<style>
+  .journey-steps { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; padding-left: 1.75rem; }
+  .journey-steps li::marker { font-weight: 750; }
+  .journey-steps .tag { white-space: normal; }
+  .journey-steps h2 { margin-top: .6rem; }
+  .related-record { margin-top: 1rem; }
+  .related-record h3 { margin-top: .55rem; }
+</style>

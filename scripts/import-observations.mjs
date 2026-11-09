@@ -12,12 +12,30 @@ const eurostatApi = 'https://ec.europa.eu/eurostat/api/dissemination/statistics/
 
 const mineralCountries = {
   Argentina: 'AR', Australia: 'AU', Austria: 'AT', Brazil: 'BR', Burma: 'MM',
-  Canada: 'CA', Chile: 'CL', China: 'CN', Germany: 'DE', Greenland: 'GL',
-  India: 'IN', 'Korea, North': 'KP', 'Korea, Republic of': 'KR',
-  Madagascar: 'MG', Malaysia: 'MY', Mali: 'ML', Mexico: 'MX', Mozambique: 'MZ',
-  Nigeria: 'NG', Norway: 'NO', Portugal: 'PT', Russia: 'RU', 'South Africa': 'ZA',
+  Canada: 'CA', Chile: 'CL', China: 'CN', 'Congo (Kinshasa)': 'CD', Germany: 'DE',
+  Greece: 'GR', Greenland: 'GL', Guinea: 'GN', India: 'IN', Indonesia: 'ID',
+  Ireland: 'IE', Jamaica: 'JM', Japan: 'JP', Kazakhstan: 'KZ',
+  'Korea, North': 'KP', 'Korea, Republic of': 'KR', Madagascar: 'MG', Malaysia: 'MY',
+  Mali: 'ML', Mexico: 'MX', Mozambique: 'MZ', Nigeria: 'NG', Norway: 'NO',
+  Peru: 'PE', Poland: 'PL', Portugal: 'PT', Russia: 'RU', 'Saudi Arabia': 'SA',
+  'South Africa': 'ZA', Spain: 'ES',
   'Sri Lanka': 'LK', Tanzania: 'TZ', Thailand: 'TH', Turkey: 'TR',
-  Ukraine: 'UA', 'United States': 'US', Vietnam: 'VN', Zimbabwe: 'ZW',
+  Ukraine: 'UA', 'United Arab Emirates': 'AE', 'United States': 'US',
+  Vietnam: 'VN', Zambia: 'ZM', Zimbabwe: 'ZW',
+};
+const refineries = {
+  COPPER: {
+    layer: 'copper-refinery-production', name: 'Copper refinery production',
+    section: 'World Mine and Refinery Production and Reserves',
+    detail: 'Refinery production', sourceUnit: 'thousand metric tons',
+    unit: 'thousand metric tons of copper content',
+  },
+  'BAUXITE AND ALUMINA': {
+    layer: 'alumina-refinery-production', name: 'Alumina refinery production',
+    section: 'World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves',
+    detail: 'Alumina, refinery production', sourceUnit: 'thousand metric dry tons',
+    unit: 'thousand metric dry tons, calcined equivalent',
+  },
 };
 const commodities = {
   LITHIUM: { layer: 'lithium', name: 'Lithium', unit: 'metric tons of lithium content' },
@@ -68,12 +86,14 @@ async function mineralObservations() {
   }
 
   const observations = [];
-  for (const [chapter, section, , reporter, statistic, , unit, year, raw, notes] of rows) {
-    const commodity = commodities[chapter];
-    if (!commodity || section !== 'World Mine Production and Reserves' || year !== mineralPeriod) continue;
+  for (const [chapter, section, , reporter, statistic, detail, unit, year, raw, notes] of rows) {
+    const commodity = section === 'World Mine Production and Reserves' ? commodities[chapter] : undefined;
+    const candidate = refineries[chapter];
+    const refinery = candidate?.section === section && candidate.detail === detail ? candidate : undefined;
+    if ((!commodity && !refinery) || year !== mineralPeriod) continue;
     if (reporter === 'Other countries' || reporter === 'World total') continue;
     if (!mineralCountries[reporter]) throw new Error('Unmapped USGS reporter ' + reporter);
-    if (unit !== 'metric tons') throw new Error('Unexpected USGS unit ' + unit);
+    if (unit !== (refinery?.sourceUnit ?? 'metric tons')) throw new Error('Unexpected USGS unit ' + unit);
     const numeric = raw.replaceAll(',', '').trim();
     // In these USGS chapters an em dash means zero. W, NA, and s denote
     // withheld, unavailable, or unspecified small reserves respectively.
@@ -83,15 +103,16 @@ async function mineralObservations() {
     if (statistic !== 'Production' && statistic !== 'Reserves') throw new Error('Unexpected USGS statistic ' + statistic);
     const qualifier = isZero ? 'USGS marks this value as zero.'
       : notes.includes('Estimated') ? 'USGS estimate.' : '';
-    const metric = suffix === 'production' ? 'mine production' : 'reserves';
+    const metric = refinery ? 'refinery production' : suffix === 'production' ? 'mine production' : 'reserves';
     observations.push({
       country: mineralCountries[reporter],
-      layer: commodity.layer + '-' + suffix,
-      name: commodity.name + ' ' + metric,
+      layer: refinery?.layer ?? commodity.layer + '-' + suffix,
+      name: refinery?.name ?? commodity.name + ' ' + metric,
       year,
       value: isZero ? 0 : Number(numeric),
-      unit: commodity.unit,
+      unit: refinery?.unit ?? commodity.unit,
       source: {
+        ...(refinery ? { id: 'usgs-mcs-2026' } : {}),
         title: 'Mineral Commodity Summaries 2026 Data Release',
         publisher: 'U.S. Geological Survey',
         url: usgsRelease,
@@ -165,7 +186,7 @@ const rows = groups.flat().sort((left, right) =>
 );
 const counts = Object.groupBy(rows, row => row.layer);
 const keys = new Set(rows.map(row => row.layer + '/' + row.country));
-if (Object.keys(counts).length !== 8 || keys.size !== rows.length ||
+if (Object.keys(counts).length !== 10 || keys.size !== rows.length ||
     rows.some(row => !Number.isFinite(row.value) || row.value < 0)) {
   throw new Error('Invalid country observations: check layer coverage, values and duplicate reporting countries');
 }

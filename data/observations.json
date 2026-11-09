@@ -1,5 +1,617 @@
 [
   {
+    "country": "AE",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 2300,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / United Arab Emirates / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "AU",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 17000,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Australia / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "BR",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 11000,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Brazil / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CA",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 1500,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Canada / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CN",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 93000,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / China / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "DE",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 460,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Germany / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "ES",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 810,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Spain / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "GN",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 360,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Guinea / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "GR",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 850,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Greece / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "ID",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 1500,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Indonesia / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "IE",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 1700,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Ireland / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "IN",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 8200,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / India / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "JM",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 1500,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Jamaica / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "KZ",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 1500,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Kazakhstan / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "RU",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 2900,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Russia / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "SA",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 1900,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Saudi Arabia / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "TR",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 310,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Turkey / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "US",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 710,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / United States / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "VN",
+    "layer": "alumina-refinery-production",
+    "name": "Alumina refinery production",
+    "year": "2025",
+    "value": 1500,
+    "unit": "thousand metric dry tons, calcined equivalent",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / BAUXITE AND ALUMINA / World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves / Vietnam / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "AU",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 460,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / Australia / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CA",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 320,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / Canada / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CD",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 2800,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / Congo (Kinshasa) / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CL",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 1700,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / Chile / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "CN",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 14000,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / China / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "DE",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 610,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / Germany / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "ID",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 400,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / Indonesia / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "IN",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 620,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / India / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "JP",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 1400,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / Japan / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "KR",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 610,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / Korea, Republic of / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "KZ",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 500,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / Kazakhstan / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "MX",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 480,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / Mexico / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "PE",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 340,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / Peru / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "PL",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 560,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / Poland / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "RU",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 950,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / Russia / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "US",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 850,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / United States / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
+    "country": "ZM",
+    "layer": "copper-refinery-production",
+    "name": "Copper refinery production",
+    "year": "2025",
+    "value": 270,
+    "unit": "thousand metric tons of copper content",
+    "source": {
+      "id": "usgs-mcs-2026",
+      "title": "Mineral Commodity Summaries 2026 Data Release",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/data/mineral-commodity-summaries-2026-data-release",
+      "locator": "MCS2026_Commodities_Data.csv / COPPER / World Mine and Refinery Production and Reserves / Zambia / 2025 refinery production / USGS estimate.",
+      "accessed": "2026-11-08",
+      "rights": "USGS data release marked CC0 1.0 Universal."
+    }
+  },
+  {
     "country": "AT",
     "layer": "electricity",
     "name": "Non-household electricity price",

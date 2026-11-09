@@ -1,3 +1,8 @@
+const gravity = 9.80665;
+
+export const gramsForceToNewtons = (gramsForce: number) =>
+  (gramsForce * gravity) / 1000;
+
 export function propulsion(input: {
   mass: number;
   rotors: number;
@@ -19,13 +24,14 @@ export function propulsion(input: {
     reserve >= 100
   )
     return null;
-  const ratio = (rotors * thrust) / (mass * 9.80665);
+  const power = rotors * watts;
+  const ratio = (rotors * thrust) / (mass * gravity);
+  const minutes = ((energy * (1 - reserve / 100)) / power) * 60;
+  if ([power, ratio, minutes].some((value) => !Number.isFinite(value) || value <= 0))
+    return null;
   return {
     ratio,
-    minutes:
-      ratio >= 1
-        ? (60 * energy * (1 - reserve / 100)) / (rotors * watts)
-        : null,
+    minutes: ratio >= 1 ? minutes : null,
   };
 }
 
@@ -51,12 +57,15 @@ export function survey(input: {
   const length = 2 * altitude * Math.tan((alongFov * Math.PI) / 360);
   const lines = width * (1 - sideOverlap / 100);
   const photos = length * (1 - frontOverlap / 100);
-  return {
+  const result = {
     width,
     length,
     lines,
     photos,
     seconds: photos / speed,
-    hectaresPerHour: (lines * speed * 3600) / 10000,
+    hectaresPerHour: lines * speed * 0.36,
   };
+  return Object.values(result).some((value) => !Number.isFinite(value) || value <= 0)
+    ? null
+    : result;
 }

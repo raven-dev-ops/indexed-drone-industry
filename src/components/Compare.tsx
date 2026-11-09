@@ -1,8 +1,61 @@
 import { useEffect, useState } from 'react';
 import { metrics, segments, type Aircraft } from '../lib/schema';
 
+type Mission = keyof typeof segments;
+type Metric = keyof typeof metrics;
+
+const missions: Record<Mission, { pair: [string, string]; priorities: Metric[]; note: string }> = {
+  camera: {
+    pair: ['dji-mini-4-pro', 'dji-air-3s'],
+    priorities: ['sensors', 'mass', 'endurance'],
+    note: 'Start with the camera and the mass of the stated battery configuration. Compare endurance in the conditions reported for each aircraft.',
+  },
+  fpv: {
+    pair: ['dji-avata-2', 'geprc-mark5-dc-hd-o3'],
+    priorities: ['ecosystem', 'mass', 'sensors'],
+    note: 'Check the goggles and control system, then compare the camera setup and whether the published mass includes a battery.',
+  },
+  enterprise: {
+    pair: ['dji-mavic-3e', 'wingtraone-gen-ii'],
+    priorities: ['sensors', 'endurance', 'ecosystem'],
+    note: 'Start with the survey sensor and positioning workflow, then read the conditions attached to endurance. Use the Survey Coverage Lab to compare a chosen camera geometry and overlap.',
+  },
+  agriculture: {
+    pair: ['dji-agras-t70p', 'xag-p100-pro'],
+    priorities: ['payload', 'mtow', 'endurance'],
+    note: 'Read payload alongside the configuration. Liquid capacity, spreader capacity and maximum takeoff mass describe different quantities.',
+  },
+  delivery: {
+    pair: ['zipline-platform-2', 'matternet-m2'],
+    priorities: ['payload', 'ecosystem', 'endurance'],
+    note: 'Read the published load and delivery system together. Operational range or delivery activity describes a different quantity from flight time.',
+  },
+  'public-safety': {
+    pair: ['skydio-x10', 'dji-matrice-30t'],
+    priorities: ['sensors', 'endurance', 'ecosystem'],
+    note: 'Start with the sensors on each named configuration and the associated operating system. Published endurance depends on the stated test conditions.',
+  },
+  research: {
+    pair: ['holybro-x500-v2', 'crazyflie-2-1-plus'],
+    priorities: ['ecosystem', 'payload', 'mass'],
+    note: 'Check the programming or control ecosystem and the exact kit configuration. Published mass and payload depend on what ships with that configuration.',
+  },
+};
+
+function missionChoices(aircraft: Aircraft[], mission: Mission | '') {
+  return mission ? aircraft.filter((row) => row.segment === mission) : aircraft;
+}
+
+function missionPair(aircraft: Aircraft[], mission: Mission | '') {
+  const choices = missionChoices(aircraft, mission);
+  return [0, 1].map((index) =>
+    (mission ? choices.find((row) => row.id === missions[mission].pair[index])?.id : undefined) ??
+    choices[index]?.id ?? '',
+  );
+}
+
 const displayUnit = (
-  key: keyof typeof metrics,
+  key: Metric,
   spec: Aircraft['specs'][number],
 ) => {
   if (spec.value === null)
@@ -23,19 +76,19 @@ export default function Compare({
   aircraft: Aircraft[];
   base: string;
 }) {
-  const [selection, setSelection] = useState([
-    aircraft[0]?.id ?? '',
-    aircraft[1]?.id ?? '',
-  ]);
+  const [mission, setMission] = useState<Mission | ''>('');
+  const [selection, setSelection] = useState(() => missionPair(aircraft, ''));
   useEffect(() => {
     function readSelection() {
       const query = new URLSearchParams(window.location.search);
+      const candidate = query.get('mission');
+      const nextMission = candidate && Object.hasOwn(missions, candidate) ? candidate as Mission : '';
+      const choices = missionChoices(aircraft, nextMission);
+      const pair = missionPair(aircraft, nextMission);
+      setMission(nextMission);
       setSelection(
-        [query.get('a'), query.get('b')].map(
-          (id, index) =>
-            aircraft.find((row) => row.id === id)?.id ??
-            aircraft[index]?.id ??
-            '',
+        [query.get('a'), query.get('b')].map((id, index) =>
+          choices.find((row) => row.id === id)?.id ?? pair[index],
         ),
       );
     }
@@ -43,12 +96,16 @@ export default function Compare({
     window.addEventListener('popstate', readSelection);
     return () => window.removeEventListener('popstate', readSelection);
   }, [aircraft]);
-  const selected = selection.map((id) => aircraft.find((row) => row.id === id));
-  const select = (index: number, value: string) => {
-    const next = [...selection];
-    next[index] = value;
+  const available = missionChoices(aircraft, mission);
+  const selected = selection.map((id) => available.find((row) => row.id === id));
+  const priorities = mission ? missions[mission].priorities : [];
+  const orderedMetrics = [...new Set([...priorities, ...Object.keys(metrics) as Metric[]])];
+  const save = (nextMission: Mission | '', next: string[]) => {
+    setMission(nextMission);
     setSelection(next);
     const url = new URL(window.location.href);
+    if (nextMission) url.searchParams.set('mission', nextMission);
+    else url.searchParams.delete('mission');
     url.searchParams.set('a', next[0]);
     url.searchParams.set('b', next[1]);
     window.history.replaceState(null, '', url);
@@ -56,16 +113,33 @@ export default function Compare({
   return (
     <>
       <div className="controls">
+        <label>
+          Comparison mission
+          <select
+            value={mission}
+            onChange={(event) => {
+              const next = event.currentTarget.value as Mission | '';
+              save(next, next ? missionPair(aircraft, next) : selection);
+            }}
+          >
+            <option value="">All missions</option>
+            {Object.entries(segments).map(([key, name]) => (
+              <option key={key} value={key}>{name}</option>
+            ))}
+          </select>
+        </label>
         {selection.map((id, index) => (
           <label key={index}>
             Aircraft {index + 1}
             <select
               value={id}
-              onChange={(event) => select(index, event.currentTarget.value)}
+              onChange={(event) => save(mission, selection.map((current, i) =>
+                i === index ? event.currentTarget.value : current,
+              ))}
             >
-              {Object.entries(segments).map(([key, name]) => (
+              {Object.entries(segments).filter(([key]) => !mission || key === mission).map(([key, name]) => (
                 <optgroup key={key} label={name}>
-                  {aircraft
+                  {available
                     .filter((row) => row.segment === key)
                     .map((row) => (
                       <option value={row.id} key={row.id}>
@@ -78,6 +152,12 @@ export default function Compare({
           </label>
         ))}
       </div>
+      {mission && (
+        <p className="note" aria-live="polite">
+          {missions[mission].note}
+          {mission === 'enterprise' && <> <a href={`${base}labs/#survey-lab`}>Open the Survey Coverage Lab</a>.</>}
+        </p>
+      )}
       <div className="table-wrap">
         <table aria-label="Aircraft specification comparison">
           <thead>
@@ -100,7 +180,7 @@ export default function Compare({
             </tr>
           </thead>
           <tbody>
-            {(Object.keys(metrics) as (keyof typeof metrics)[]).map((key) => {
+            {orderedMetrics.map((key) => {
               const all = selected.map(
                 (row) =>
                   row?.specs.filter(

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import type { GeoJSONSource, Map as LibreMap, MapMouseEvent } from 'maplibre-gl';
+import type { ExpressionSpecification, GeoJSONSource, Map as LibreMap, MapMouseEvent } from 'maplibre-gl';
+import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import type { Facility, Observation } from '../lib/schema';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
@@ -56,6 +57,9 @@ export default function Atlas({ facilities, observations, base }: Props) {
   const [country, setCountry] = useState('');
   const [activity, setActivity] = useState('');
   const [facilityStatus, setFacilityStatus] = useState('');
+  const [precision, setPrecision] = useState('');
+  const [facilityYear, setFacilityYear] = useState('');
+  const [facilityId, setFacilityId] = useState('');
   const [choice, setChoice] = useState<FeatureChoice>();
   const [loadMap, setLoadMap] = useState(false);
   const [mapStatus, setMapStatus] = useState<'loading' | 'ready' | 'unavailable'>('loading');
@@ -64,9 +68,16 @@ export default function Atlas({ facilities, observations, base }: Props) {
   const isFacilities = layer === facilityLayer;
 
   useEffect(() => {
-    const requested = new URLSearchParams(window.location.search).get('layer');
+    const params = new URLSearchParams(window.location.search);
+    const requested = params.get('layer');
     if (requested && layers.some(([id]) => id === requested)) setLayer(requested);
-  }, [layers]);
+    const facility = facilities.find((row) => row.id === params.get('facility'));
+    if (facility) {
+      setLayer(facilityLayer);
+      setFacilityId(facility.id);
+      setChoice({ type: 'facility', id: facility.id });
+    }
+  }, [facilities, layers]);
 
   const layerRows = useMemo(() => observations.filter((row) => row.layer === layer), [observations, layer]);
   const years = sortedUnique(layerRows.map(({ year }) => year)).reverse();
@@ -84,10 +95,14 @@ export default function Atlas({ facilities, observations, base }: Props) {
   const selectedCountry = countryOptions.includes(country) ? country : '';
   const activities = sortedUnique(facilities.map((row) => row.activity));
   const statuses = sortedUnique(facilities.map((row) => row.status));
+  const precisions = sortedUnique(facilities.map((row) => row.precision));
+  const facilityYears = sortedUnique(facilities.flatMap((row) => row.observed ? [row.observed.slice(0, 4)] : [])).reverse();
   const visibleFacilities = useMemo(
     () => facilities.filter((row) => (!selectedCountry || row.country === selectedCountry)
-      && (!activity || row.activity === activity) && (!facilityStatus || row.status === facilityStatus)),
-    [facilities, selectedCountry, activity, facilityStatus],
+      && (!activity || row.activity === activity) && (!facilityStatus || row.status === facilityStatus)
+      && (!precision || row.precision === precision) && (!facilityYear || row.observed?.startsWith(facilityYear))
+      && (!facilityId || row.id === facilityId)),
+    [facilities, selectedCountry, activity, facilityStatus, precision, facilityYear, facilityId],
   );
   const visibleObservations = useMemo(
     () => observationsForPeriod.filter((row) => !selectedCountry || row.country === selectedCountry)
@@ -106,8 +121,18 @@ export default function Atlas({ facilities, observations, base }: Props) {
     setYear('');
     setUnit('');
     const url = new URL(window.location.href);
+    setFacilityId('');
+    url.searchParams.delete('facility');
     if (next === facilityLayer) url.searchParams.delete('layer');
     else url.searchParams.set('layer', next);
+    window.history.replaceState(window.history.state, '', url);
+  }
+
+  function showAllFacilities() {
+    setFacilityId('');
+    setChoice(undefined);
+    const url = new URL(window.location.href);
+    url.searchParams.delete('facility');
     window.history.replaceState(window.history.state, '', url);
   }
 
@@ -118,9 +143,9 @@ export default function Atlas({ facilities, observations, base }: Props) {
     const points = map.getSource<GeoJSONSource>(facilitySource);
     points?.setData(facilitiesData(isFacilities ? visibleFacilities : []));
     const colorByCountry = new Map(visibleObservations.map((row) => [row.country, colorFor(row.value, highest)]));
-    const pairs = [...colorByCountry].flat();
-    const color = !isFacilities && pairs.length
-      ? ['match', ['coalesce', ['get', 'ISO_A2_EH'], ['get', 'ISO_A2'], ''], ...pairs, neutral]
+    const [first, ...rest] = colorByCountry;
+    const color: string | ExpressionSpecification = !isFacilities && first
+      ? ['match', ['coalesce', ['get', 'ISO_A2_EH'], ['get', 'ISO_A2'], ''], ...first, ...rest.flat(), neutral]
       : neutral;
     map.setPaintProperty(countriesLayer, 'fill-color', color);
   }, [isFacilities, visibleFacilities, visibleObservations, highest, mapStatus]);
@@ -140,6 +165,7 @@ export default function Atlas({ facilities, observations, base }: Props) {
       if (!response.ok) throw new Error('Country boundaries unavailable');
       const countries = await response.json() as GeoJSON;
       if (cancel.signal.aborted) return;
+      maplibre.setWorkerUrl(workerUrl);
       const instance = new maplibre.Map({
         container,
         center: [15, 27],
@@ -254,6 +280,20 @@ export default function Atlas({ facilities, observations, base }: Props) {
                 {statuses.map((item) => <option key={item} value={item}>{item}</option>)}
               </select>
             </label>
+            <label>
+              Location precision
+              <select value={precision} onChange={(event) => { setPrecision(event.currentTarget.value); setChoice(undefined); }}>
+                <option value="">All precisions</option>
+                {precisions.map((item) => <option key={item} value={item}>{item}</option>)}
+              </select>
+            </label>
+            {facilityYears.length > 0 && <label>
+              Facility observation year
+              <select value={facilityYear} onChange={(event) => { setFacilityYear(event.currentTarget.value); setChoice(undefined); }}>
+                <option value="">All dates</option>
+                {facilityYears.map((item) => <option key={item} value={item}>{item}</option>)}
+              </select>
+            </label>}
           </>
         ) : (
           <>
@@ -316,16 +356,17 @@ export default function Atlas({ facilities, observations, base }: Props) {
 
       {isFacilities ? (
         <>
+          {facilityId && <button className="button secondary small" type="button" onClick={showAllFacilities}>Show all facilities</button>}
           <p role="status">{visibleFacilities.length} facilities match the filters.</p>
           {visibleFacilities.length ? (
             <div className="table-wrap">
               <table aria-label="Filtered facilities">
-                <thead><tr><th scope="col">Facility</th><th scope="col">Country</th><th scope="col">Activity</th><th scope="col">Status</th><th scope="col">Location precision</th></tr></thead>
+                <thead><tr><th scope="col">Facility</th><th scope="col">Country</th><th scope="col">Activity</th><th scope="col">Status</th><th scope="col">Location precision</th><th scope="col">Observed</th></tr></thead>
                 <tbody>
                   {visibleFacilities.map((row) => (
                     <tr key={row.id}>
                       <th scope="row"><a href={`${base}facilities/${row.id}/`}>{row.name}</a></th>
-                      <td>{countryName(row.country)}</td><td>{row.activity}</td><td>{row.status}</td><td>{row.precision}</td>
+                      <td>{countryName(row.country)}</td><td>{row.activity}</td><td>{row.status}{row.statusReviewed && <small>Reviewed {row.statusReviewed}</small>}</td><td>{row.precision}</td><td>{row.observed ?? 'Unknown'}</td>
                     </tr>
                   ))}
                 </tbody>

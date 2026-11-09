@@ -2,7 +2,7 @@
 
 An open field guide to civilian drones, from raw materials and components to aircraft, operators, maintenance, and recycling. Explore aircraft anatomy, compare configurations, trace supply pathways, browse facilities and country data, and work through flight and survey labs.
 
-Start with the Holybro X500 V2 kit, follow its motor to a representative magnet pathway, then look at a documented disruption. Each record links to its evidence. The coverage page shows which segments and regions the index covers.
+Start with the Holybro X500 V2 kit and follow its documented motor into a representative magnet pathway. Replay Skydio’s battery disruption alongside the reported rationing and support changes, or choose a guided journey for one of the seven civilian segments. The coverage page shows the depth of the model, supply, facility, disruption, and market evidence.
 
 ## Run locally
 

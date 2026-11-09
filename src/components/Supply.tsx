@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { evaluateScenario } from '../lib/simulation';
 import type { Scenario } from '../lib/schema';
 
@@ -8,8 +8,18 @@ const states = {
   indeterminate: 'Indeterminate',
 };
 
-export default function Supply({ scenario }: { scenario: Scenario }) {
+type RelatedRecord = { name: string; href: string };
+
+export default function Supply({ scenario, related = {} }: { scenario: Scenario; related?: Record<string, RelatedRecord[]> }) {
   const [cuts, setCuts] = useState<string[]>([]);
+  const [animate, setAnimate] = useState(false);
+  useEffect(() => {
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const sync = () => setAnimate(!preference.matches);
+    sync();
+    preference.addEventListener('change', sync);
+    return () => preference.removeEventListener('change', sync);
+  }, []);
   const outcomes = evaluateScenario(scenario, new Set(cuts));
   const allNames = Object.fromEntries(
     scenario.nodes.map((node) => [node.id, node.name]),
@@ -74,7 +84,7 @@ export default function Supply({ scenario }: { scenario: Scenario }) {
                         group.evidenceType !== 'documented' ? '5 4' : undefined
                       }
                     />
-                    {group.leadTimeDays && (
+                    {group.leadTimeDays && animate && outcomes[from].state === 'available' && outcomes[group.target].state === 'available' && (
                       <circle cx={x1} cy={y1} r="3" fill={color}>
                         <animate
                           attributeName="cx"
@@ -178,6 +188,19 @@ export default function Supply({ scenario }: { scenario: Scenario }) {
             : 'Select a step to see which branches depend on it.'}
         </p>
       </section>
+      {scenario.nodes.some((node) => related[node.id]?.length || node.timing) && (
+        <section className="panel" aria-labelledby="steps-title">
+          <h2 id="steps-title">Explore the steps</h2>
+          <p className="note">The linked records give context for the selected step. The input evidence below describes which dependencies are documented.</p>
+          {scenario.nodes.filter((node) => related[node.id]?.length || node.timing).map((node) => (
+            <div key={node.id} id={node.id}>
+              <h3>{node.name}</h3>
+              {node.timing && <p>{node.timing} {node.source && <a href={node.source.url}>{node.source.publisher} · {node.source.locator}</a>}</p>}
+              {related[node.id]?.length > 0 && <ul>{related[node.id].map((link) => <li key={link.href}><a href={link.href}>{link.name}</a></li>)}</ul>}
+            </div>
+          ))}
+        </section>
+      )}
       <section aria-labelledby="edge-title">
         <h2 id="edge-title">Input evidence</h2>
         <div className="table-wrap" style={{ marginTop: '.8rem' }}>

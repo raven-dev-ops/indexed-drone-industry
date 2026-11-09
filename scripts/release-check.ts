@@ -5,6 +5,8 @@ import {
   lookupModel,
   scenarios,
   events,
+  evidenceCoverage,
+  pathwayContexts,
 } from '../src/lib/data.ts';
 const missing: string[] = [];
 for (const key of Object.keys(
@@ -29,6 +31,13 @@ if (
   )
 )
   missing.push('Historical case and simulator');
+if ((evidenceCoverage.anatomy['documented-assembly'] ?? 0) < 2)
+  missing.push('Two documented assembly layouts');
+if (evidenceCoverage.replayableCases < 2)
+  missing.push('Two historical replays');
+if (scenarios.some((row) => row.mode === 'representative' &&
+    !pathwayContexts.some((context) => context.id === row.id && context.aircraft.length > 0)))
+  missing.push('Aircraft context for every representative pathway');
 if (missing.length)
   throw new Error(`Launch criteria incomplete:\n${missing.join('\n')}`);
 console.log(
