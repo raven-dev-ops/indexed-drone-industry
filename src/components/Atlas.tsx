@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import type { GeoJSONSource, Map as LibreMap, MapMouseEvent } from 'maplibre-gl';
+import type { ExpressionSpecification, GeoJSONSource, Map as LibreMap, MapMouseEvent } from 'maplibre-gl';
+import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import type { Facility, Observation } from '../lib/schema';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
@@ -142,9 +143,9 @@ export default function Atlas({ facilities, observations, base }: Props) {
     const points = map.getSource<GeoJSONSource>(facilitySource);
     points?.setData(facilitiesData(isFacilities ? visibleFacilities : []));
     const colorByCountry = new Map(visibleObservations.map((row) => [row.country, colorFor(row.value, highest)]));
-    const pairs = [...colorByCountry].flat();
-    const color = !isFacilities && pairs.length
-      ? ['match', ['coalesce', ['get', 'ISO_A2_EH'], ['get', 'ISO_A2'], ''], ...pairs, neutral]
+    const [first, ...rest] = colorByCountry;
+    const color: string | ExpressionSpecification = !isFacilities && first
+      ? ['match', ['coalesce', ['get', 'ISO_A2_EH'], ['get', 'ISO_A2'], ''], ...first, ...rest.flat(), neutral]
       : neutral;
     map.setPaintProperty(countriesLayer, 'fill-color', color);
   }, [isFacilities, visibleFacilities, visibleObservations, highest, mapStatus]);
@@ -164,6 +165,7 @@ export default function Atlas({ facilities, observations, base }: Props) {
       if (!response.ok) throw new Error('Country boundaries unavailable');
       const countries = await response.json() as GeoJSON;
       if (cancel.signal.aborted) return;
+      maplibre.setWorkerUrl(workerUrl);
       const instance = new maplibre.Map({
         container,
         center: [15, 27],
